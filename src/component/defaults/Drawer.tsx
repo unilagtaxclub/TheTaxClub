@@ -2,7 +2,7 @@ import { CaretDown } from "../svgs/Icons";
 
 const Drawer = () => {
   return (
-    <div className="space-y-10 flex-col flex lg:hidden w-[100%] fixed px-8 mt-10 mx-auto">
+    <div className="bg-[#f2f2f2] z-50 space-y-10 flex-col flex lg:hidden w-[100%] fixed px-8 mt-10 mx-auto">
       <span>Home</span>
       <div className="space-x-3 flex items-center justify-between">
         <span>Publication</span>
