@@ -8,7 +8,7 @@ const Header = () => {
 
   return (
     <div>
-      <div className="lg:w-[80vw] w-[90vw] mx-auto bg-[#fff] py-2 px-6 rounded-xl text-[18px] flex justify-between items-center">
+      <div className="lg:w-[80vw] w-[90vw] mx-auto bg-[#fff] py-2 px-6 rounded-2xl text-[18px] flex justify-between items-center">
         <img src="/assets/logo.svg" alt="logo" />
         <div className="space-x-10 lg:flex hidden">
           <span>Home</span>
