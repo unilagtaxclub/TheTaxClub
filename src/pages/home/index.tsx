@@ -1,7 +1,9 @@
+import Header from "../../component/defaults/Header"
+
 const Home = () => {
   return (
-    <div>
-      <h2 className="text-red-500">Hello world!!</h2>
+    <div className="bg-[#f2f2f2] min-h-screen pt-10">
+        <Header />
     </div>
   )
 }
