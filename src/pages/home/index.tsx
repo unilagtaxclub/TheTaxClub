@@ -1,6 +1,7 @@
 import Header from "../../component/defaults/Header"
 import About from "../../component/sections/About"
 import Hero from "../../component/sections/Hero"
+import LogoScroll from "../../component/sections/LogoScroll"
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
         <Header />
         <Hero />
         <About />
+        <LogoScroll />
     </div>
   )
 }
