@@ -20,7 +20,7 @@ const About = () => {
         </button>
       </div>
       <div className="lg:w-[45%]">
-        <img src="/assets/about.png" alt="about" className="w-[100%] lg:h-[714px]" />
+        <img src="/assets/about.png" alt="about" className="w-[100%]" />
       </div>
     </div>
   );
