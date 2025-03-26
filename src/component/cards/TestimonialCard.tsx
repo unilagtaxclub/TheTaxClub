@@ -12,7 +12,7 @@ const TestimonialCard: FC<TestimonialCardProps> = ({
   testimonial,
 }) => {
   return (
-    <div className="bg-[#fff] p-4 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out cursor-pointer lg:min-w-[100%] min-w-[70vw]">
+    <div className="bg-[#fff] p-4 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 ease-in-out cursor-pointer lg:min-w-[100%] min-w-[70vw]">
       <div className="flex items-center space-x-3">
         <img
           src="/assets/test-avatar.png"
