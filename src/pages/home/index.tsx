@@ -2,6 +2,7 @@ import Header from "../../component/defaults/Header"
 import About from "../../component/sections/About"
 import Hero from "../../component/sections/Hero"
 import LogoScroll from "../../component/sections/LogoScroll"
+import Testimonials from "../../component/sections/Testimonials"
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
         <Hero />
         <About />
         <LogoScroll />
+        <Testimonials />
     </div>
   )
 }
