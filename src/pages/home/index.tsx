@@ -1,6 +1,7 @@
 import Header from "../../component/defaults/Header"
 import About from "../../component/sections/About"
 import BlogStories from "../../component/sections/BlogStories"
+import Events from "../../component/sections/Events"
 import Hero from "../../component/sections/Hero"
 import Leadership from "../../component/sections/Leadership"
 import LogoScroll from "../../component/sections/LogoScroll"
@@ -16,6 +17,7 @@ const Home = () => {
         <Testimonials />
         <BlogStories />
         <Leadership />
+        <Events />
     </div>
   )
 }
