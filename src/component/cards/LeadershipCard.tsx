@@ -12,8 +12,8 @@ const LeadershipCard: FC<LeadershipCardProps> = ({ imgSrc }) => {
         alt="community-img"
         className="w-[100%] h-[200px] rounded-lg object-cover"
       />
-      <h3 className="text-[24px] mt-4">Sam Smith</h3>
-      <p className="text-[18px] text-[#808080]">CEO, Company Name</p>
+      <h3 className="lg:text-[24px] text-[18px] mt-4">Sam Smith</h3>
+      <p className="lg:text-[16px] text-[14px] text-[#808080]">CEO, Company Name</p>
     </div>
   );
 };
