@@ -2,6 +2,7 @@ import Header from "../../component/defaults/Header"
 import About from "../../component/sections/About"
 import BlogStories from "../../component/sections/BlogStories"
 import Hero from "../../component/sections/Hero"
+import Leadership from "../../component/sections/Leadership"
 import LogoScroll from "../../component/sections/LogoScroll"
 import Testimonials from "../../component/sections/Testimonials"
 
@@ -14,6 +15,7 @@ const Home = () => {
         <LogoScroll />
         <Testimonials />
         <BlogStories />
+        <Leadership />
     </div>
   )
 }
