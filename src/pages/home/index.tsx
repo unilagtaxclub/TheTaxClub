@@ -5,6 +5,7 @@ import Events from "../../component/sections/Events"
 import Hero from "../../component/sections/Hero"
 import Leadership from "../../component/sections/Leadership"
 import LogoScroll from "../../component/sections/LogoScroll"
+import Memories from "../../component/sections/Memories"
 import Testimonials from "../../component/sections/Testimonials"
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
         <BlogStories />
         <Leadership />
         <Events />
+        <Memories />
     </div>
   )
 }
