@@ -2,6 +2,8 @@ import { useState } from "react";
 import { CaretDown, CloseIcon, Hamburger } from "../svgs/Icons";
 import { motion, AnimatePresence } from "framer-motion";
 import Drawer from "./Drawer";
+import { NavLink } from "react-router-dom";
+import { Logo } from "../svgs/Logos";
 
 const Header = () => {
   const [showDrawer, setShowDrawer] = useState<boolean>(false);
@@ -9,14 +11,14 @@ const Header = () => {
   return (
     <div>
       <div className="lg:w-[80vw] w-[90vw] mx-auto bg-[#fff] py-2 px-6 rounded-2xl text-[18px] flex justify-between items-center">
-        <img src="/assets/logo.svg" alt="logo" />
+        <NavLink to="/"><Logo /></NavLink>
         <div className="space-x-10 lg:flex hidden">
-          <span>Home</span>
+          <NavLink to="/">Home</NavLink>
           <div className="space-x-3 flex items-center">
             <span>Publication</span>
             <CaretDown />
           </div>
-          <span>About</span>
+          <NavLink to="/about">About</NavLink>
           <span>Our People</span>
           <span>Blog</span>
           <span>Events</span>
