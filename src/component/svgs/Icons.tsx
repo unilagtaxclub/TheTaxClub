@@ -174,3 +174,30 @@ export const MiniCalendarIcon = () => (
     />
   </svg>
 );
+
+export const EmailIcon = () => (
+  <svg
+    width="20"
+    height="21"
+    viewBox="0 0 20 21"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M14.1667 17.1784H5.83341C3.33341 17.1784 1.66675 15.9284 1.66675 13.0117V7.17839C1.66675 4.26172 3.33341 3.01172 5.83341 3.01172H14.1667C16.6667 3.01172 18.3334 4.26172 18.3334 7.17839V13.0117C18.3334 15.9284 16.6667 17.1784 14.1667 17.1784Z"
+      stroke="#808080"
+      strokeWidth="1.5"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M14.1666 7.5957L11.5582 9.67904C10.6999 10.3624 9.29158 10.3624 8.43325 9.67904L5.83325 7.5957"
+      stroke="#808080"
+      strokeWidth="1.5"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);

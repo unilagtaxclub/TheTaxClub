@@ -1,3 +1,4 @@
+import Footer from "../../component/defaults/Footer"
 import Header from "../../component/defaults/Header"
 import About from "../../component/sections/About"
 import BlogStories from "../../component/sections/BlogStories"
@@ -20,6 +21,7 @@ const Home = () => {
         <Leadership />
         <Events />
         <Memories />
+        <Footer />
     </div>
   )
 }
