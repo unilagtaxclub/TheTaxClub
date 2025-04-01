@@ -12,7 +12,7 @@ const Drawer = () => {
       <NavLink to="/about">About</NavLink>
       <span>Our People</span>
       <span>Blog</span>
-      <span>Events</span>
+      <NavLink to="/events">Events</NavLink>
       <span>Gallery</span>
       <button className="px-6 py-3 text-[#fff] bg-[#00689e] rounded-xl">
         Contact Us

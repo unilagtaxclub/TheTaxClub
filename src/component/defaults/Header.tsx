@@ -21,7 +21,7 @@ const Header = () => {
           <NavLink to="/about">About</NavLink>
           <span>Our People</span>
           <span>Blog</span>
-          <span>Events</span>
+          <NavLink to="/events">Events</NavLink>
           <span>Gallery</span>
         </div>
         <button className="px-6 py-3 text-[#fff] bg-[#00689e] rounded-xl lg:block hidden">
@@ -45,7 +45,7 @@ const Header = () => {
               </motion.div>
             ) : (
               <motion.div
-                key="hamburger"
+                key="hamburger"                                                                                                                                                                                                                                                                                                                                                                                                                 
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
