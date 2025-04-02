@@ -40,9 +40,12 @@ const Header = () => {
                   >
                     Featured
                   </NavLink>
-                  <span className="text-[15px] hover:bg-[#f1f1f1] hover:rounded-xl p-2 transition-all duration-300 ease-in-out">
+                  <NavLink
+                    to="/publications/anthology"
+                    className="text-[15px] hover:bg-[#f1f1f1] hover:rounded-xl p-2 transition-all duration-300 ease-in-out"
+                  >
                     Anthology
-                  </span>
+                  </NavLink>
                 </motion.div>
               )}
             </AnimatePresence>

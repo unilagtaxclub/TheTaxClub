@@ -15,7 +15,11 @@ const Drawer = () => {
           className="space-x-3 flex items-center justify-between"
         >
           <span>Publication</span>
-          <div className={`${!showDropdown && "rotate-270"} transition-all duration-300 ease-in-out`}>
+          <div
+            className={`${
+              !showDropdown && "rotate-270"
+            } transition-all duration-300 ease-in-out`}
+          >
             <CaretDown />
           </div>
         </div>
@@ -35,9 +39,12 @@ const Drawer = () => {
               >
                 Featured
               </NavLink>
-              <span className="text-[15px] hover:bg-[#ccc] p-2 border-b-2 border-[#ccc] transition-all duration-300 ease-in-out">
+              <NavLink
+                to="/publications/anthology"
+                className="text-[15px] hover:bg-[#ccc] p-2 border-b-2 border-[#ccc] transition-all duration-300 ease-in-out"
+              >
                 Anthology
-              </span>
+              </NavLink>
             </motion.div>
           )}
         </AnimatePresence>
