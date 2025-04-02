@@ -36,7 +36,7 @@ const FeaturedPublications = () => {
           </div>
           <div className="mt-10">
             <div className="flex justify-between items-center">
-              <h2 className="lg:text-[30px] text-[20px] font-semibold">Featured Article</h2>
+              <h2 className="lg:text-[30px] text-[20px] font-semibold">Featured Articles</h2>
               <p className="lg:text-[20px] underline text-[#00689e] font-semibold">
                 See all
               </p>

@@ -37,14 +37,14 @@ const Blog = () => {
           <div className="mt-10">
             <div className="flex justify-between items-center">
               <h2 className="lg:text-[30px] text-[20px] font-semibold">
-                Latest Post
+                Latest Posts
               </h2>
               <p className="lg:text-[20px] underline text-[#00689e] font-semibold">
                 See all
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-3 grid-cols-1 gap-6 lg:gap-10 mt-10">
+            <div className="grid lg:grid-cols-3 grid-cols-1 gap-6 lg:gap-10 mt-4">
               <BlogStoryCard
                 imgSrc="/assets/blog-imgs/bl-cover-1.png"
                 category="Tax"
@@ -116,7 +116,15 @@ const Blog = () => {
               </div>
             </div>
 
-            <div className="grid lg:grid-cols-3 grid-cols-1 gap-6 lg:gap-10 mt-10">
+            <div className="flex justify-between items-center">
+              <h2 className="lg:text-[30px] text-[20px] font-semibold">
+                Trending Posts
+              </h2>
+              <p className="lg:text-[20px] underline text-[#00689e] font-semibold">
+                See all
+              </p>
+            </div>
+            <div className="grid lg:grid-cols-3 grid-cols-1 gap-6 lg:gap-10 mt-4">
               <BlogStoryCard
                 imgSrc="/assets/blog-imgs/bl-cover-1.png"
                 category="Tax"
