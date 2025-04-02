@@ -51,7 +51,7 @@ const Drawer = () => {
       </div>
       <NavLink to="/about">About</NavLink>
       <span>Our People</span>
-      <span>Blog</span>
+      <NavLink to="/blog">Blog</NavLink>
       <NavLink to="/events">Events</NavLink>
       <span>Gallery</span>
       <button className="px-6 py-3 text-[#fff] bg-[#00689e] rounded-xl">

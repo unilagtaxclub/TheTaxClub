@@ -5,6 +5,7 @@ import About from "./pages/about";
 import Event from "./pages/events";
 import FeaturedPublications from "./pages/publications/featured";
 import Anthology from "./pages/publications/anthology";
+import Blog from "./pages/blog";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -13,6 +14,7 @@ const App = () => {
     { path: "/events", element: <Event /> },
     { path: "/publications/featured", element: <FeaturedPublications /> },
     { path: "/publications/anthology", element: <Anthology /> },
+    { path: "/blog", element: <Blog /> },
   ]);
 
   return (

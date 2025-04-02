@@ -123,7 +123,7 @@ const FeaturedPublications = () => {
               />
             </div>
 
-            <div className="flex items-center justify-center mt-10 mb-[15vh]">
+            <div className="flex items-center justify-center mt-10 lg:mb-[15vh]">
               <button className="border border-[#00689e] text-[#00689e] font-semibold text-[18px] py-3 px-10 rounded-lg">
                 Load More
               </button>
