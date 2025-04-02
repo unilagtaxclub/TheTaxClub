@@ -34,8 +34,15 @@ const Header = () => {
                   transition={{ duration: 0.2 }}
                   className="absolute bg-[#fff] rounded-xl shadow-lg mt-2 flex flex-col p-2 space-y-2 w-[15vw] top-12"
                 >
-                  <span className="text-[15px] hover:bg-[#f1f1f1] hover:rounded-xl p-2 transition-all duration-300 ease-in-out">Featured</span>
-                  <span className="text-[15px] hover:bg-[#f1f1f1] hover:rounded-xl p-2 transition-all duration-300 ease-in-out">Anthology</span>
+                  <NavLink
+                    to="/publications/featured"
+                    className="text-[15px] hover:bg-[#f1f1f1] hover:rounded-xl p-2 transition-all duration-300 ease-in-out"
+                  >
+                    Featured
+                  </NavLink>
+                  <span className="text-[15px] hover:bg-[#f1f1f1] hover:rounded-xl p-2 transition-all duration-300 ease-in-out">
+                    Anthology
+                  </span>
                 </motion.div>
               )}
             </AnimatePresence>
