@@ -6,6 +6,7 @@ import Event from "./pages/events";
 import FeaturedPublications from "./pages/publications/featured";
 import Anthology from "./pages/publications/anthology";
 import Blog from "./pages/blog";
+import BlogPost from "./pages/blog/BlogPost";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -15,6 +16,7 @@ const App = () => {
     { path: "/publications/featured", element: <FeaturedPublications /> },
     { path: "/publications/anthology", element: <Anthology /> },
     { path: "/blog", element: <Blog /> },
+    { path: "/blog/:slug", element: <BlogPost /> },
   ]);
 
   return (
@@ -22,6 +24,6 @@ const App = () => {
       <RouterProvider router={router} />
     </AnimatePresence>
   );
-}
+};
 
-export default App
+export default App;
