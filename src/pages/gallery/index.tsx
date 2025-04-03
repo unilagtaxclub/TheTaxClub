@@ -20,12 +20,12 @@ const Gallery = () => {
           <div className="mt-10">
             <div className="flex justify-between items-center mb-10">
               <div className="">
-                <h2 className="text-[32px] font-semibold">
+                <h2 className="lg:text-[32px] text-[20px] font-semibold">
                   NTDV Publicity Shot
                 </h2>
                 <div className="flex items-center space-x-2">
                   <MiniCalendarIcon />
-                  <p>30th January, 2023</p>
+                  <p className="lg:text-[16px] text-[14px]">30th January, 2023</p>
                 </div>
               </div>
               <p className="lg:text-[20px] underline text-[#00689e] font-semibold">
@@ -42,6 +42,7 @@ const Gallery = () => {
                 imgFive="/assets/gallery/ntdv/img-five.png"
                 imgSix="/assets/gallery/ntdv/img-six.png"
                 imgSeven="/assets/gallery/ntdv/img-seven.png"
+                imgEight="/assets/gallery/ntdv/img-eight.png"
               />
               <LayoutTwo
                 imgOne="/assets/gallery/ntdv/img-eight.png"
@@ -58,10 +59,10 @@ const Gallery = () => {
           <div className="mt-20">
             <div className="flex justify-between items-center mb-10">
               <div className="">
-                <h2 className="text-[32px] font-semibold">Tax Debate 6.0</h2>
+                <h2 className="lg:text-[32px] text-[20px] font-semibold">Tax Debate 6.0</h2>
                 <div className="flex items-center space-x-2">
                   <MiniCalendarIcon />
-                  <p>30th January, 2023</p>
+                  <p className="lg:text-[16px] text-[14px]">30th January, 2023</p>
                 </div>
               </div>
               <p className="lg:text-[20px] underline text-[#00689e] font-semibold">
@@ -78,6 +79,7 @@ const Gallery = () => {
                 imgFive="/assets/gallery/debate/five.png"
                 imgSix="/assets/gallery/debate/six.png"
                 imgSeven="/assets/gallery/debate/seven.png"
+                imgEight="/assets/gallery/debate/eight.png"
               />
               <LayoutTwo
                 imgOne="/assets/gallery/debate/eight.png"
