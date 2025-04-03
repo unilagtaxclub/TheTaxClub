@@ -30,7 +30,7 @@ const OurPeople = () => {
                 <LeadershipCard imgSrc="/assets/community-imgs/community-img-five.jpeg" />
                 <LeadershipCard imgSrc="/assets/community-imgs/community-img-six.jpeg" />
                 <LeadershipCard imgSrc="/assets/community-imgs/community-img-seven.jpeg" />
-              </div>
+              </div> 
           </div>
 
           <div className="lg:mt-[20vh] mt-20">
