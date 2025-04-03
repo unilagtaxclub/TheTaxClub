@@ -22,7 +22,15 @@ const Gallery = () => {
               <p>30th January, 2023</p>
             </div>
 
-            <LayoutOne />
+            <LayoutOne
+              imgOne="/assets/gallery/ntdv/img-one.png"
+              imgTwo="/assets/gallery/ntdv/img-two.png"
+              imgThree="/assets/gallery/ntdv/img-three.png"
+              imgFour="/assets/gallery/ntdv/img-four.png"
+              imgFive="/assets/gallery/ntdv/img-five.png"
+              imgSix="/assets/gallery/ntdv/img-six.png"
+              imgSeven="/assets/gallery/ntdv/img-seven.png"
+            />
           </div>
         </div>
       </div>

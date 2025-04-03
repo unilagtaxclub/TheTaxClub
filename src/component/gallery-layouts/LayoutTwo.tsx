@@ -1,16 +1,7 @@
 import { FC } from "react";
+import { LayoutProps } from "./LayoutOne";
 
-export interface LayoutProps {
-  imgOne: string;
-  imgTwo: string;
-  imgThree: string;
-  imgFour: string;
-  imgFive: string;
-  imgSix: string;
-  imgSeven: string;
-}
-
-const LayoutOne: FC<LayoutProps> = ({
+const LayoutTwo: FC<LayoutProps> = ({
   imgOne,
   imgTwo,
   imgThree,
@@ -33,37 +24,38 @@ const LayoutOne: FC<LayoutProps> = ({
           className="w-[100%] object-cover h-[339px] rounded-2xl"
         />
       </div>
+
       <div className="space-y-4">
         <img
           src={imgThree}
           alt="gallery-img"
-          className="w-[100%] object-cover h-[218px] rounded-2xl"
+          className="w-[100%] object-cover h-[339px] rounded-2xl"
         />
         <img
           src={imgFour}
           alt="gallery-img"
-          className="w-[100%] object-cover h-[218px] rounded-2xl"
+          className="w-[100%] object-cover h-[339px] rounded-2xl"
         />
+      </div>
+      <div className="space-y-4">
         <img
           src={imgFive}
           alt="gallery-img"
           className="w-[100%] object-cover h-[218px] rounded-2xl"
         />
-      </div>
-      <div className="space-y-4">
         <img
           src={imgSix}
           alt="gallery-img"
-          className="w-[100%] object-cover h-[339px] rounded-2xl"
+          className="w-[100%] object-cover h-[218px] rounded-2xl"
         />
         <img
           src={imgSeven}
           alt="gallery-img"
-          className="w-[100%] object-cover h-[339px] rounded-2xl"
+          className="w-[100%] object-cover h-[218px] rounded-2xl"
         />
       </div>
     </div>
   );
 };
 
-export default LayoutOne;
+export default LayoutTwo;
