@@ -51,7 +51,7 @@ const Header = () => {
             </AnimatePresence>
           </div>
           <NavLink to="/about">About</NavLink>
-          <span>Our People</span>
+          <NavLink to="/our-people">Our People</NavLink>
           <NavLink to="/blog">Blog</NavLink>
           <NavLink to="/events">Events</NavLink>
           <span>Gallery</span>

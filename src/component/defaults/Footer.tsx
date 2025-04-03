@@ -29,7 +29,7 @@ const Footer = () => {
             <div className="space-y-4 flex flex-col">
               <NavLink to="/">Home</NavLink>
               <NavLink to="/about">About</NavLink>
-              <p>Our People</p>
+              <NavLink to="/our-people">Our People</NavLink>
               <NavLink to="/blog">Blog</NavLink>
               <NavLink to="/events">Events</NavLink>
               <p>Gallery</p>
