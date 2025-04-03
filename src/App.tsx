@@ -8,6 +8,7 @@ import Anthology from "./pages/publications/anthology";
 import Blog from "./pages/blog";
 import BlogPost from "./pages/blog/BlogPost";
 import OurPeople from "./pages/people";
+import Gallery from "./pages/gallery";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -19,6 +20,7 @@ const App = () => {
     { path: "/blog", element: <Blog /> },
     { path: "/blog/:slug", element: <BlogPost /> },
     { path: "/our-people", element: <OurPeople /> },
+    { path: "/gallery", element: <Gallery /> },
   ]);
 
   return (

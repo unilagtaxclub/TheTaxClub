@@ -53,7 +53,7 @@ const Drawer = () => {
       <NavLink to="/our-people">Our People</NavLink>
       <NavLink to="/blog">Blog</NavLink>
       <NavLink to="/events">Events</NavLink>
-      <span>Gallery</span>
+      <NavLink to="/gallery">Gallery</NavLink>
       <button className="px-6 py-3 text-[#fff] bg-[#00689e] rounded-xl">
         Contact Us
       </button>
