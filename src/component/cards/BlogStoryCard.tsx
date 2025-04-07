@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { NavLink } from "react-router-dom";
 
 interface BlogStoryCardProps {
   imgSrc: string;
@@ -30,7 +31,12 @@ const BlogStoryCard: FC<BlogStoryCardProps> = ({
           {category}
         </p>
       </div>
-      <h2 className="lg:text-[24px] text-[18px] text-[#333] font-semibold">{title}</h2>
+      <NavLink
+        to={`/blog/${title}`}
+        className="lg:text-[24px] text-[18px] text-[#333] font-semibold hover:underline"
+      >
+        {title}
+      </NavLink>
       <div className="flex justify-between items-center text-[#808080] text-[14px]">
         <div className="flex items-center space-x-3">
           <img src={authorImg} alt="author" className="w-8 h-8 rounded-full" />

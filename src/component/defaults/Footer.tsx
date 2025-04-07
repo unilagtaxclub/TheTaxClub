@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { EmailIcon } from "../svgs/Icons";
 import { Facebook, Instagram, LinkedIn, Logo, Twitter } from "../svgs/Logos";
 
@@ -25,13 +26,13 @@ const Footer = () => {
 
           <div className="space-y-6 lg:w-[25%] flex flex-col lg:items-center mt-10 lg:mt-0">
             <h2 className="text-[18px] font-semibold">Quick Links</h2>
-            <div className="space-y-4">
-              <p>Home</p>
-              <p>Our People</p>
-              <p>Blog</p>
-              <p>Event</p>
-              <p>Gallery</p>
-              <p>Publication</p>
+            <div className="space-y-4 flex flex-col">
+              <NavLink to="/">Home</NavLink>
+              <NavLink to="/about">About</NavLink>
+              <NavLink to="/our-people">Our People</NavLink>
+              <NavLink to="/blog">Blog</NavLink>
+              <NavLink to="/events">Events</NavLink>
+              <NavLink to="/gallery">Gallery</NavLink>
               <p>Contact Us</p>
             </div>
           </div>
