@@ -1,21 +1,33 @@
-import CountdownTimer from "../defaults/CountdownTimer";
 import Header from "../defaults/Header";
 
 const Hero = () => {
   return (
     <div className="bg-[url('/assets/hero.png')] lg:min-h-[650px] bg-cover bg-no-repeat">
-      <div className="bg-[rgba(0,0,0,0.4)] text-[#fff] w-[100%] flex flex-col items-center justify-center lg:min-h-screen px-6">
-      <Header />
-        <h2 className="lg:text-[61px] text-[28px] font-semibold text-center lg:w-[100%] w-[80%] mb-3 lg:mb-1">Welcome to the Tax Club</h2>
-        <p className="lg:text-[25px] text-[12px] text-center">
-          Your Trusted Partner in Tax Knowledge and <br /> Community.
-        </p>
-        <CountdownTimer />
-
-        <div className="carousel flex items-center space-x-3 mt-20">
-            <div className="w-[56px] h-[16px] rounded-full bg-[#00689e]"></div>
-            <div className="h-[16px] w-[16px] rounded-full bg-[#b3b3b3]"></div>
-            <div className="h-[16px] w-[16px] rounded-full bg-[#b3b3b3]"></div>
+      <div className="bg-[rgba(0,0,0,0.4)] text-[#fff] w-[100%] flex flex-col pt-6 lg:pt-20 lg:min-h-screen pb-20 lg:pb-0 px-6">
+        <Header />
+        <div className="lg:w-[80vw] w-[90vw] mx-auto mt-10 lg:mt-[20vh]">
+          <h2 className="text-[#fff301] font-semibold">
+            The Tax Club, University of Lagos
+          </h2>
+          <h2 className="lg:block hidden text-[56px] font-semibold">
+            Shaping the Future of Taxation, <br /> one step at a time
+          </h2>
+          <h2 className="lg:hidden text-[30px] font-semibold">
+            Shaping the Future of Taxation, one step at a time
+          </h2>
+          <p className="lg:w-[60%] mt-3">
+            We are a dynamic community of young and passionate individuals
+            dedicated to mastering the field of taxation and spreading the
+            gospel of taxation. We are the First, and we have no equals.{" "}
+          </p>
+          <div className="mt-10 flex lg:flex-row flex-col lg:space-x-10 space-y-6 lg:space-y-0 text-[20px]">
+            <button className="bg-[#00689e] text-[#fff] px-20 py-3 rounded-lg font-semibold hover:bg-[#005a7a] transition-all duration-300 ease-in-out">
+              Partner with us
+            </button>
+            <button className="border border-[#00689e] text-[#00689e] px-20 py-3 rounded-lg font-semibold hover:bg-[#00689e] hover:text-[#fff] transition-all duration-300 ease-in-out">
+              Become a Member
+            </button>
+          </div>
         </div>
       </div>
     </div>
