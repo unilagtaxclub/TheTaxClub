@@ -14,8 +14,8 @@ const Home = () => {
     <Container>
       <div className="bg-[#f2f2f2] min-h-screen">
         <Hero />
-        <About />
         <LogoScroll />
+        <About />
         <Testimonials />
         <BlogStories />
         <Leadership />
