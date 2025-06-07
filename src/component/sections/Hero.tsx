@@ -20,7 +20,7 @@ const Hero = () => {
             dedicated to mastering the field of taxation and spreading the
             gospel of taxation. We are the First, and we have no equals.{" "}
           </p>
-          <div className="mt-10 flex lg:flex-row flex-col lg:space-x-10 space-y-6 lg:space-y-0 text-[20px]">
+          <div className="mt-10 flex lg:flex-row flex-col lg:space-x-10 space-y-6 lg:space-y-0 lg:text-[20px]">
             <button className="bg-[#00689e] text-[#fff] px-20 py-3 rounded-lg font-semibold hover:bg-[#005a7a] transition-all duration-300 ease-in-out">
               Partner with us
             </button>
