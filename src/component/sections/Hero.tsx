@@ -3,7 +3,7 @@ import Header from "../defaults/Header";
 const Hero = () => {
   return (
     <div className="bg-[url('/assets/hero.png')] lg:min-h-[650px] bg-cover bg-no-repeat">
-      <div className="bg-[rgba(0,0,0,0.4)] text-[#fff] w-[100%] flex flex-col pt-6 lg:pt-20 lg:min-h-screen pb-20 lg:pb-0 px-6">
+      <div className="bg-[rgba(0,0,0,0.4)] text-[#fff] w-[100%] flex flex-col pt-6 lg:pt-20 lg:min-h-screen pb-20 lg:pb-0 lg:px-6">
         <Header />
         <div className="lg:w-[80vw] w-[90vw] mx-auto mt-10 lg:mt-[20vh]">
           <h2 className="text-[#fff301] font-semibold">
