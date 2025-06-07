@@ -8,6 +8,7 @@ import Leadership from "../../component/sections/Leadership";
 import LogoScroll from "../../component/sections/LogoScroll";
 import Memories from "../../component/sections/Memories";
 import Testimonials from "../../component/sections/Testimonials";
+import Upcoming from "../../component/sections/Upcoming";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
         <Hero />
         <LogoScroll />
         <About />
+        <Upcoming />
         <Testimonials />
         <BlogStories />
         <Leadership />
