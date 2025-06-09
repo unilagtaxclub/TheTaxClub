@@ -1,3 +1,5 @@
+import { FC } from "react";
+
 export const CaretDown = () => (
   <svg
     width="17"
@@ -317,7 +319,11 @@ export const DownloadIcon = () => (
   </svg>
 );
 
-export const RightArrow = () => (
+interface IconProps {
+  color?: string;
+}
+
+export const RightArrow: FC<IconProps> = ({ color }) => (
   <svg
     width="24"
     height="24"
@@ -327,7 +333,7 @@ export const RightArrow = () => (
   >
     <path
       d="M14.4301 5.92969L20.5001 11.9997L14.4301 18.0697"
-      stroke="#00689E"
+      stroke={color ? color : "#00689E"}
       strokeWidth="1.5"
       strokeMiterlimit="10"
       strokeLinecap="round"
@@ -335,7 +341,7 @@ export const RightArrow = () => (
     />
     <path
       d="M3.5 12H20.33"
-      stroke="#00689E"
+      stroke={color ? color : "#00689E"}
       strokeWidth="1.5"
       strokeMiterlimit="10"
       strokeLinecap="round"
