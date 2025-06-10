@@ -1,20 +1,19 @@
 import { FC } from "react";
 import { NavLink } from "react-router-dom";
+import { Avatar } from "../svgs/Icons";
 
 interface BlogStoryCardProps {
   imgSrc: string;
-  category: string;
+  tags: string[];
   title: string;
-  authorImg: string;
   authorName: string;
   date: string;
 }
 
 const BlogStoryCard: FC<BlogStoryCardProps> = ({
   imgSrc,
-  category,
+  tags,
   title,
-  authorImg,
   authorName,
   date,
 }) => {
@@ -26,10 +25,14 @@ const BlogStoryCard: FC<BlogStoryCardProps> = ({
         className="w-[100%] lg:h-[240px] object-cover rounded-lg"
       />
 
-      <div className="flex">
-        <p className="bg-[#e6f4fc] text-[#0085CB] text-[14px] py-1 px-3 rounded-lg">
-          {category}
-        </p>
+      <div className="flex items-center space-x-3">
+        {tags.map((tag, index) => (
+          <div key={index} className="flex">
+            <p className="bg-[#e6f4fc] text-[#0085CB] text-[14px] py-1 px-3 rounded-lg">
+              {tag}
+            </p>
+          </div>
+        ))}
       </div>
       <NavLink
         to={`/blog/${title}`}
@@ -37,9 +40,11 @@ const BlogStoryCard: FC<BlogStoryCardProps> = ({
       >
         {title}
       </NavLink>
-      <div className="flex justify-between items-center text-[#808080] text-[14px]">
+      <div className="flex justify-between items-center mt-4 text-[#808080] lg:text-[14px] text-[10px]">
         <div className="flex items-center space-x-3">
-          <img src={authorImg} alt="author" className="w-8 h-8 rounded-full" />
+          <div className="bg-[#ccc] rounded-full">
+            <Avatar />
+          </div>
           <span className="text-[#333]">{authorName}</span>
         </div>
         <p>{date}</p>
