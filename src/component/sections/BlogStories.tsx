@@ -1,5 +1,4 @@
 import BlogStoryCard from "../cards/BlogStoryCard";
-import { RightArrow } from "../svgs/Icons";
 
 const BlogStories = () => {
   const items = [
