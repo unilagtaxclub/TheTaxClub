@@ -2,11 +2,8 @@ import Container from "../../component/defaults/Container";
 import Footer from "../../component/defaults/Footer";
 import About from "../../component/sections/About";
 import BlogStories from "../../component/sections/BlogStories";
-import Events from "../../component/sections/Events";
 import Hero from "../../component/sections/Hero";
-import Leadership from "../../component/sections/Leadership";
 import LogoScroll from "../../component/sections/LogoScroll";
-import Memories from "../../component/sections/Memories";
 import Programmes from "../../component/sections/Programmes";
 import Upcoming from "../../component/sections/Upcoming";
 
@@ -20,9 +17,6 @@ const Home = () => {
         <Upcoming />
         <Programmes />
         <BlogStories />
-        <Leadership />
-        <Events />
-        <Memories />
         <Footer />
       </div>
     </Container>

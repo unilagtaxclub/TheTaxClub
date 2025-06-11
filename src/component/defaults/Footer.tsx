@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { EmailIcon } from "../svgs/Icons";
-import { Facebook, Instagram, LinkedIn, Logo, Twitter } from "../svgs/Logos";
+import { Logo } from "../svgs/Logos";
 
 const Footer = () => {
   return (
