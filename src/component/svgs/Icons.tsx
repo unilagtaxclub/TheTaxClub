@@ -349,3 +349,19 @@ export const RightArrow: FC<IconProps> = ({ color }) => (
     />
   </svg>
 );
+
+export const RedirectIcon = () => (
+  <svg
+    width="37"
+    height="37"
+    viewBox="0 0 37 37"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle cx="18" cy="18" r="15.5" stroke="#00689E" />
+    <path
+      d="M12.402 23.5694L20.2762 14.1853L12.2095 14.27L11.9635 13.2019L21.9508 13.0971L23.5818 22.9509L22.4873 22.894L21.1699 14.9352L13.2958 24.3193L12.402 23.5694Z"
+      fill="#00689E"
+    />
+  </svg>
+);
