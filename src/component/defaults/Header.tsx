@@ -4,6 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import Drawer from "./Drawer";
 import { NavLink } from "react-router-dom";
 import { Logo } from "../svgs/Logos";
+import ProgrammeDropdown from "../dropdowns/ProgrammeDropdown";
+import PublicationDropdown from "../dropdowns/PublicationDropdown";
 
 const Header = () => {
   const [showDrawer, setShowDrawer] = useState<boolean>(false);
@@ -33,28 +35,7 @@ const Header = () => {
               <CaretDown />
             </div>
             <AnimatePresence>
-              {showProgrammesDropdown && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.2 }}
-                  className="absolute bg-[#fff] text-[#000] rounded-xl shadow-lg mt-2 flex flex-col p-2 space-y-2 w-[15vw] top-12"
-                >
-                  <NavLink
-                    to="/publications/featured"
-                    className="text-[15px] hover:bg-[#f1f1f1] hover:rounded-xl p-2 transition-all duration-300 ease-in-out"
-                  >
-                    Featured
-                  </NavLink>
-                  <NavLink
-                    to="/publications/anthology"
-                    className="text-[15px] hover:bg-[#f1f1f1] hover:rounded-xl p-2 transition-all duration-300 ease-in-out"
-                  >
-                    Anthology
-                  </NavLink>
-                </motion.div>
-              )}
+              {showProgrammesDropdown && <ProgrammeDropdown />}
             </AnimatePresence>
           </div>
           <div className="relative">
@@ -69,28 +50,7 @@ const Header = () => {
               <CaretDown />
             </div>
             <AnimatePresence>
-              {showPublicationsDropdown && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.2 }}
-                  className="absolute bg-[#fff] text-[#000] rounded-xl shadow-lg mt-2 flex flex-col p-2 space-y-2 w-[15vw] top-12"
-                >
-                  <NavLink
-                    to="/publications/featured"
-                    className="text-[15px] hover:bg-[#f1f1f1] hover:rounded-xl p-2 transition-all duration-300 ease-in-out"
-                  >
-                    Featured
-                  </NavLink>
-                  <NavLink
-                    to="/publications/anthology"
-                    className="text-[15px] hover:bg-[#f1f1f1] hover:rounded-xl p-2 transition-all duration-300 ease-in-out"
-                  >
-                    Anthology
-                  </NavLink>
-                </motion.div>
-              )}
+              {showPublicationsDropdown && <PublicationDropdown />}
             </AnimatePresence>
           </div>
 
