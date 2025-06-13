@@ -8,6 +8,7 @@ import Blog from "./pages/blog";
 import BlogPost from "./pages/blog/BlogPost";
 import OurPeople from "./pages/people";
 import Gallery from "./pages/gallery";
+import Tntd from "./pages/programmes/tntd";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -19,6 +20,9 @@ const App = () => {
     { path: "/blog/:slug", element: <BlogPost /> },
     { path: "/our-people", element: <OurPeople /> },
     { path: "/gallery", element: <Gallery /> },
+
+    // programme links
+    { path: "/programmes/tntd", element: <Tntd /> },
   ]);
 
   return (
