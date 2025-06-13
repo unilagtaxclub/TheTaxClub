@@ -12,6 +12,7 @@ import Tntd from "./pages/programmes/tntd";
 import Tte from "./pages/programmes/tte";
 import Ttss from "./pages/programmes/ttss";
 import Ttm from "./pages/programmes/ttm";
+import Ttw from "./pages/programmes/ttw";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -29,6 +30,7 @@ const App = () => {
     { path: "/programmes/tte", element: <Tte /> },
     { path: "/programmes/ttss", element: <Ttss /> },
     { path: "/programmes/ttm", element: <Ttm /> },
+    { path: "/programmes/ttw", element: <Ttw /> },
   ]);
 
   return (
