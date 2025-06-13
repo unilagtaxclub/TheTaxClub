@@ -11,6 +11,7 @@ import Gallery from "./pages/gallery";
 import Tntd from "./pages/programmes/tntd";
 import Tte from "./pages/programmes/tte";
 import Ttss from "./pages/programmes/ttss";
+import Ttm from "./pages/programmes/ttm";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -27,6 +28,7 @@ const App = () => {
     { path: "/programmes/tntd", element: <Tntd /> },
     { path: "/programmes/tte", element: <Tte /> },
     { path: "/programmes/ttss", element: <Ttss /> },
+    { path: "/programmes/ttm", element: <Ttm /> },
   ]);
 
   return (
