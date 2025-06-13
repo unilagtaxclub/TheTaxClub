@@ -1,19 +1,8 @@
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
+import { publicationItems } from "../rawitems/PublicationItems";
 
 const PublicationDropdown = () => {
-  const items = [
-    {
-      id: 1,
-      title: "Featured",
-      link: "/publications/featured",
-    },
-    {
-      id: 2,
-      title: "Anthology",
-      link: "/publications/anthology",
-    },
-  ];
   return (
     <motion.div
       initial={{ opacity: 0, y: -10 }}
@@ -22,7 +11,7 @@ const PublicationDropdown = () => {
       transition={{ duration: 0.2 }}
       className="absolute bg-gray-800 text-[#fff] rounded-xl shadow-lg mt-2 flex flex-col p-2 space-y-2 w-[20vw] top-12"
     >
-      {items.map((item) => (
+      {publicationItems.map((item) => (
         <NavLink
           key={item.id}
           to={item.link}

@@ -47,49 +47,43 @@ const Blog = () => {
             <div className="grid lg:grid-cols-3 grid-cols-1 gap-6 lg:gap-10 mt-4">
               <BlogStoryCard
                 imgSrc="/assets/blog-imgs/bl-cover-1.png"
-                category="Tax"
+                tags={["Tax", "Sports"]}
                 title="The Impact of Technology on the Workplace: How Technology is Changing"
-                authorImg="/assets/blog-imgs/bl-avatar-1.png"
                 authorName="Tracey Wilson"
                 date="August 20, 2022."
               />
               <BlogStoryCard
                 imgSrc="/assets/blog-imgs/bl-cover-2.png"
-                category="Tax"
+                tags={["Tax", "Sports"]}
                 title="The Impact of Technology on the Workplace: How Technology is Changing"
-                authorImg="/assets/blog-imgs/bl-avatar-2.png"
                 authorName="Jason Francisco"
                 date="August 20, 2022."
               />
               <BlogStoryCard
                 imgSrc="/assets/blog-imgs/bl-cover-3.png"
-                category="Tax"
+                tags={["Tax", "Sports"]}
                 title="The Impact of Technology on the Workplace: How Technology is Changing"
-                authorImg="/assets/blog-imgs/bl-avatar-3.png"
                 authorName="Elizabeth Slavin"
                 date="August 20, 2022."
               />
               <BlogStoryCard
                 imgSrc="/assets/blog-imgs/bl-cover-4.png"
-                category="Tax"
+                tags={["Tax", "Sports"]}
                 title="The Impact of Technology on the Workplace: How Technology is Changing"
-                authorImg="/assets/blog-imgs/bl-avatar-4.png"
                 authorName="Ernie Smith"
                 date="August 20, 2022."
               />
               <BlogStoryCard
                 imgSrc="/assets/blog-imgs/bl-cover-5.png"
-                category="Tax"
+                tags={["Tax", "Sports"]}
                 title="The Impact of Technology on the Workplace: How Technology is Changing"
-                authorImg="/assets/blog-imgs/bl-avatar-5.png"
                 authorName="Eric Smith"
                 date="August 20, 2022."
               />
               <BlogStoryCard
                 imgSrc="/assets/blog-imgs/bl-cover-6.png"
-                category="Tax"
+                tags={["Tax", "Sports"]}
                 title="The Impact of Technology on the Workplace: How Technology is Changing"
-                authorImg="/assets/blog-imgs/bl-avatar-1.png"
                 authorName="Tracey Wilson"
                 date="August 20, 2022."
               />
@@ -127,49 +121,43 @@ const Blog = () => {
             <div className="grid lg:grid-cols-3 grid-cols-1 gap-6 lg:gap-10 mt-4">
               <BlogStoryCard
                 imgSrc="/assets/blog-imgs/bl-cover-1.png"
-                category="Tax"
+                tags={["Tax", "Sports"]}
                 title="The Impact of Technology on the Workplace: How Technology is Changing"
-                authorImg="/assets/blog-imgs/bl-avatar-1.png"
                 authorName="Tracey Wilson"
                 date="August 20, 2022."
               />
               <BlogStoryCard
                 imgSrc="/assets/blog-imgs/bl-cover-2.png"
-                category="Tax"
+                tags={["Tax", "Sports"]}
                 title="The Impact of Technology on the Workplace: How Technology is Changing"
-                authorImg="/assets/blog-imgs/bl-avatar-2.png"
                 authorName="Jason Francisco"
                 date="August 20, 2022."
               />
               <BlogStoryCard
                 imgSrc="/assets/blog-imgs/bl-cover-3.png"
-                category="Tax"
+                tags={["Tax", "Sports"]}
                 title="The Impact of Technology on the Workplace: How Technology is Changing"
-                authorImg="/assets/blog-imgs/bl-avatar-3.png"
                 authorName="Elizabeth Slavin"
                 date="August 20, 2022."
               />
               <BlogStoryCard
                 imgSrc="/assets/blog-imgs/bl-cover-4.png"
-                category="Tax"
+                tags={["Tax", "Sports"]}
                 title="The Impact of Technology on the Workplace: How Technology is Changing"
-                authorImg="/assets/blog-imgs/bl-avatar-4.png"
                 authorName="Ernie Smith"
                 date="August 20, 2022."
               />
               <BlogStoryCard
                 imgSrc="/assets/blog-imgs/bl-cover-5.png"
-                category="Tax"
+                tags={["Tax", "Sports"]}
                 title="The Impact of Technology on the Workplace: How Technology is Changing"
-                authorImg="/assets/blog-imgs/bl-avatar-5.png"
                 authorName="Eric Smith"
                 date="August 20, 2022."
               />
               <BlogStoryCard
                 imgSrc="/assets/blog-imgs/bl-cover-6.png"
-                category="Tax"
+                tags={["Tax", "Sports"]}
                 title="The Impact of Technology on the Workplace: How Technology is Changing"
-                authorImg="/assets/blog-imgs/bl-avatar-1.png"
                 authorName="Tracey Wilson"
                 date="August 20, 2022."
               />
