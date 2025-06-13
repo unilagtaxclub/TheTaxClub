@@ -7,46 +7,46 @@ export const programmeItems = [
   {
     id: 2,
     title: "The Tax Experience",
-    link: "/publications/featured",
+    link: "/programmes/tte",
   },
   {
     id: 3,
     title: "The Tax Summer School",
-    link: "/publications/featured",
+    link: "/programmes/ttss",
   },
   {
     id: 4,
     title: "The Tax Masterclass",
-    link: "/publications/featured",
+    link: "/programmes/ttm",
   },
   {
     id: 5,
     title: "The Tax Walk",
-    link: "/publications/featured",
+    link: "/programmes/ttw",
   },
   {
     id: 6,
     title: "Prof. A. Sanni Essay Competition",
-    link: "/publications/featured",
+    link: "/programmes/pasec",
   },
   {
     id: 7,
     title: "Monday Memo",
-    link: "/publications/featured",
+    link: "/programmes/mm",
   },
   {
     id: 8,
     title: "#TaxThursday",
-    link: "/publications/featured",
+    link: "/programmes/tt",
   },
   {
     id: 9,
     title: "Tea and Taxes",
-    link: "/publications/featured",
+    link: "/programmes/tandt",
   },
   {
     id: 10,
     title: "Bi-weekly meetings",
-    link: "/publications/featured",
+    link: "/programmes/bwm",
   },
 ];
