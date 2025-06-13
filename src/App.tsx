@@ -10,6 +10,7 @@ import OurPeople from "./pages/people";
 import Gallery from "./pages/gallery";
 import Tntd from "./pages/programmes/tntd";
 import Tte from "./pages/programmes/tte";
+import Ttss from "./pages/programmes/ttss";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -25,6 +26,7 @@ const App = () => {
     // programme links
     { path: "/programmes/tntd", element: <Tntd /> },
     { path: "/programmes/tte", element: <Tte /> },
+    { path: "/programmes/ttss", element: <Ttss /> },
   ]);
 
   return (
