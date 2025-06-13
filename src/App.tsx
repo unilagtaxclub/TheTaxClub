@@ -14,6 +14,7 @@ import Ttss from "./pages/programmes/ttss";
 import Ttm from "./pages/programmes/ttm";
 import Ttw from "./pages/programmes/ttw";
 import Pasec from "./pages/programmes/pasec";
+import Mm from "./pages/programmes/mm";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -33,6 +34,7 @@ const App = () => {
     { path: "/programmes/ttm", element: <Ttm /> },
     { path: "/programmes/ttw", element: <Ttw /> },
     { path: "/programmes/pasec", element: <Pasec /> },
+    { path: "/programmes/mm", element: <Mm /> },
   ]);
 
   return (
