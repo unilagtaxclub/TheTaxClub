@@ -86,7 +86,7 @@ const NtdvOne = () => {
           <div className="flex items-center justify-center mt-10 lg:mb-[15vh]">
             <NavLink
               to="/gallery"
-              className="border border-[#00689e] text-[#00689e] font-semibold text-[18px] py-3 px-10 rounded-lg"
+              className="border border-[#00689e] text-[#00689e] font-semibold lg:text-[18px] py-3 px-10 rounded-lg"
             >
               Show Less
             </NavLink>
