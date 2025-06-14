@@ -56,7 +56,7 @@ const Header = () => {
 
           <NavLink to="/our-people">Our People</NavLink>
           <NavLink to="/gallery">Gallery</NavLink>
-          <NavLink to="/blog">Contact</NavLink>
+          <NavLink to="/contact">Contact</NavLink>
         </div>
         <button className="px-10 py-2 font-semibold text-[#fff] bg-[#00689e] rounded-xl lg:block hidden">
           Join Us

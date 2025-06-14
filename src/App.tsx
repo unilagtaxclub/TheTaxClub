@@ -17,6 +17,7 @@ import Mm from "./pages/programmes/mm";
 import Tt from "./pages/programmes/tt";
 import Tandt from "./pages/programmes/tandt";
 import Bwm from "./pages/programmes/bwm";
+import Contact from "./pages/contact";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -27,6 +28,7 @@ const App = () => {
     { path: "/blog/:slug", element: <BlogPost /> },
     { path: "/our-people", element: <OurPeople /> },
     { path: "/gallery", element: <Gallery /> },
+    { path: "/contact", element: <Contact /> },
 
     // programme links
     { path: "/programmes/tntd", element: <Tntd /> },
