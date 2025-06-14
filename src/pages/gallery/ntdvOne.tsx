@@ -3,10 +3,11 @@ import Container from "../../component/defaults/Container";
 import Footer from "../../component/defaults/Footer";
 import Header from "../../component/defaults/Header";
 import LayoutOne from "../../component/gallery-layouts/LayoutOne";
+import LayoutThree from "../../component/gallery-layouts/LayoutThree";
 import LayoutTwo from "../../component/gallery-layouts/LayoutTwo";
 import { MiniCalendarIcon } from "../../component/svgs/Icons";
 
-const Gallery = () => {
+const NtdvOne = () => {
   return (
     <Container>
       <div className="bg-[#f2f2f2] min-h-screen ">
@@ -28,24 +29,14 @@ const Gallery = () => {
           </div>
 
           <div className="mt-10">
-            <div className="flex justify-between items-center mb-10">
-              <div className="">
-                <h2 className="lg:text-[32px] text-[20px] font-semibold">
-                  NTDV Publicity Shot
-                </h2>
-                <div className="flex items-center space-x-2">
-                  <MiniCalendarIcon />
-                  <p className="lg:text-[16px] text-[14px]">
-                    30th February 2023
-                  </p>
-                </div>
+            <div className="mb-10">
+              <h2 className="lg:text-[32px] text-[20px] font-semibold">
+                NTDV Publicity Shot
+              </h2>
+              <div className="flex items-center space-x-2">
+                <MiniCalendarIcon />
+                <p className="lg:text-[16px] text-[14px]">30th February 2023</p>
               </div>
-              <NavLink
-                to="/gallery/ntdv-one"
-                className="lg:text-[20px] underline text-[#00689e] font-semibold"
-              >
-                See all
-              </NavLink>
             </div>
 
             <div className="space-y-6">
@@ -68,27 +59,7 @@ const Gallery = () => {
                 imgSix="/assets/gallery/ntdv/img-thirteen.png"
                 imgSeven="/assets/gallery/ntdv/img-fourteen.png"
               />
-            </div>
-          </div>
-
-          <div className="mt-10">
-            <div className="flex justify-between items-center mb-10">
-              <div className="">
-                <h2 className="lg:text-[32px] text-[20px] font-semibold">
-                  NTDV Publicity Shot
-                </h2>
-                <div className="flex items-center space-x-2">
-                  <MiniCalendarIcon />
-                  <p className="lg:text-[16px] text-[14px]">4 Jul 2023</p>
-                </div>
-              </div>
-              <p className="lg:text-[20px] underline text-[#00689e] font-semibold">
-                See all
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              <LayoutOne
+              <LayoutThree
                 imgOne="/assets/gallery/ntdv/img-one.png"
                 imgTwo="/assets/gallery/ntdv/img-two.png"
                 imgThree="/assets/gallery/ntdv/img-three.png"
@@ -110,45 +81,13 @@ const Gallery = () => {
             </div>
           </div>
 
-          <div className="mt-20">
-            <div className="flex justify-between items-center mb-10">
-              <div className="">
-                <h2 className="lg:text-[32px] text-[20px] font-semibold">
-                  Tax Debate 6.0
-                </h2>
-                <div className="flex items-center space-x-2">
-                  <MiniCalendarIcon />
-                  <p className="lg:text-[16px] text-[14px]">
-                    30th January, 2023
-                  </p>
-                </div>
-              </div>
-              <p className="lg:text-[20px] underline text-[#00689e] font-semibold">
-                See all
-              </p>
-            </div>
-
-            <div className="space-y-6">
-              <LayoutOne
-                imgOne="/assets/gallery/debate/one.png"
-                imgTwo="/assets/gallery/debate/two.png"
-                imgThree="/assets/gallery/debate/three.png"
-                imgFour="/assets/gallery/debate/four.png"
-                imgFive="/assets/gallery/debate/five.png"
-                imgSix="/assets/gallery/debate/six.png"
-                imgSeven="/assets/gallery/debate/seven.png"
-                imgEight="/assets/gallery/debate/eight.png"
-              />
-              <LayoutTwo
-                imgOne="/assets/gallery/debate/eight.png"
-                imgTwo="/assets/gallery/debate/nine.png"
-                imgThree="/assets/gallery/debate/ten.png"
-                imgFour="/assets/gallery/debate/eleven.png"
-                imgFive="/assets/gallery/debate/twelve.png"
-                imgSix="/assets/gallery/debate/thirteen.png"
-                imgSeven="/assets/gallery/debate/fourteen.png"
-              />
-            </div>
+          <div className="flex items-center justify-center mt-10 lg:mb-[15vh]">
+            <NavLink
+              to="/gallery"
+              className="border border-[#00689e] text-[#00689e] font-semibold text-[18px] py-3 px-10 rounded-lg"
+            >
+              Show Less
+            </NavLink>
           </div>
         </div>
         <Footer />
@@ -157,4 +96,4 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+export default NtdvOne;
