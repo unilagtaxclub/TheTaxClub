@@ -7,7 +7,7 @@ import LayoutThree from "../../component/gallery-layouts/LayoutThree";
 import LayoutTwo from "../../component/gallery-layouts/LayoutTwo";
 import { MiniCalendarIcon } from "../../component/svgs/Icons";
 
-const NtdvOne = () => {
+const NtdvTwo = () => {
   return (
     <Container>
       <div className="bg-[#f2f2f2] min-h-screen ">
@@ -35,9 +35,7 @@ const NtdvOne = () => {
               </h2>
               <div className="flex items-center space-x-2">
                 <MiniCalendarIcon />
-                <p className="lg:text-[16px] text-[14px]">
-                  30th February, 2023
-                </p>
+                <p className="lg:text-[16px] text-[14px]">4th July, 2023</p>
               </div>
             </div>
 
@@ -71,7 +69,7 @@ const NtdvOne = () => {
                 imgSeven="/assets/gallery/ntdv/img-seven.png"
                 imgEight="/assets/gallery/ntdv/img-eight.png"
               />
-              <LayoutTwo
+              <LayoutThree
                 imgOne="/assets/gallery/ntdv/img-eight.png"
                 imgTwo="/assets/gallery/ntdv/img-nine.png"
                 imgThree="/assets/gallery/ntdv/img-ten.png"
@@ -98,4 +96,4 @@ const NtdvOne = () => {
   );
 };
 
-export default NtdvOne;
+export default NtdvTwo;

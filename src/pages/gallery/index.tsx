@@ -82,9 +82,12 @@ const Gallery = () => {
                   <p className="lg:text-[16px] text-[14px]">4 Jul 2023</p>
                 </div>
               </div>
-              <p className="lg:text-[20px] underline text-[#00689e] font-semibold">
+              <NavLink
+                to="/gallery/ntdv-two"
+                className="lg:text-[20px] underline text-[#00689e] font-semibold"
+              >
                 See all
-              </p>
+              </NavLink>
             </div>
 
             <div className="space-y-6">
