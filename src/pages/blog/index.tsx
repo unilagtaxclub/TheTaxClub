@@ -1,8 +1,11 @@
+import { NavLink } from "react-router-dom";
 import BlogStoryCard from "../../component/cards/BlogStoryCard";
 import Container from "../../component/defaults/Container";
 import Footer from "../../component/defaults/Footer";
 import Header from "../../component/defaults/Header";
-import { Avatar, EmailIcon } from "../../component/svgs/Icons";
+import { publicationItems } from "../../component/rawitems/PublicationItems";
+import { Avatar, SearchIcon } from "../../component/svgs/Icons";
+import { blogItems } from "../../component/rawitems/BlogItems";
 
 const Blog = () => {
   return (
@@ -10,157 +13,68 @@ const Blog = () => {
       <div className="bg-[#f2f2f2] min-h-screen pt-10">
         <Header />
         <div className="w-[90vw] lg:w-[80vw] mx-auto mt-10 pb-10">
+          <div className="lg:flex hidden items-center flex-wrap gap-6 mb-10 text-[14px]">
+            {publicationItems.map((item) => (
+              <NavLink
+                to={item.link}
+                key={item.id}
+                className={`${item.title === "Blog" ? "border-[#00689E] text-[#00689E] font-semibold" : "text-[#808080] border-[#808080]"} border rounded-full cursor-pointer py-3 px-6`}
+              >
+                {item.title}
+              </NavLink>
+            ))}
+          </div>
           <div className="w-[100%] lg:h-[644px] h-[296px] bg-[url('/assets/blog.jpeg')] bg-cover bg-center text-white rounded-xl">
             <div className="flex flex-col justify-end bg-black/50 lg:pb-20 lg:space-y-6 space-y-3 rounded-lg lg:px-16 pb-6 px-6 h-[100%]">
-              <div className="flex">
-                <p className="bg-black/30 text-[#fff] text-[14px] py-1 px-3 rounded-lg">
-                  Tax Law
-                </p>
-              </div>
-              <h2 className="lg:text-[40px] text-[18px] font-semibold">
-                National Tax Debate
-              </h2>
               <p className="lg:text-[24px] text-[16px] lg:w-[50%] w-[90%]">
-                Topic: Maximising Retirement Savings with Profit Sharing Plans
-                for Solopreneurs
+                Tax Planning, Tax Avoidance and Tax Evasion: An Exposition and
+                Analysis of Implications on the Economy
               </p>
+              <div className="flex">
+                <button className="px-10 py-2 font-semibold text-[#fff] bg-[#00689e] rounded-xl lg:block hidden">
+                  Read article
+                </button>
+              </div>
 
-              <div className="flex items-center space-x-3 text-[14px] lg:text-[16px]">
+              <div className="flex items-center lg:space-x-3 text-[12px] lg:text-[16px]">
                 <div className="lg:scale-100 scale-50">
                   <Avatar />
                 </div>
-                <p>Admin</p>
-                <p>12th October 2023</p>
+                <div className="flex lg:justify-normal space-x-6 justify-between w-[100%]">
+                  <p>Oyinkansola Ademeso</p>
+                  <p>May 5, 2025</p>
+                </div>
               </div>
             </div>
           </div>
+
+          <div className="flex items-center border border-[#ccc] bg-[#E5E5E5] space-x-3 rounded-full mt-10 lg:p-6 p-3 w-[100%]">
+            <SearchIcon />
+            <input
+              type="search"
+              name="search"
+              id="search"
+              placeholder="Search Articles"
+              className="w-[100%] outline-none border-none"
+            />
+          </div>
+
           <div className="mt-10">
-            <div className="flex justify-between items-center">
-              <h2 className="lg:text-[30px] text-[20px] font-semibold">
-                Latest Posts
-              </h2>
-              <p className="lg:text-[20px] underline text-[#00689e] font-semibold">
-                See all
-              </p>
-            </div>
+            <h2 className="lg:text-[30px] text-[20px] font-semibold">
+              Featured Articles
+            </h2>
 
-            <div className="grid lg:grid-cols-3 grid-cols-1 gap-6 lg:gap-10 mt-4">
-              <BlogStoryCard
-                imgSrc="/assets/blog-imgs/bl-cover-1.png"
-                tags={["Tax", "Sports"]}
-                title="The Impact of Technology on the Workplace: How Technology is Changing"
-                authorName="Tracey Wilson"
-                date="August 20, 2022."
-              />
-              <BlogStoryCard
-                imgSrc="/assets/blog-imgs/bl-cover-2.png"
-                tags={["Tax", "Sports"]}
-                title="The Impact of Technology on the Workplace: How Technology is Changing"
-                authorName="Jason Francisco"
-                date="August 20, 2022."
-              />
-              <BlogStoryCard
-                imgSrc="/assets/blog-imgs/bl-cover-3.png"
-                tags={["Tax", "Sports"]}
-                title="The Impact of Technology on the Workplace: How Technology is Changing"
-                authorName="Elizabeth Slavin"
-                date="August 20, 2022."
-              />
-              <BlogStoryCard
-                imgSrc="/assets/blog-imgs/bl-cover-4.png"
-                tags={["Tax", "Sports"]}
-                title="The Impact of Technology on the Workplace: How Technology is Changing"
-                authorName="Ernie Smith"
-                date="August 20, 2022."
-              />
-              <BlogStoryCard
-                imgSrc="/assets/blog-imgs/bl-cover-5.png"
-                tags={["Tax", "Sports"]}
-                title="The Impact of Technology on the Workplace: How Technology is Changing"
-                authorName="Eric Smith"
-                date="August 20, 2022."
-              />
-              <BlogStoryCard
-                imgSrc="/assets/blog-imgs/bl-cover-6.png"
-                tags={["Tax", "Sports"]}
-                title="The Impact of Technology on the Workplace: How Technology is Changing"
-                authorName="Tracey Wilson"
-                date="August 20, 2022."
-              />
-            </div>
-            <div className="flex flex-col text-center lg:w-[35%] my-20 mx-auto space-y-4">
-              <h2 className="lg:text-[25px] font-semibold">
-                Join our newsletter to stay up to date on all tax related
-                contents
-              </h2>
-              <div className="flex items-center lg:flex-row flex-col space-y-4 lg:space-y-0 lg:space-x-3 w-[100%]">
-                <div className="flex items-center border border-[#ccc] bg-[#fff] space-x-3 rounded-lg px-4 py-2 w-[90%] lg:w-[65%]">
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="Your email"
-                    className="w-[100%] outline-none border-none"
-                  />
-                  <EmailIcon />
-                </div>
-                <button className="bg-[#00689e] text-[#fff] text-[16px] font-semibold rounded-lg py-2 px-6 lg:w-[30%] w-[90%]">
-                  Subscribe
-                </button>
-              </div>
-            </div>
-
-            <div className="flex justify-between items-center">
-              <h2 className="lg:text-[30px] text-[20px] font-semibold">
-                Trending Posts
-              </h2>
-              <p className="lg:text-[20px] underline text-[#00689e] font-semibold">
-                See all
-              </p>
-            </div>
-            <div className="grid lg:grid-cols-3 grid-cols-1 gap-6 lg:gap-10 mt-4">
-              <BlogStoryCard
-                imgSrc="/assets/blog-imgs/bl-cover-1.png"
-                tags={["Tax", "Sports"]}
-                title="The Impact of Technology on the Workplace: How Technology is Changing"
-                authorName="Tracey Wilson"
-                date="August 20, 2022."
-              />
-              <BlogStoryCard
-                imgSrc="/assets/blog-imgs/bl-cover-2.png"
-                tags={["Tax", "Sports"]}
-                title="The Impact of Technology on the Workplace: How Technology is Changing"
-                authorName="Jason Francisco"
-                date="August 20, 2022."
-              />
-              <BlogStoryCard
-                imgSrc="/assets/blog-imgs/bl-cover-3.png"
-                tags={["Tax", "Sports"]}
-                title="The Impact of Technology on the Workplace: How Technology is Changing"
-                authorName="Elizabeth Slavin"
-                date="August 20, 2022."
-              />
-              <BlogStoryCard
-                imgSrc="/assets/blog-imgs/bl-cover-4.png"
-                tags={["Tax", "Sports"]}
-                title="The Impact of Technology on the Workplace: How Technology is Changing"
-                authorName="Ernie Smith"
-                date="August 20, 2022."
-              />
-              <BlogStoryCard
-                imgSrc="/assets/blog-imgs/bl-cover-5.png"
-                tags={["Tax", "Sports"]}
-                title="The Impact of Technology on the Workplace: How Technology is Changing"
-                authorName="Eric Smith"
-                date="August 20, 2022."
-              />
-              <BlogStoryCard
-                imgSrc="/assets/blog-imgs/bl-cover-6.png"
-                tags={["Tax", "Sports"]}
-                title="The Impact of Technology on the Workplace: How Technology is Changing"
-                authorName="Tracey Wilson"
-                date="August 20, 2022."
-              />
+            <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-10 gap-6 mt-10">
+              {blogItems.map((item) => (
+                <BlogStoryCard
+                  key={item.id}
+                  imgSrc={item.img}
+                  title={item.title}
+                  authorName={item.authorName}
+                  date={item.date}
+                  tags={item.tags}
+                />
+              ))}
             </div>
 
             <div className="flex items-center justify-center mt-10 lg:mb-[15vh]">
@@ -168,6 +82,20 @@ const Blog = () => {
                 Load More
               </button>
             </div>
+          </div>
+        </div>
+
+        <div className="flex items-center justify-center pb-20">
+          <div className="lg:w-[40%] w-[90%] rounded-2xl shadow-md bg-[#fff] p-10 space-y-6 flex items-center justify-center flex-col">
+            <h2 className="lg:text-[24px] text-[20px] font-semibold">
+              Follow us on Medium
+            </h2>
+            <p className="lg:text-[18px] lg:w-[60%] mx-auto text-center">
+              Be the first to receive notifications when we drop a new article
+            </p>
+            <button className="px-10 py-2 font-semibold text-[#fff] bg-[#00689e] rounded-xl">
+              Follow
+            </button>
           </div>
         </div>
         <Footer />

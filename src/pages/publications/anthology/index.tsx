@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import FeaturedArticleCard from "../../../component/cards/FeaturedArticleCard";
 import Container from "../../../component/defaults/Container";
 import Footer from "../../../component/defaults/Footer";
 import Header from "../../../component/defaults/Header";

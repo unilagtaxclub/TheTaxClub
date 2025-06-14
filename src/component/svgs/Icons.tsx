@@ -365,3 +365,28 @@ export const RedirectIcon = () => (
     />
   </svg>
 );
+
+export const SearchIcon = () => (
+  <svg
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M7.66732 13.9987C11.1651 13.9987 14.0007 11.1632 14.0007 7.66536C14.0007 4.16756 11.1651 1.33203 7.66732 1.33203C4.16951 1.33203 1.33398 4.16756 1.33398 7.66536C1.33398 11.1632 4.16951 13.9987 7.66732 13.9987Z"
+      stroke="#808080"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M14.6673 14.6654L13.334 13.332"
+      stroke="#808080"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);

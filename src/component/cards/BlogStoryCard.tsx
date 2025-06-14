@@ -18,7 +18,7 @@ const BlogStoryCard: FC<BlogStoryCardProps> = ({
   date,
 }) => {
   return (
-    <div className="bg-[#fff] p-4 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 ease-in-out cursor-pointer space-y-4">
+    <div className="bg-[#fff] p-4 rounded-2xl flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 ease-in-out cursor-pointer space-y-4">
       <img
         src={imgSrc}
         alt="blog-img"
