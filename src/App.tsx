@@ -20,6 +20,7 @@ import Bwm from "./pages/programmes/bwm";
 import Contact from "./pages/contact";
 import NtdvOne from "./pages/gallery/ntdvOne";
 import NtdvTwo from "./pages/gallery/ntdvTwo";
+import TaxDebate from "./pages/gallery/TaxDebate";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -47,7 +48,7 @@ const App = () => {
     // gallery links
     { path: "/gallery/ntdv-one", element: <NtdvOne /> },
     { path: "/gallery/ntdv-two", element: <NtdvTwo /> },
-    //  { path: "/gallery/tax-debate", element: <TaxDebate /> },
+    { path: "/gallery/tax-debate", element: <TaxDebate /> },
   ]);
 
   return (

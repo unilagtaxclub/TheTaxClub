@@ -126,9 +126,12 @@ const Gallery = () => {
                   </p>
                 </div>
               </div>
-              <p className="lg:text-[20px] underline text-[#00689e] font-semibold">
+              <NavLink
+                to="/gallery/tax-debate"
+                className="lg:text-[20px] underline text-[#00689e] font-semibold"
+              >
                 See all
-              </p>
+              </NavLink>
             </div>
 
             <div className="space-y-6">
