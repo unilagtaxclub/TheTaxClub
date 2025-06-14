@@ -1,3 +1,4 @@
+import Container from "../../component/defaults/Container";
 import Footer from "../../component/defaults/Footer";
 import Header from "../../component/defaults/Header";
 import { AddressIcon, EmailIcon } from "../../component/svgs/Icons";
@@ -10,7 +11,7 @@ import {
 
 const Contact = () => {
   return (
-    <>
+    <Container>
       <div className="bg-[url('/assets/hero.png')] lg:h-[581px] bg-cover bg-no-repeat">
         <div className="bg-[rgba(0,0,0,0.4)] text-[#fff] w-[100%] flex flex-col pt-6 lg:pt-20 lg:h-[581px] pb-20 lg:pb-0 lg:px-6">
           <Header />
@@ -157,7 +158,7 @@ const Contact = () => {
         </div>
       </div>
       <Footer />
-    </>
+    </Container>
   );
 };
 
