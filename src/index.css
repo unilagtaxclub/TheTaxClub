@@ -29,8 +29,10 @@ html {
 .perspective {
     perspective: 1000px;
 }
+
 .backface-hidden {
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 @media only screen and (max-width: 768px) {
