@@ -3,9 +3,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import Header from "../defaults/Header";
 
 const backgroundImages = [
-  "/assets/hero.png",
-  "/assets/footer-img.png",
-  "/assets/hero.png",
+  "/assets/hero-imgs/hero.png",
+  "/assets/hero-imgs/img-two.png",
+  "/assets/hero-imgs/img-three.png",
+  "/assets/hero-imgs/img-four.png",
+  "/assets/hero-imgs/img-five.png",
+  "/assets/hero-imgs/img-six.png",
+  "/assets/hero-imgs/img-eight.png",
+  "/assets/hero-imgs/img-nine.png",
+  "/assets/hero-imgs/img-ten.png",
 ];
 
 const Hero = () => {
