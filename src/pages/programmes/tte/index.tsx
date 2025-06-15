@@ -8,7 +8,7 @@ const Tte = () => {
   return (
     <Container>
       <div className="lg:mt-[10vh] mt-10">
-        <Header />
+        <Header active="Programmes" />
         <div className="lg:w-[80vw] w-[90vw] mt-14 mx-auto">
           <div className="lg:flex hidden items-center flex-wrap gap-6 text-[14px]">
             {programmeItems.map((item) => (

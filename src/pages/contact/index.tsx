@@ -14,7 +14,7 @@ const Contact = () => {
     <Container>
       <div className="bg-[url('/assets/hero.png')] lg:h-[581px] bg-cover bg-no-repeat">
         <div className="bg-[rgba(0,0,0,0.4)] text-[#fff] w-[100%] flex flex-col pt-6 lg:pt-20 lg:h-[581px] pb-20 lg:pb-0 lg:px-6">
-          <Header />
+          <Header active="Contact" />
           <div className="lg:w-[80vw] w-[90vw] mx-auto mt-10 lg:mt-[30vh]">
             <h2 className="lg:text-[56px] text-[30px] font-semibold">
               Contact Us

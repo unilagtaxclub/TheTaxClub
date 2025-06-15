@@ -55,7 +55,7 @@ const Hero = () => {
 
       <div className="absolute inset-0 bg-[rgba(0,0,0,0.4)] z-10 text-white w-full flex flex-col pt-6 lg:pt-20 pb-20 lg:pb-0 lg:px-6">
         <motion.div variants={heroVariants} initial="hidden" animate="visible">
-          <Header />
+          <Header active="Home" />
         </motion.div>
 
         <div className="lg:w-[80vw] w-[90vw] mx-auto mt-10 lg:mt-[20vh] z-20">

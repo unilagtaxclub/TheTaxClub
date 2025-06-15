@@ -9,7 +9,7 @@ const Anthology = () => {
   return (
     <Container>
       <div className="bg-[#f2f2f2] min-h-screen pt-10">
-        <Header />
+        <Header active="Publications" />
         <div className="w-[90vw] lg:w-[80vw] mx-auto mt-10 pb-10">
           <div className="lg:flex hidden items-center flex-wrap gap-6 mb-10 text-[14px]">
             {publicationItems.map((item) => (

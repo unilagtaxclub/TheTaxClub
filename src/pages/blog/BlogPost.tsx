@@ -16,7 +16,7 @@ const BlogPost = () => {
   return (
     <Container>
       <div className="bg-[#f2f2f2] min-h-screen pt-10">
-        <Header />
+        <Header active="Blog" />
         <div className="w-[90vw] lg:w-[50vw] mx-auto mt-10 pb-10">
           <div className="space-y-4">
             <div className="flex">
@@ -83,7 +83,9 @@ const BlogPost = () => {
           </div>
 
           <div className="space-y-3 mt-4">
-            <h2 className="lg:text-[24px] text-[20px] font-semibold">Plan your Itinerary</h2>
+            <h2 className="lg:text-[24px] text-[20px] font-semibold">
+              Plan your Itinerary
+            </h2>
 
             <p className="lg:text-[20px]">
               While it's essential to leave room for spontaneity and unexpected
@@ -164,7 +166,9 @@ const BlogPost = () => {
             </div>
 
             <div className="space-y-3">
-              <h2 className="lg:text-[24px] text-[20px] font-semibold">Capture Memories</h2>
+              <h2 className="lg:text-[24px] text-[20px] font-semibold">
+                Capture Memories
+              </h2>
               <p className="lg:text-[20px]">
                 Finally, don't forget to capture memories of your journey.
                 Whether it's through photographs, journaling, or souvenirs,
@@ -176,7 +180,9 @@ const BlogPost = () => {
             </div>
 
             <div className="space-y-3">
-              <h2 className="lg:text-[24px] text-[20px] font-semibold">Conclusion</h2>
+              <h2 className="lg:text-[24px] text-[20px] font-semibold">
+                Conclusion
+              </h2>
               <p className="lg:text-[20px]">
                 Traveling is an art form that requires a blend of planning,
                 preparation, and spontaneity. By following these tips and

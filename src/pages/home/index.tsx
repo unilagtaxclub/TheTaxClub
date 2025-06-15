@@ -19,7 +19,7 @@ const Home = () => {
         <Programmes />
         <Feedback />
         <BlogStories />
-        <Footer />
+        <Footer active="Home" />
       </div>
     </Container>
   );

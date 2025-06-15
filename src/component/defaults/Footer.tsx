@@ -2,41 +2,49 @@ import { NavLink } from "react-router-dom";
 import { EmailIcon } from "../svgs/Icons";
 import { Logo } from "../svgs/Logos";
 
-const Footer = () => {
+interface FooterProps {
+  active?: string;
+}
+
+const Footer = ({ active }: FooterProps) => {
   return (
     <div className="bg-[#003D5E] relative mt-[20vh]">
-      <div className="bg-[#fff] text-center z-10 absolute lg:-top-[15vh] lg:left-[30%] lg:px-20 lg:py-10 lg:space-y-6 space-y-3 py-4 px-6 mt-10 lg:mt-0 rounded-3xl lg:w-[45%] w-[90%] left-6">
-        <h2 className="mt-4 mb-8 lg:text-[34px] font-semibold">
-          Haven't signed up to our Newsletter yet?
-        </h2>
-        <p className="text-[#808080] lg:text-[16px] text-[14px]">
-          Subscribe to stay up to date on all our juicy and exciting content and
-          events.
-        </p>
-        <div className="">
-          <div className="flex items-center lg:mb-10 mt-6 border border-[#ccc] space-x-3 rounded-lg px-4 lg:py-4 py-2">
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Your email"
-              className="w-[100%] outline-none border-none"
-            />
-            <EmailIcon />
+      {active === "Home" && (
+        <div className="bg-[#fff] text-center z-10 absolute lg:-top-[15vh] lg:left-[30%] lg:px-20 lg:py-10 lg:space-y-6 space-y-3 py-4 px-6 mt-10 lg:mt-0 rounded-3xl lg:w-[45%] w-[90%] left-6">
+          <h2 className="mt-4 mb-8 lg:text-[34px] font-semibold">
+            Haven't signed up to our Newsletter yet?
+          </h2>
+          <p className="text-[#808080] lg:text-[16px] text-[14px]">
+            Subscribe to stay up to date on all our juicy and exciting content
+            and events.
+          </p>
+          <div className="">
+            <div className="flex items-center lg:mb-10 mt-6 border border-[#ccc] space-x-3 rounded-lg px-4 lg:py-4 py-2">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your email"
+                className="w-[100%] outline-none border-none"
+              />
+              <EmailIcon />
+            </div>
+            <button className="bg-[#00689e] text-[#fff] mt-6 text-[16px] font-semibold rounded-lg lg:py-4 py-2 px-6 w-[100%]">
+              Subscribe to Newsletter
+            </button>
           </div>
-          <button className="bg-[#00689e] text-[#fff] mt-6 text-[16px] font-semibold rounded-lg lg:py-4 py-2 px-6 w-[100%]">
-            Subscribe to Newsletter
-          </button>
         </div>
-      </div>
-      <div className="relative h-[400px]">
-        <img
-          src="/assets/footer-img.png"
-          alt="footer-img"
-          className="object-cover h-[100%] w-[100%]"
-        />
-        <div className="bg-[rgba(0,0,0,0.6)] absolute w-[100%] h-[400px] top-0"></div>
-      </div>
+      )}
+      {active === "Home" && (
+        <div className="relative h-[400px]">
+          <img
+            src="/assets/footer-img.png"
+            alt="footer-img"
+            className="object-cover h-[100%] w-[100%]"
+          />
+          <div className="bg-[rgba(0,0,0,0.6)] absolute w-[100%] h-[400px] top-0"></div>
+        </div>
+      )}
       <div className="mt-10 text-[#fff] lg:w-[80vw] w-[90vw] mx-auto py-14">
         <div className="flex lg:flex-row flex-col justify-between">
           <div className="flex space-x-2">

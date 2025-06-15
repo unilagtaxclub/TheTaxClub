@@ -7,7 +7,11 @@ import { Logo } from "../svgs/Logos";
 import ProgrammeDropdown from "../dropdowns/ProgrammeDropdown";
 import PublicationDropdown from "../dropdowns/PublicationDropdown";
 
-const Header = () => {
+interface HeaderProps {
+  active: string;
+}
+
+const Header = ({ active }: HeaderProps) => {
   const [showDrawer, setShowDrawer] = useState<boolean>(false);
   const [showProgrammesDropdown, setShowProgrammesDropdown] =
     useState<boolean>(false);
@@ -21,8 +25,18 @@ const Header = () => {
           <Logo />
         </NavLink>
         <div className="space-x-10 lg:flex hidden">
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/about">About Us</NavLink>
+          <NavLink
+            to="/"
+            className={`${active === "Home" && "text-[#00689E] font-semibold"}`}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={`${active === "About" && "text-[#00689E] font-semibold"}`}
+          >
+            About Us
+          </NavLink>
           <div className="relative">
             <div
               className="space-x-3 flex items-center cursor-pointer"
@@ -31,7 +45,11 @@ const Header = () => {
                 setShowPublicationsDropdown(false);
               }}
             >
-              <span>Our Programmes</span>
+              <span
+                className={`${active === "Programmes" && "text-[#00689E] font-semibold"}`}
+              >
+                Our Programmes
+              </span>
               <CaretDown />
             </div>
             <AnimatePresence>
@@ -46,7 +64,11 @@ const Header = () => {
                 setShowProgrammesDropdown(false);
               }}
             >
-              <span>Publication</span>
+              <span
+                className={`${active === "Publications" && "text-[#00689E] font-semibold"}`}
+              >
+                Publications
+              </span>
               <CaretDown />
             </div>
             <AnimatePresence>
@@ -54,9 +76,24 @@ const Header = () => {
             </AnimatePresence>
           </div>
 
-          <NavLink to="/our-people">Our People</NavLink>
-          <NavLink to="/gallery">Gallery</NavLink>
-          <NavLink to="/contact">Contact</NavLink>
+          <NavLink
+            to="/our-people"
+            className={`${active === "Our People" && "text-[#00689E] font-semibold"}`}
+          >
+            Our People
+          </NavLink>
+          <NavLink
+            to="/gallery"
+            className={`${active === "Gallery" && "text-[#00689E] font-semibold"}`}
+          >
+            Gallery
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={`${active === "Contact" && "text-[#00689E] font-semibold"}`}
+          >
+            Contact
+          </NavLink>
         </div>
         <button className="px-10 py-2 font-semibold text-[#fff] bg-[#00689e] rounded-xl lg:block hidden">
           Join Us
