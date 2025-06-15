@@ -27,6 +27,9 @@ const NtdvTwo = () => {
               Images
             </h2>
           </div>
+          <p className="text-[#232323] my-3">
+            Walk down memory lane here with us
+          </p>
 
           <div className="mt-10">
             <div className="mb-10">
@@ -60,24 +63,44 @@ const NtdvTwo = () => {
                 imgSeven="/assets/gallery/ntdv/img-fourteen.png"
               />
               <LayoutThree
-                imgOne="/assets/gallery/ntdv/img-one.png"
-                imgTwo="/assets/gallery/ntdv/img-two.png"
-                imgThree="/assets/gallery/ntdv/img-three.png"
-                imgFour="/assets/gallery/ntdv/img-four.png"
-                imgFive="/assets/gallery/ntdv/img-five.png"
-                imgSix="/assets/gallery/ntdv/img-six.png"
-                imgSeven="/assets/gallery/ntdv/img-seven.png"
-                imgEight="/assets/gallery/ntdv/img-eight.png"
+                imgOne="/assets/gallery/ntdv/img-fifteen.png"
+                imgTwo="/assets/gallery/ntdv/img-sixteen.png"
+                imgThree="/assets/gallery/ntdv/img-seventeen.png"
+                imgFour="/assets/gallery/ntdv/img-eighteen.png"
+                imgFive="/assets/gallery/ntdv/img-nineteen.png"
+                imgSix="/assets/gallery/ntdv/img-twenty.png"
+                imgSeven="/assets/gallery/ntdv/img-twenty-one.png"
+                imgEight="/assets/gallery/ntdv/img-twenty-two.png"
+              />
+              <LayoutOne
+                imgOne="/assets/gallery/ntdv/img-twenty-three.png"
+                imgTwo="/assets/gallery/ntdv/img-twenty-four.png"
+                imgThree="/assets/gallery/ntdv/img-twenty-five.png"
+                imgFour="/assets/gallery/ntdv/img-twenty-six.png"
+                imgFive="/assets/gallery/ntdv/img-twenty-seven.png"
+                imgSix="/assets/gallery/ntdv/img-twenty-eight.png"
+                imgSeven="/assets/gallery/ntdv/img-twenty-nine.png"
+                imgEight="/assets/gallery/ntdv/img-thirty.png"
+              />
+              <LayoutTwo
+                imgOne="/assets/gallery/ntdv/img-thirty-one.png"
+                imgTwo="/assets/gallery/ntdv/img-thirty-two.png"
+                imgThree="/assets/gallery/ntdv/img-thirty-three.png"
+                imgFour="/assets/gallery/ntdv/img-thirty-four.png"
+                imgFive="/assets/gallery/ntdv/img-thirty-five.png"
+                imgSix="/assets/gallery/ntdv/img-thirty-six.png"
+                imgSeven="/assets/gallery/ntdv/img-thirty-seven.png"
+                imgEight="/assets/gallery/ntdv/img-thirty-eight.png"
               />
               <LayoutThree
-                imgOne="/assets/gallery/ntdv/img-eight.png"
-                imgTwo="/assets/gallery/ntdv/img-nine.png"
-                imgThree="/assets/gallery/ntdv/img-ten.png"
-                imgFour="/assets/gallery/ntdv/img-eleven.png"
-                imgFive="/assets/gallery/ntdv/img-twelve.png"
-                imgSix="/assets/gallery/ntdv/img-thirteen.png"
-                imgSeven="/assets/gallery/ntdv/img-fourteen.png"
-                imgEight="/assets/gallery/ntdv/img-thirty.png"
+                imgOne="/assets/gallery/ntdv/img-twenty.png"
+                imgTwo="/assets/gallery/ntdv/img-thirty-nine.png"
+                imgThree="/assets/gallery/ntdv/img-forty.png"
+                imgFour="/assets/gallery/ntdv/img-forty-one.png"
+                imgFive="/assets/gallery/ntdv/img-forty-two.png"
+                imgSix="/assets/gallery/ntdv/img-eight.png"
+                imgSeven="/assets/gallery/ntdv/img-nineteen.png"
+                imgEight="/assets/gallery/ntdv/img-ten.png"
               />
             </div>
           </div>

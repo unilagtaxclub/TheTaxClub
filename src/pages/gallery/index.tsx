@@ -26,6 +26,9 @@ const Gallery = () => {
               Images
             </h2>
           </div>
+          <p className="text-[#232323] my-3">
+            Walk down memory lane here with us
+          </p>
 
           <div className="mt-10">
             <div className="flex justify-between items-center mb-10">
@@ -50,23 +53,23 @@ const Gallery = () => {
 
             <div className="space-y-6">
               <LayoutOne
-                imgOne="/assets/gallery/ntdv/img-one.png"
-                imgTwo="/assets/gallery/ntdv/img-two.png"
-                imgThree="/assets/gallery/ntdv/img-three.png"
-                imgFour="/assets/gallery/ntdv/img-four.png"
-                imgFive="/assets/gallery/ntdv/img-five.png"
-                imgSix="/assets/gallery/ntdv/img-six.png"
-                imgSeven="/assets/gallery/ntdv/img-seven.png"
-                imgEight="/assets/gallery/ntdv/img-eight.png"
+                imgOne="/assets/gallery/ntdv-two/one.png"
+                imgTwo="/assets/gallery/ntdv-two/two.png"
+                imgThree="/assets/gallery/ntdv-two/three.png"
+                imgFour="/assets/gallery/ntdv-two/four.png"
+                imgFive="/assets/gallery/ntdv-two/five.png"
+                imgSix="/assets/gallery/ntdv-two/six.png"
+                imgSeven="/assets/gallery/ntdv-two/seven.png"
+                imgEight="/assets/gallery/ntdv-two/eight.png"
               />
               <LayoutTwo
-                imgOne="/assets/gallery/ntdv/img-eight.png"
-                imgTwo="/assets/gallery/ntdv/img-nine.png"
-                imgThree="/assets/gallery/ntdv/img-ten.png"
-                imgFour="/assets/gallery/ntdv/img-eleven.png"
-                imgFive="/assets/gallery/ntdv/img-twelve.png"
-                imgSix="/assets/gallery/ntdv/img-thirteen.png"
-                imgSeven="/assets/gallery/ntdv/img-fourteen.png"
+                imgOne="/assets/gallery/ntdv-two/fifteen.png"
+                imgTwo="/assets/gallery/ntdv-two/sixteen.png"
+                imgThree="/assets/gallery/ntdv-two/seventeen.png"
+                imgFour="/assets/gallery/ntdv-two/eighteen.png"
+                imgFive="/assets/gallery/ntdv-two/nineteen.png"
+                imgSix="/assets/gallery/ntdv-two/twenty.png"
+                imgSeven="/assets/gallery/ntdv-two/twenty-one.png"
               />
             </div>
           </div>

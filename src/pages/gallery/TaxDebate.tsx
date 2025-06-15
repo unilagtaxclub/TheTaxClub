@@ -27,6 +27,9 @@ const TaxDebate = () => {
               Images
             </h2>
           </div>
+          <p className="text-[#232323] my-3">
+            Walk down memory lane here with us
+          </p>
 
           <div className="mt-20">
             <div className="mb-10">
@@ -58,27 +61,47 @@ const TaxDebate = () => {
                 imgFive="/assets/gallery/debate/twelve.png"
                 imgSix="/assets/gallery/debate/thirteen.png"
                 imgSeven="/assets/gallery/debate/fourteen.png"
-                imgEight="/assets/gallery/debate/eight.png"
+                imgEight="/assets/gallery/debate/fifteen.png"
               />
               <LayoutTwo
-                imgOne="/assets/gallery/debate/one.png"
-                imgTwo="/assets/gallery/debate/two.png"
-                imgThree="/assets/gallery/debate/three.png"
-                imgFour="/assets/gallery/debate/four.png"
-                imgFive="/assets/gallery/debate/five.png"
-                imgSix="/assets/gallery/debate/six.png"
-                imgSeven="/assets/gallery/debate/seven.png"
-                imgEight="/assets/gallery/debate/eight.png"
+                imgOne="/assets/gallery/debate/sixteen.png"
+                imgTwo="/assets/gallery/debate/seventeen.png"
+                imgThree="/assets/gallery/debate/eighteen.png"
+                imgFour="/assets/gallery/debate/nineteen.png"
+                imgFive="/assets/gallery/debate/twenty.png"
+                imgSix="/assets/gallery/debate/twenty-one.png"
+                imgSeven="/assets/gallery/debate/twenty-two.png"
+                imgEight="/assets/gallery/debate/twenty-three.png"
               />
               <LayoutOne
-                imgOne="/assets/gallery/debate/eight.png"
-                imgTwo="/assets/gallery/debate/nine.png"
-                imgThree="/assets/gallery/debate/ten.png"
-                imgFour="/assets/gallery/debate/eleven.png"
-                imgFive="/assets/gallery/debate/twelve.png"
-                imgSix="/assets/gallery/debate/thirteen.png"
-                imgSeven="/assets/gallery/debate/fourteen.png"
-                imgEight="/assets/gallery/debate/eight.png"
+                imgOne="/assets/gallery/debate/twenty-four.png"
+                imgTwo="/assets/gallery/debate/twenty-five.png"
+                imgThree="/assets/gallery/debate/twenty-six.png"
+                imgFour="/assets/gallery/debate/twenty-seven.png"
+                imgFive="/assets/gallery/debate/twenty-eight.png"
+                imgSix="/assets/gallery/debate/twenty-nine.png"
+                imgSeven="/assets/gallery/debate/thirty.png"
+                imgEight="/assets/gallery/debate/thirty-one.png"
+              />
+              <LayoutThree
+                imgOne="/assets/gallery/debate/thirty-two.png"
+                imgTwo="/assets/gallery/debate/thirty-three.png"
+                imgThree="/assets/gallery/debate/thirty-four.png"
+                imgFour="/assets/gallery/debate/thirty-five.png"
+                imgFive="/assets/gallery/debate/thirty-six.png"
+                imgSix="/assets/gallery/debate/thirty-seven.png"
+                imgSeven="/assets/gallery/debate/thirty-eight.png"
+                imgEight="/assets/gallery/debate/thirty-nine.png"
+              />
+              <LayoutTwo
+                imgOne="/assets/gallery/debate/four.png"
+                imgTwo="/assets/gallery/debate/twenty.png"
+                imgThree="/assets/gallery/debate/forty.png"
+                imgFour="/assets/gallery/debate/forty-one.png"
+                imgFive="/assets/gallery/debate/forty-two.png"
+                imgSix="/assets/gallery/debate/nine.png"
+                imgSeven="/assets/gallery/debate/thirty.png"
+                imgEight="/assets/gallery/debate/one.png"
               />
             </div>
           </div>
