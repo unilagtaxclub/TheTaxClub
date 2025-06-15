@@ -25,19 +25,19 @@ const Bwm = () => {
           <div className="flex lg:flex-row flex-col justify-between space-x-10 lg:mt-20 mt-10">
             <div className="lg:w-[50%] w-[100%]">
               <img
-                src="/assets/gallery/ntdv/img-twenty.png"
+                src="/assets/programme-imgs/bwm-one.png"
                 alt="img"
                 className="w-[100%] lg:h-[569px] h-[370px] rounded-3xl object-cover"
               />
             </div>
             <div className="lg:w-[50%] w-[100%] flex flex-col lg:mt-0 mt-6 justify-between">
               <img
-                src="/assets/gallery/ntdv/img-twenty-one.png"
+                src="/assets/programme-imgs/bwm-two.png"
                 alt="img"
                 className="w-[100%] lg:h-[273px] h-[370px] object-cover rounded-3xl"
               />
               <img
-                src="/assets/gallery/ntdv/img-twenty-two.png"
+                src="/assets/programme-imgs/bwm-three.png"
                 alt="img"
                 className="w-[100%] lg:h-[273px] h-[370px] object-cover lg:mt-0 mt-6 rounded-3xl"
               />

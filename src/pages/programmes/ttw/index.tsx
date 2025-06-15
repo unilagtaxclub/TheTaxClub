@@ -25,24 +25,24 @@ const Ttw = () => {
           <div className="flex lg:flex-row flex-col justify-between space-x-10 lg:mt-20 mt-10">
             <div className="lg:w-[50%] w-[100%] flex flex-col lg:mt-0 mt-6 space-y-6 justify-between">
               <img
-                src="/assets/gallery/ntdv/img-thirteen.png"
+                src="/assets/programme-imgs/ttw-one.png"
                 alt="img"
                 className="w-[100%] lg:h-[273px] h-[370px] object-cover rounded-3xl"
               />
               <img
-                src="/assets/gallery/ntdv/img-fourteen.png"
+                src="/assets/programme-imgs/ttw-two.png"
                 alt="img"
                 className="w-[100%] lg:h-[273px] h-[370px] object-cover lg:mt-0 mt-6 rounded-3xl"
               />
             </div>
             <div className="lg:w-[50%] w-[100%] flex flex-col lg:mt-0 mt-6 space-y-6 justify-between">
               <img
-                src="/assets/gallery/ntdv/img-eleven.png"
+                src="/assets/programme-imgs/ttw-three.png"
                 alt="img"
                 className="w-[100%] lg:h-[273px] h-[370px] object-cover rounded-3xl"
               />
               <img
-                src="/assets/gallery/ntdv/img-twelve.png"
+                src="/assets/programme-imgs/ttw-four.png"
                 alt="img"
                 className="w-[100%] lg:h-[273px] h-[370px] object-cover lg:mt-0 mt-6 rounded-3xl"
               />

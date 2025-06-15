@@ -25,14 +25,14 @@ const Mm = () => {
           <div className="flex lg:flex-row flex-col justify-between space-x-10 lg:mt-20 mt-10">
             <div className="lg:w-[50%] w-[100%]">
               <img
-                src="/assets/gallery/ntdv/img-fifteen.png"
+                src="/assets/programme-imgs/mm-one.png"
                 alt="img"
                 className="w-[100%] lg:h-[569px] h-[370px] rounded-3xl object-cover"
               />
             </div>
             <div className="lg:w-[50%] w-[100%] flex flex-col lg:mt-0 mt-6 justify-between">
               <img
-                src="/assets/gallery/ntdv/img-sixteen.png"
+                src="/assets/programme-imgs/mm-two.png"
                 alt="img"
                 className="w-[100%] lg:h-[273px] h-[370px] object-cover rounded-3xl"
               />
