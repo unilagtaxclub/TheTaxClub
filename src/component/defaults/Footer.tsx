@@ -71,7 +71,9 @@ const Footer = ({ active }: FooterProps) => {
             <div className="space-y-4">
               <div className="flex flex-col">
                 <span>Email address:</span>
-                <span className="underline">unilagtaxclub@gmail.com</span>
+                <a href="mailto:unilagtaxclub@gmail.com" className="underline">
+                  unilagtaxclub@gmail.com
+                </a>
               </div>
               <div className="flex flex-col">
                 <span>Address:</span>
@@ -81,11 +83,29 @@ const Footer = ({ active }: FooterProps) => {
           </div>
 
           <div className="space-y-6 flex flex-col mt-10 lg:mt-0">
-            <h2 className="text-[20px] font-semibold">Social Meedia</h2>
+            <h2 className="text-[20px] font-semibold">Social Media</h2>
             <div className="space-y-4 flex flex-col">
-              <span className="underline">Linkedin</span>
-              <span className="underline">Instagram</span>
-              <span className="underline">X</span>
+              <a
+                href="https://www.linkedin.com/company/thetaxclub/"
+                target="_blank"
+                className="underline"
+              >
+                Linkedin
+              </a>
+              <a
+                href="https://www.instagram.com/unilagtaxclub/?igsh=aW1ncGxyNzhhemUy&utm_source=qr"
+                target="_blank"
+                className="underline"
+              >
+                Instagram
+              </a>
+              <a
+                href="https://x.com/unilagtaxclub?s=11"
+                target="_blank"
+                className="underline"
+              >
+                X
+              </a>
               <span className="underline">Facebook</span>
             </div>
           </div>

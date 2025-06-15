@@ -108,15 +108,33 @@ const Contact = () => {
           <div className="space-y-6 mt-6">
             <div className="flex items-center space-x-3">
               <LinkedIn />
-              <span className="text-[#232323] underline">Linkedin</span>
+              <a
+                href="https://www.linkedin.com/company/thetaxclub/"
+                target="_blank"
+                className="text-[#232323] underline"
+              >
+                Linkedin
+              </a>
             </div>
             <div className="flex items-center space-x-3">
               <Instagram />
-              <span className="text-[#232323] underline">Instagram</span>
+              <a
+                href="https://www.instagram.com/unilagtaxclub/?igsh=aW1ncGxyNzhhemUy&utm_source=qr"
+                target="_blank"
+                className="text-[#232323] underline"
+              >
+                Instagram
+              </a>
             </div>
             <div className="flex items-center space-x-3">
               <Twitter />
-              <span className="text-[#232323] underline">X</span>
+              <a
+                href="https://x.com/unilagtaxclub?s=11"
+                target="_blank"
+                className="text-[#232323] underline"
+              >
+                X
+              </a>
             </div>
             <div className="flex items-center space-x-3">
               <Facebook />
@@ -152,7 +170,12 @@ const Contact = () => {
                   Email Address
                 </span>
               </div>
-              <p className="lg:text-[18px]">unilagtaxclub@gmail.com</p>
+              <a
+                href="mailto:unilagtaxclub@gmail.com"
+                className="lg:text-[18px] underline"
+              >
+                unilagtaxclub@gmail.com
+              </a>
             </div>
           </div>
         </div>

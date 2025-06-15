@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { CaretDown } from "../svgs/Icons";
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import ProgrammeDropdown from "../dropdowns/ProgrammeDropdown";
 import PublicationDropdown from "../dropdowns/PublicationDropdown";
 
