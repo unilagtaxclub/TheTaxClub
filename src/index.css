@@ -23,6 +23,13 @@
     width: 200%;
 }
 
+.perspective {
+    perspective: 1000px;
+}
+.backface-hidden {
+    backface-visibility: hidden;
+}
+
 @media only screen and (max-width: 768px) {
     @keyframes scroll {
         0% {

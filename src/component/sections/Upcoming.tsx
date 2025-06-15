@@ -47,7 +47,7 @@ const Upcoming = () => {
               Time remaining for anniversary event
             </h2>
             <div className="my-6">
-              <CountdownTimer />
+              <CountdownTimer targetDate="June 30, 2025 15:30" />
             </div>
           </div>
         </div>
