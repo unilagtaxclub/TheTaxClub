@@ -95,9 +95,13 @@ const Header = ({ active }: HeaderProps) => {
             Contact
           </NavLink>
         </div>
-        <button className="px-10 py-2 font-semibold text-[#fff] bg-[#00689e] rounded-xl lg:block hidden">
+        <a
+          href="https://bit.ly/applicationformttcunilag"
+          target="_blank"
+          className="px-10 py-2 font-semibold text-[#fff] bg-[#00689e] rounded-xl lg:block hidden"
+        >
           Join Us
-        </button>
+        </a>
 
         <div
           className="lg:hidden"

@@ -39,9 +39,13 @@ const About = () => {
             Office which is in charge of sourcing and allotting internship
             placements as well as other networking opportunities.
           </p>
-          <button className="px-6 py-3 text-[#fff] bg-[#00689e] lg:w-[50%] w-[100%] lg:max-w-[50%] font-semibold rounded-lg lg:text-[20px] mb-10 lg:mb-0">
+          <a
+            href="https://bit.ly/applicationformttcunilag"
+            target="_blank"
+            className="px-6 py-3 text-[#fff] bg-[#00689e] lg:w-[50%] w-[100%] lg:max-w-[50%] font-semibold rounded-lg lg:text-[20px] mb-10 lg:mb-0"
+          >
             Become a Member
-          </button>
+          </a>
         </div>
         <div className="lg:w-[45%]">
           <img

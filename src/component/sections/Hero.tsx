@@ -111,9 +111,13 @@ const Hero = () => {
             <button className="bg-[#00689e] text-white px-20 py-3 rounded-lg font-semibold hover:bg-[#005a7a] transition-all duration-300 ease-in-out">
               Partner with us
             </button>
-            <button className="border border-[#00689e] text-[#00689e] px-20 py-3 rounded-lg font-semibold hover:bg-[#00689e] hover:text-white transition-all duration-300 ease-in-out">
+            <a
+              href="https://bit.ly/applicationformttcunilag"
+              target="_blank"
+              className="border border-[#00689e] text-[#00689e] px-20 py-3 rounded-lg font-semibold hover:bg-[#00689e] hover:text-white transition-all duration-300 ease-in-out"
+            >
               Become a Member
-            </button>
+            </a>
           </motion.div>
         </div>
       </div>

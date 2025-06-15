@@ -71,10 +71,13 @@ const Programmes = () => {
         </div>
 
         <div className="lg:w-[50%] w-[100%] flex lg:justify-end">
-          <button className="lg:py-4 py-3 px-10 w-[100%] mt-6 lg:mt-0 lg:w-auto bg-[#00689E] text-[#fff] lg:text-[20px] flex items-center justify-center lg:justify-start font-semibold space-x-3 rounded-lg">
+          <NavLink
+            to="/programmes/tntd"
+            className="lg:py-4 py-3 px-10 w-[100%] mt-6 lg:mt-0 lg:w-auto bg-[#00689E] text-[#fff] lg:text-[20px] flex items-center justify-center lg:justify-start font-semibold space-x-3 rounded-lg"
+          >
             <span>View All Programmes</span>
             <RightArrow color="#ffffff" />
-          </button>
+          </NavLink>
         </div>
       </div>
 
