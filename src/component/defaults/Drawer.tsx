@@ -2,6 +2,8 @@ import { NavLink } from "react-router-dom";
 import { CaretDown } from "../svgs/Icons";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import ProgrammeDropdown from "../dropdowns/ProgrammeDropdown";
+import PublicationDropdown from "../dropdowns/PublicationDropdown";
 
 const Drawer = () => {
   const [showProgrammesDropdown, setShowProgrammesDropdown] =
@@ -10,7 +12,7 @@ const Drawer = () => {
     useState<boolean>(false);
 
   return (
-    <div className="bg-[#f2f2f2] text-[#000] min-h-screen z-50 space-y-10 flex-col flex lg:hidden w-[100%] py-10 fixed px-4 mx-auto">
+    <div className="bg-gray-800 text-[#fff] min-h-screen z-50 space-y-10 flex-col flex lg:hidden w-[100%] py-10 fixed px-4 mx-auto">
       <NavLink to="/">Home</NavLink>
       <NavLink to="/about">About Us</NavLink>
       <div className="">
@@ -29,28 +31,7 @@ const Drawer = () => {
         </div>
 
         <AnimatePresence>
-          {showProgrammesDropdown && (
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.2 }}
-              className="mt-2 flex flex-col space-y-2 w-[100%]"
-            >
-              <NavLink
-                to="/publications/featured"
-                className="text-[15px] hover:bg-[#ccc] border-b-2 border-[#ccc] p-2 transition-all duration-300 ease-in-out"
-              >
-                Featured
-              </NavLink>
-              <NavLink
-                to="/publications/anthology"
-                className="text-[15px] hover:bg-[#ccc] p-2 border-b-2 border-[#ccc] transition-all duration-300 ease-in-out"
-              >
-                Anthology
-              </NavLink>
-            </motion.div>
-          )}
+          {showProgrammesDropdown && <ProgrammeDropdown />}
         </AnimatePresence>
       </div>
       <div className="">
@@ -69,28 +50,7 @@ const Drawer = () => {
         </div>
 
         <AnimatePresence>
-          {showPublicationsDropdown && (
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -10 }}
-              transition={{ duration: 0.2 }}
-              className="mt-2 flex flex-col space-y-2 w-[100%]"
-            >
-              <NavLink
-                to="/publications/featured"
-                className="text-[15px] hover:bg-[#ccc] border-b-2 border-[#ccc] p-2 transition-all duration-300 ease-in-out"
-              >
-                Featured
-              </NavLink>
-              <NavLink
-                to="/publications/anthology"
-                className="text-[15px] hover:bg-[#ccc] p-2 border-b-2 border-[#ccc] transition-all duration-300 ease-in-out"
-              >
-                Anthology
-              </NavLink>
-            </motion.div>
-          )}
+          {showPublicationsDropdown && <PublicationDropdown />}
         </AnimatePresence>
       </div>
       <NavLink to="/our-people">Our People</NavLink>
