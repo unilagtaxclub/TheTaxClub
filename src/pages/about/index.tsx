@@ -4,37 +4,64 @@ import Header from "../../component/defaults/Header";
 import { RedirectIcon } from "../../component/svgs/Icons";
 
 const About = () => {
+  const scrollToTarget = (targetId: string, duration = 700) => {
+    const target = document.getElementById(targetId);
+    if (!target) return;
+
+    const targetPosition =
+      target.getBoundingClientRect().top + window.pageYOffset;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    let startTime: number | null = null;
+
+    const easeInOutQuad = (t: number, b: number, c: number, d: number) => {
+      t /= d / 2;
+      if (t < 1) return (c / 2) * t * t + b;
+      t--;
+      return (-c / 2) * (t * (t - 2) - 1) + b;
+    };
+
+    const animation = (currentTime: number) => {
+      if (startTime === null) startTime = currentTime;
+      const timeElapsed = currentTime - startTime;
+      const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
+      window.scrollTo(0, run);
+      if (timeElapsed < duration) requestAnimationFrame(animation);
+    };
+
+    requestAnimationFrame(animation);
+  };
+
   return (
     <Container>
-      <div className="bg-[url('/assets/hero.png')] lg:min-h-[650px] bg-cover bg-no-repeat">
+      <div className="bg-[url('/assets/hero-imgs/img-four.png')] lg:min-h-[650px] bg-cover bg-no-repeat scroll-smooth">
         <div className="bg-[rgba(0,0,0,0.4)] text-[#fff] w-[100%] flex flex-col pt-6 lg:pt-20 lg:min-h-screen pb-20 lg:pb-0 lg:px-6">
           <Header />
           <div className="lg:w-[80vw] w-[90vw] text-[#000] mx-auto mt-10 lg:mt-[20vh]">
-            <div className="bg-[rgba(255,255,255,0.7)] lg:w-[40%] p-10 rounded-2xl">
+            <div className="bg-[rgba(255,255,255,0.6)] lg:w-[40%] p-10 rounded-2xl">
               <h2 className="lg:text-[56px] text-[30px] font-semibold">
                 About Us
               </h2>
               <div className="space-y-4 mt-6">
-                <div className="flex items-center justify-between text-[20px] text-[#00689E]">
-                  <span>Our History</span>
-                  <RedirectIcon />
-                </div>
-                <div className="flex items-center justify-between text-[20px] text-[#00689E]">
-                  <span>Core Mandate</span>
-                  <RedirectIcon />
-                </div>
-                <div className="flex items-center justify-between text-[20px] text-[#00689E]">
-                  <span>Aims {"&"} Objectives</span>
-                  <RedirectIcon />
-                </div>
-                <div className="flex items-center justify-between text-[20px] text-[#00689E]">
-                  <span>Our Impact</span>
-                  <RedirectIcon />
-                </div>
-                <div className="flex items-center justify-between text-[20px] text-[#00689E]">
-                  <span>Our Achievements</span>
-                  <RedirectIcon />
-                </div>
+                {[
+                  { label: "Our History", id: "history" },
+                  { label: "Core Mandate", id: "mandate" },
+                  { label: "Aims & Objectives", id: "aims" },
+                  { label: "Our Impact", id: "impact" },
+                  { label: "Our Achievements", id: "achievements" },
+                ].map(({ label, id }) => (
+                  <div
+                    key={id}
+                    className="flex items-center justify-between text-[20px] text-[#00689E] cursor-pointer"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToTarget(id);
+                    }}
+                  >
+                    <span>{label}</span>
+                    <RedirectIcon />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -46,12 +73,12 @@ const About = () => {
           <div className="flex lg:flex-row flex-col-reverse justify-between items-center space-x-10">
             <div className="lg:w-[45%] w-[100%] mx-auto lg:mx-0">
               <img
-                src="/assets/gallery/debate/one.png"
+                src="/assets/about-imgs/img-one.png"
                 alt="img"
                 className="w-[100% object-cover h-[420px] lg:my-0 my-6 rounded-2xl"
               />
             </div>
-            <div className="space-y-6 lg:w-[55%]">
+            <div id="history" className="space-y-6 lg:w-[55%]">
               <div className="flex">
                 <h2 className="text-[#808080] lg:text-[20px] text-[12px] font-semibold uppercase text-center border border-[#DFBD00] py-1 px-3 rounded-full">
                   Our History
@@ -98,10 +125,13 @@ const About = () => {
           </p>
 
           {/* CORE MANDATE */}
-          <div className="flex lg:flex-row-reverse flex-col-reverse mt-20 justify-between items-center space-x-10">
+          <div
+            id="mandate"
+            className="flex lg:flex-row-reverse flex-col-reverse mt-20 justify-between items-center space-x-10"
+          >
             <div className="lg:w-[40%] w-[100%] mx-auto lg:mx-0">
               <img
-                src="/assets/gallery/debate/two.png"
+                src="/assets/about-imgs/img-two.png"
                 alt="img"
                 className="w-[100%] object-cover h-[420px] lg:my-0 my-6 rounded-2xl"
               />
@@ -136,11 +166,14 @@ const About = () => {
             </div>
           </div>
 
-          {/* AIMS & OBJECTIVES */}
-          <div className="flex lg:flex-row flex-col-reverse mt-20 justify-between items-center space-x-10">
+          {/* AIMS */}
+          <div
+            id="aims"
+            className="flex lg:flex-row flex-col-reverse mt-20 justify-between items-center space-x-10"
+          >
             <div className="lg:w-[40%] w-[100%] mx-auto lg:mx-0">
               <img
-                src="/assets/gallery/debate/three.png"
+                src="/assets/about-imgs/img-three.png"
                 alt="img"
                 className="w-[100%] object-cover h-[420px] lg:my-0 my-6 rounded-2xl"
               />
@@ -178,10 +211,13 @@ const About = () => {
 
           {/* OUR IMPACT */}
           <div>
-            <div className="flex mt-20 lg:flex-row-reverse flex-col-reverse justify-between items-center space-x-10">
+            <div
+              id="impact"
+              className="flex mt-20 lg:flex-row-reverse flex-col-reverse justify-between items-center space-x-10"
+            >
               <div className="lg:w-[40%] w-[100%] mx-auto lg:mx-0">
                 <img
-                  src="/assets/gallery/debate/four.png"
+                  src="/assets/about-imgs/img-four.png"
                   alt="img"
                   className="w-[100%] object-cover h-[420px] lg:my-0 my-6 rounded-2xl"
                 />
@@ -244,10 +280,13 @@ const About = () => {
           </div>
 
           {/* OUR ACHIEVEMENTS */}
-          <div className="flex mt-20 justify-between lg:flex-row flex-col-reverse items-center space-x-10">
+          <div
+            id="achievements"
+            className="flex mt-20 justify-between lg:flex-row flex-col-reverse items-center space-x-10"
+          >
             <div className="lg:w-[40%] w-[100%] mx-auto lg:mx-0">
               <img
-                src="/assets/gallery/debate/five.png"
+                src="/assets/about-imgs/img-five.png"
                 alt="img"
                 className="w-[100%] object-cover h-[420px] lg:my-0 my-6 rounded-2xl"
               />
