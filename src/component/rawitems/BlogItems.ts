@@ -28,7 +28,7 @@ export const blogItems = [
   },
   {
     id: 4,
-    img: "/assets/blog-imgs/bl-cover-3.png",
+    img: "/assets/blog-imgs/bl-cover-4.png",
     title:
       "The Implications of Sin Taxes in Nigeria: Shaping Consumption, Boosting Rev...",
     tags: ["Tax"],
@@ -37,15 +37,15 @@ export const blogItems = [
   },
   {
     id: 5,
-    img: "/assets/blog-imgs/bl-cover-3.png",
+    img: "/assets/blog-imgs/bl-cover-5.png",
     title: "Game Plan: Understading Taxation in the world of Sports",
-    tags: ["Tax, Sports"],
+    tags: ["Tax", "Sports"],
     authorName: "The Tax Club",
     date: "April 11, 2024",
   },
   {
     id: 6,
-    img: "/assets/blog-imgs/bl-cover-3.png",
+    img: "/assets/blog-imgs/bl-cover-6.png",
     title: "A Reform of Nigeria's Tax Policy on the Informal Sector",
     tags: ["Tax", "Informal sector"],
     authorName: "Oyindamola David",

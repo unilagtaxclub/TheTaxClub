@@ -26,7 +26,7 @@ const Anthology = () => {
           <div className="mt-10 flex justify-between lg:flex-row flex-col space-y-6 lg:space-y-0 lg:space-x-4">
             <div className="bg-[#fff] p-4 rounded-3xl lg:w-[33%]">
               <img
-                src="/assets/gallery/debate/five.png"
+                src="/assets/anthology-imgs/img-one.png"
                 className="w-[100%] h-[240px] object-cover rounded-2xl"
               />
               <div className="flex justify-between items-center mt-4">
@@ -40,14 +40,18 @@ const Anthology = () => {
               <h2 className="text-[24px] font-semibold mt-6 mb-10">
                 The Tax Anthology (2021)
               </h2>
-              <button className="flex justify-center items-center space-x-3 text-[14px] font-semibold text-[#fff] bg-[#00689E] w-[100%] rounded-lg py-3">
+              <a
+                href="/downloads/THE TAX ANTHOLOGY 2021.pdf"
+                download
+                className="flex justify-center items-center space-x-3 text-[14px] font-semibold text-[#fff] bg-[#00689E] w-[100%] rounded-lg py-3"
+              >
                 <span>Download</span>
                 <DownloadIcon />
-              </button>
+              </a>
             </div>
             <div className="bg-[#fff] p-4 rounded-3xl lg:w-[33%]">
               <img
-                src="/assets/gallery/debate/five.png"
+                src="/assets/anthology-imgs/img-two.png"
                 className="w-[100%] h-[240px] object-cover rounded-2xl"
               />
               <div className="flex justify-between items-center mt-4">
@@ -59,14 +63,18 @@ const Anthology = () => {
               <h2 className="text-[24px] font-semibold mt-6 mb-10">
                 The Tax Anthology (2019)
               </h2>
-              <button className="flex justify-center items-center space-x-3 text-[14px] font-semibold text-[#fff] bg-[#00689E] w-[100%] rounded-lg py-3">
+              <a
+                href="/downloads/THE TAX ANTHOLOGY 2019.pdf"
+                download
+                className="flex justify-center items-center space-x-3 text-[14px] font-semibold text-[#fff] bg-[#00689E] w-[100%] rounded-lg py-3"
+              >
                 <span>Download</span>
                 <DownloadIcon />
-              </button>
+              </a>
             </div>
             <div className="bg-[#fff] p-4 rounded-3xl lg:w-[33%]">
               <img
-                src="/assets/gallery/debate/five.png"
+                src="/assets/anthology-imgs/img-three.png"
                 className="w-[100%] h-[240px] object-cover rounded-2xl"
               />
               <div className="flex justify-between items-center mt-4">
@@ -78,10 +86,14 @@ const Anthology = () => {
               <h2 className="text-[24px] font-semibold mt-6 mb-10">
                 The Tax Anthology (2018)
               </h2>
-              <button className="flex justify-center items-center space-x-3 text-[14px] font-semibold text-[#fff] bg-[#00689E] w-[100%] rounded-lg py-3">
+              <a
+                href="/downloads/THE TAX ANTHOLOGY 2018.pdf"
+                download
+                className="flex justify-center items-center space-x-3 text-[14px] font-semibold text-[#fff] bg-[#00689E] w-[100%] rounded-lg py-3"
+              >
                 <span>Download</span>
                 <DownloadIcon />
-              </button>
+              </a>
             </div>
           </div>
         </div>

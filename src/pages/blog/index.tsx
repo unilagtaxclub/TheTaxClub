@@ -24,7 +24,7 @@ const Blog = () => {
               </NavLink>
             ))}
           </div>
-          <div className="w-[100%] lg:h-[644px] h-[296px] bg-[url('/assets/blog.jpeg')] bg-cover bg-center text-white rounded-xl">
+          <div className="w-[100%] lg:h-[644px] h-[296px] bg-[url('/assets/blog-imgs/bl-hero.png')] bg-cover bg-center text-white rounded-xl">
             <div className="flex flex-col justify-end bg-black/50 lg:pb-20 lg:space-y-6 space-y-3 rounded-lg lg:px-16 pb-6 px-6 h-[100%]">
               <p className="lg:text-[24px] text-[16px] lg:w-[50%] w-[90%]">
                 Tax Planning, Tax Avoidance and Tax Evasion: An Exposition and
