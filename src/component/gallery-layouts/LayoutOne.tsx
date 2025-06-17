@@ -19,10 +19,11 @@ const LayoutOne: FC<LayoutProps> = ({
   imgFive,
   imgSix,
   imgSeven,
-  imgEight
+  imgEight,
 }) => {
   return (
     <div className="">
+      {/* desktop */}
       <div className="lg:grid hidden gap-6 grid-cols-3">
         <div className="space-y-4">
           <img
@@ -67,6 +68,7 @@ const LayoutOne: FC<LayoutProps> = ({
         </div>
       </div>
 
+      {/* mobile */}
       <div className="grid lg:hidden gap-6 grid-cols-2">
         <img
           src={imgOne}

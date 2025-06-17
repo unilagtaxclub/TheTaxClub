@@ -1,45 +1,55 @@
 import { FC } from "react";
 import { NavLink } from "react-router-dom";
+import { Avatar } from "../svgs/Icons";
 
 interface BlogStoryCardProps {
   imgSrc: string;
-  category: string;
+  tags: string[];
   title: string;
-  authorImg: string;
   authorName: string;
+  slug: string;
   date: string;
 }
 
 const BlogStoryCard: FC<BlogStoryCardProps> = ({
   imgSrc,
-  category,
+  tags,
   title,
-  authorImg,
   authorName,
+  slug,
   date,
 }) => {
   return (
-    <div className="bg-[#fff] p-4 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 ease-in-out cursor-pointer space-y-4">
+    <div
+      key={title}
+      className="bg-[#fff] p-4 rounded-2xl flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 ease-in-out cursor-pointer space-y-4"
+    >
       <img
         src={imgSrc}
         alt="blog-img"
         className="w-[100%] lg:h-[240px] object-cover rounded-lg"
       />
 
-      <div className="flex">
-        <p className="bg-[#e6f4fc] text-[#0085CB] text-[14px] py-1 px-3 rounded-lg">
-          {category}
-        </p>
+      <div className="flex items-center space-x-3">
+        {tags.map((tag, index) => (
+          <div key={index} className="flex">
+            <p className="bg-[#e6f4fc] text-[#0085CB] text-[14px] py-1 px-3 rounded-lg">
+              {tag}
+            </p>
+          </div>
+        ))}
       </div>
       <NavLink
-        to={`/blog/${title}`}
+        to={`/blog/${slug}`}
         className="lg:text-[24px] text-[18px] text-[#333] font-semibold hover:underline"
       >
-        {title}
+        {title.slice(0, 100)}...
       </NavLink>
-      <div className="flex justify-between items-center text-[#808080] text-[14px]">
+      <div className="flex justify-between items-center mt-4 text-[#808080] lg:text-[14px] text-[10px]">
         <div className="flex items-center space-x-3">
-          <img src={authorImg} alt="author" className="w-8 h-8 rounded-full" />
+          <div className="bg-[#ccc] rounded-full">
+            <Avatar />
+          </div>
           <span className="text-[#333]">{authorName}</span>
         </div>
         <p>{date}</p>

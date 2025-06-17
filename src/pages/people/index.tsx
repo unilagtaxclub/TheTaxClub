@@ -1,75 +1,167 @@
-import LeadershipCard from "../../component/cards/LeadershipCard";
+import FlippableCard from "../../component/cards/FlippableCard";
 import Container from "../../component/defaults/Container";
 import Footer from "../../component/defaults/Footer";
 import Header from "../../component/defaults/Header";
 
 const OurPeople = () => {
+  const executives = [
+    {
+      id: 1,
+      frontCard: "/assets/people-imgs/jesutofunmi-front.png",
+      backCard: "/assets/people-imgs/jesutofunmi-back.png",
+    },
+    {
+      id: 2,
+      frontCard: "/assets/people-imgs/emmanuel-front.png",
+      backCard: "/assets/people-imgs/emmanuel-back.png",
+    },
+    {
+      id: 3,
+      frontCard: "/assets/people-imgs/jedidiah-front.png",
+      backCard: "/assets/people-imgs/jedidiah-back.png",
+    },
+    {
+      id: 4,
+      frontCard: "/assets/people-imgs/paul-front.png",
+      backCard: "/assets/people-imgs/paul-back.png",
+    },
+    {
+      id: 5,
+      frontCard: "/assets/people-imgs/michael-front.png",
+      backCard: "/assets/people-imgs/michael-back.png",
+    },
+    {
+      id: 6,
+      frontCard: "/assets/people-imgs/taiwo-front.png",
+      backCard: "/assets/people-imgs/taiwo-back.png",
+    },
+    {
+      id: 7,
+      frontCard: "/assets/people-imgs/oluwafeyikemi-front.png",
+      backCard: "/assets/people-imgs/oluwafeyikemi-back.png",
+    },
+    {
+      id: 8,
+      frontCard: "/assets/people-imgs/elum-front.png",
+      backCard: "/assets/people-imgs/elum-back.png",
+    },
+    {
+      id: 9,
+      frontCard: "/assets/people-imgs/kehinde-front.png",
+      backCard: "/assets/people-imgs/kehinde-back.png",
+    },
+  ];
+
+  const staffAdvisers = [
+    {
+      id: 10,
+      frontCard: "/assets/people-imgs/sanni-front.png",
+      backCard: "/assets/people-imgs/sanni-back.png",
+    },
+    {
+      id: 11,
+      frontCard: "/assets/people-imgs/emmanuel-front.png",
+      backCard: "/assets/people-imgs/emmanuel-back.png",
+    },
+    {
+      id: 12,
+      frontCard: "/assets/people-imgs/jesutofunmi-front.png",
+      backCard: "/assets/people-imgs/jesutofunmi-back.png",
+    },
+  ];
+
+  const elders = [
+    {
+      id: 13,
+      frontCard: "/assets/people-imgs/zacch-front.png",
+      backCard: "/assets/people-imgs/zacch-back.png",
+    },
+    {
+      id: 14,
+      frontCard: "/assets/people-imgs/ayodele-front.png",
+      backCard: "/assets/people-imgs/ayodele-back.png",
+    },
+    {
+      id: 15,
+      frontCard: "/assets/people-imgs/jesutofunmi-front.png",
+      backCard: "/assets/people-imgs/jesutofunmi-back.png",
+    },
+    {
+      id: 15,
+      frontCard: "/assets/people-imgs/oyedele-front.png",
+      backCard: "/assets/people-imgs/oyedele-back.png",
+    },
+  ];
+
   return (
     <Container>
-      <div className="bg-[#f2f2f2] min-h-screen pt-10">
-        <Header />
-        <div className="w-[90vw] lg:w-[80vw] mx-auto mt-10 pb-10">
-          <div className="flex flex-col text-center items-center justify-center space-y-2">
-            <h2 className="text-[#808080] lg:text-[20px] text-[12px] font-semibold uppercase text-center border border-[#808080] py-1 px-3 rounded-full">
-              Meet our People
-            </h2>
-            <p className="lg:text-[25px] text-[#333] lg:w-[70%]">
-              Meet our world class ullamcorper cursus lectus. Fames aliquet ac
-              dui adipiscing.{" "}
-            </p>
+      <div className="bg-[#f2f2f2] min-h-screen">
+        <div className="bg-[url('/assets/gallery/ntdv/img-fourteen.png')] lg:h-[581px] bg-cover bg-no-repeat">
+          <div className="bg-[rgba(0,0,0,0.6)] text-[#fff] w-[100%] flex flex-col pt-6 lg:pt-20 lg:h-[581px] pb-20 lg:pb-0 lg:px-6">
+            <Header active="Our People" />
+            <div className="lg:w-[80vw] w-[90vw] mx-auto mt-10 lg:mt-[30vh]">
+              <h2 className="lg:text-[56px] text-[30px] font-semibold">
+                People
+              </h2>
+            </div>
           </div>
-
+        </div>
+        <div className="w-[90vw] lg:w-[80vw] mx-auto mt-[10vh] pb-10">
           <div className="mt-10">
-            <h2 className="lg:text-[24px] text-[18px] font-semibold">
-              Current Excos and Coordinators
-            </h2>
-              <div className="mt-6 grid lg:grid-cols-3 grid-cols-2 gap-10">
-                <LeadershipCard imgSrc="/assets/community-imgs/community-img-two.jpeg" />
-                <LeadershipCard imgSrc="/assets/community-imgs/community-img-three.jpeg" />
-                <LeadershipCard imgSrc="/assets/community-imgs/community-img-four.jpeg" />
-                <LeadershipCard imgSrc="/assets/community-imgs/community-img-five.jpeg" />
-                <LeadershipCard imgSrc="/assets/community-imgs/community-img-six.jpeg" />
-                <LeadershipCard imgSrc="/assets/community-imgs/community-img-seven.jpeg" />
-              </div> 
+            <div className="flex">
+              <h2 className="text-[#808080] lg:text-[20px] text-[12px] font-semibold uppercase text-center border border-[#DFBD00] py-1 px-3 rounded-full">
+                Executives
+              </h2>
+            </div>
+            <div className="mt-6 grid lg:grid-cols-3 grid-cols-1 gap-10">
+              {executives.map((executive) => (
+                <div key={executive.id} className="lg:h-[509px] h-[450px]">
+                  <FlippableCard
+                    frontCard={executive.frontCard}
+                    backCard={executive.backCard}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="lg:mt-[20vh] mt-20">
-            <h2 className="lg:text-[24px] text-[18px] font-semibold">
-              Staffs
-            </h2>
-              <div className="mt-6 grid lg:grid-cols-5 grid-cols-2 gap-10">
-                <LeadershipCard imgSrc="/assets/community-imgs/community-img-two.jpeg" />
-                <LeadershipCard imgSrc="/assets/community-imgs/community-img-three.jpeg" />
-                <LeadershipCard imgSrc="/assets/community-imgs/community-img-four.jpeg" />
-                <LeadershipCard imgSrc="/assets/community-imgs/community-img-five.jpeg" />
-                <LeadershipCard imgSrc="/assets/community-imgs/community-img-six.jpeg" />
-                <LeadershipCard imgSrc="/assets/community-imgs/community-img-seven.jpeg" />
-                <LeadershipCard imgSrc="/assets/community-imgs/community-img-four.jpeg" />
-                <LeadershipCard imgSrc="/assets/community-imgs/community-img-five.jpeg" />
-                <LeadershipCard imgSrc="/assets/community-imgs/community-img-six.jpeg" />
-                <LeadershipCard imgSrc="/assets/community-imgs/community-img-seven.jpeg" />
-              </div>
+            <div className="flex">
+              <h2 className="text-[#808080] lg:text-[20px] text-[12px] font-semibold uppercase text-center border border-[#DFBD00] py-1 px-3 rounded-full">
+                Staff Advisers
+              </h2>
+            </div>
+            <div className="mt-6 grid lg:grid-cols-3 grid-cols-1 gap-10">
+              {staffAdvisers.map((staff) => (
+                <div key={staff.id} className="lg:h-[509px] h-[450px]">
+                  <FlippableCard
+                    frontCard={staff.frontCard}
+                    backCard={staff.backCard}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
 
           <div className="lg:mt-[20vh] mt-20 lg:mb-20 mb-10">
-            <h2 className="lg:text-[24px] text-[18px] font-semibold">
-              Hall of Fame
-            </h2>
-              <div className="mt-6 grid lg:grid-cols-5 grid-cols-2 gap-10">
-                <LeadershipCard imgSrc="/assets/community-imgs/community-img-two.jpeg" />
-                <LeadershipCard imgSrc="/assets/community-imgs/community-img-three.jpeg" />
-                <LeadershipCard imgSrc="/assets/community-imgs/community-img-four.jpeg" />
-                <LeadershipCard imgSrc="/assets/community-imgs/community-img-five.jpeg" />
-                <LeadershipCard imgSrc="/assets/community-imgs/community-img-six.jpeg" />
-                <LeadershipCard imgSrc="/assets/community-imgs/community-img-seven.jpeg" />
-                <LeadershipCard imgSrc="/assets/community-imgs/community-img-four.jpeg" />
-                <LeadershipCard imgSrc="/assets/community-imgs/community-img-five.jpeg" />
-                <LeadershipCard imgSrc="/assets/community-imgs/community-img-six.jpeg" />
-                <LeadershipCard imgSrc="/assets/community-imgs/community-img-seven.jpeg" />
-              </div>
+            <div className="flex">
+              <h2 className="text-[#808080] lg:text-[20px] text-[12px] font-semibold uppercase text-center border border-[#DFBD00] py-1 px-3 rounded-full">
+                Patrons/Matrons
+              </h2>
+            </div>
+            <div className="mt-6 grid lg:grid-cols-3 grid-cols-1 gap-10">
+              {elders.map((elder) => (
+                <div key={elder.id} className="lg:h-[509px] h-[450px]">
+                  <FlippableCard
+                    frontCard={elder.frontCard}
+                    backCard={elder.backCard}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-        <Footer />
+        <Footer active="Our People" />
       </div>
     </Container>
   );

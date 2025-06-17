@@ -1,89 +1,120 @@
 import { NavLink } from "react-router-dom";
 import { EmailIcon } from "../svgs/Icons";
-import { Facebook, Instagram, LinkedIn, Logo, Twitter } from "../svgs/Logos";
+import { Logo } from "../svgs/Logos";
 
-const Footer = () => {
+interface FooterProps {
+  active?: string;
+}
+
+const Footer = ({ active }: FooterProps) => {
   return (
-    <div className="bg-[#00689e]">
+    <div className="bg-[#003D5E] relative mt-[20vh]">
+      {active === "Home" && (
+        <div className="bg-[#fff] text-center z-10 absolute lg:-top-[15vh] lg:left-[30%] lg:px-20 lg:py-10 lg:space-y-6 space-y-3 py-4 px-6 mt-10 lg:mt-0 rounded-3xl lg:w-[45%] w-[90%] left-6">
+          <h2 className="mt-4 mb-8 lg:text-[34px] font-semibold">
+            Haven't signed up to our Newsletter yet?
+          </h2>
+          <p className="text-[#808080] lg:text-[16px] text-[14px]">
+            Subscribe to stay up to date on all our juicy and exciting content
+            and events.
+          </p>
+          <div className="">
+            <div className="flex items-center lg:mb-10 mt-6 border border-[#ccc] space-x-3 rounded-lg px-4 lg:py-4 py-2">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your email"
+                className="w-[100%] outline-none border-none"
+              />
+              <EmailIcon />
+            </div>
+            <button className="bg-[#00689e] text-[#fff] mt-6 text-[16px] font-semibold rounded-lg lg:py-4 py-2 px-6 w-[100%]">
+              Subscribe to Newsletter
+            </button>
+          </div>
+        </div>
+      )}
+      {active === "Home" && (
+        <div className="relative h-[400px]">
+          <img
+            src="/assets/footer-img.png"
+            alt="footer-img"
+            className="object-cover h-[100%] w-[100%]"
+          />
+          <div className="bg-[rgba(0,0,0,0.6)] absolute w-[100%] h-[400px] top-0"></div>
+        </div>
+      )}
       <div className="mt-10 text-[#fff] lg:w-[80vw] w-[90vw] mx-auto py-14">
         <div className="flex lg:flex-row flex-col justify-between">
-          <div className="space-y-6 lg:w-[30%]">
-            <h2 className="text-[18px] font-semibold">About</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam
-            </p>
-            <div className="space-y-1">
-              <p>
-                <span className="font-semibold">Email:</span> TTC@web.net
-              </p>
-              <p>
-                <span className="font-semibold">Phone:</span> 880123456789
-              </p>
+          <div className="flex space-x-2">
+            <Logo />
+            <div className="text-[20px]">
+              <h2 className="font-semibold">The Tax Club,</h2>
+              <p className="">University of Lagos</p>
             </div>
           </div>
-
-          <div className="space-y-6 lg:w-[25%] flex flex-col lg:items-center mt-10 lg:mt-0">
-            <h2 className="text-[18px] font-semibold">Quick Links</h2>
+          <div className="space-y-6 flex flex-col lg:items-center mt-10 lg:mt-0">
+            <h2 className="text-[20px] font-semibold">Quick Links</h2>
             <div className="space-y-4 flex flex-col">
               <NavLink to="/">Home</NavLink>
-              <NavLink to="/about">About</NavLink>
-              <NavLink to="/our-people">Our People</NavLink>
-              <NavLink to="/blog">Blog</NavLink>
-              <NavLink to="/events">Events</NavLink>
+              <NavLink to="/about">About Us</NavLink>
+              <NavLink to="/our-people">Our Programmes</NavLink>
+              <NavLink to="/blog">Publications</NavLink>
+              <NavLink to="/events">Our People</NavLink>
               <NavLink to="/gallery">Gallery</NavLink>
-              <p>Contact Us</p>
             </div>
           </div>
 
-          <div className="bg-[#fff] text-[#808080] lg:p-10 p-6 mt-10 lg:mt-0 rounded-3xl lg:w-[35%]">
-            <h2 className="font-semibold">Subscribe</h2>
-            <p className="mt-4 mb-8">
-              Join our newsletter to stay up to date on features and releases
-            </p>
-            <div className="">
-              <div className="flex items-center border border-[#ccc] space-x-3 rounded-lg px-4 py-2">
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Your email"
-                  className="w-[100%] outline-none border-none"
-                />
-                <EmailIcon />
+          <div className="space-y-6 flex flex-col mt-10 lg:mt-0">
+            <h2 className="text-[20px] font-semibold">Reach Us</h2>
+            <div className="space-y-4">
+              <div className="flex flex-col">
+                <span>Email address:</span>
+                <a href="mailto:unilagtaxclub@gmail.com" className="underline">
+                  unilagtaxclub@gmail.com
+                </a>
               </div>
-              <button className="bg-[#00689e] text-[#fff] text-[16px] font-semibold rounded-lg py-3 px-6 mt-2 w-[100%]">
-                Subscribe
-              </button>
+              <div className="flex flex-col">
+                <span>Address:</span>
+                <span>University of Lagos, Akoka</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="space-y-6 flex flex-col mt-10 lg:mt-0">
+            <h2 className="text-[20px] font-semibold">Social Media</h2>
+            <div className="space-y-4 flex flex-col">
+              <a
+                href="https://www.linkedin.com/company/thetaxclub/"
+                target="_blank"
+                className="underline"
+              >
+                Linkedin
+              </a>
+              <a
+                href="https://www.instagram.com/unilagtaxclub/?igsh=aW1ncGxyNzhhemUy&utm_source=qr"
+                target="_blank"
+                className="underline"
+              >
+                Instagram
+              </a>
+              <a
+                href="https://x.com/unilagtaxclub?s=11"
+                target="_blank"
+                className="underline"
+              >
+                X
+              </a>
+              <span className="underline">Facebook</span>
             </div>
           </div>
         </div>
 
-        <div className="border-t-2 border-[#fff] mt-10 pt-10 flex lg:flex-row flex-col justify-between lg:items-center space-y-6 lg:space-y-0">
-          <div className="flex items-center space-x-2">
-            <Logo />
-            <div className="">
-              <h2 className="text-[18px] font-semibold">TTC Website</h2>
-              <p className="text-[15px]">
-                TTC 2024. All rights reserved
-              </p>
-            </div>
-          </div>
-          <div className="flex space-x-4">
-            <LinkedIn />
-            <Twitter />
-            <Facebook />
-            <Instagram />
-          </div>
-
-          <div className="flex space-x-4">
-            <p className="text-[15px]">Privacy Policy</p>
-            <p className="text-[15px]">|</p>
-            <p className="text-[15px]">Terms of Use</p>
-            <p className="text-[15px]">|</p>
-            <p className="text-[15px]">Cookie Policy</p>
-          </div>
+        <div className="border-t-2 border-[#fff] mt-10 pt-10">
+          <p className="text-center text-[14px] font-semibold">
+            Copyright©The Tax Club UNILAG. All rights reserved.
+          </p>
         </div>
       </div>
     </div>

@@ -12,6 +12,7 @@ const LayoutTwo: FC<LayoutProps> = ({
 }) => {
   return (
     <div>
+      {/* desktop */}
       <div className="lg:grid hidden grid-cols-3 gap-6">
         <div className="space-y-4">
           <img
@@ -57,6 +58,7 @@ const LayoutTwo: FC<LayoutProps> = ({
         </div>
       </div>
 
+      {/* mobile */}
       <div className="grid lg:hidden gap-6 grid-cols-2">
         <img
           src={imgTwo}

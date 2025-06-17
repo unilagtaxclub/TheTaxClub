@@ -6,14 +6,12 @@ interface LeadershipCardProps {
 
 const LeadershipCard: FC<LeadershipCardProps> = ({ imgSrc }) => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="lg:h-[509px] h-[450px]">
       <img
         src={imgSrc}
         alt="community-img"
-        className="w-[100%] h-[200px] rounded-lg object-cover"
+        className="w-[100%] h-[100%] object-cover"
       />
-      <h3 className="lg:text-[24px] text-[18px] mt-4">Sam Smith</h3>
-      <p className="lg:text-[16px] text-[14px] text-[#808080]">CEO, Company Name</p>
     </div>
   );
 };

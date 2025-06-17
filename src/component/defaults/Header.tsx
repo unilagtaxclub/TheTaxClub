@@ -4,61 +4,104 @@ import { motion, AnimatePresence } from "framer-motion";
 import Drawer from "./Drawer";
 import { NavLink } from "react-router-dom";
 import { Logo } from "../svgs/Logos";
+import ProgrammeDropdown from "../dropdowns/ProgrammeDropdown";
+import PublicationDropdown from "../dropdowns/PublicationDropdown";
 
-const Header = () => {
+interface HeaderProps {
+  active: string;
+}
+
+const Header = ({ active }: HeaderProps) => {
   const [showDrawer, setShowDrawer] = useState<boolean>(false);
-  const [showDropdown, setShowDropdown] = useState<boolean>(false);
+  const [showProgrammesDropdown, setShowProgrammesDropdown] =
+    useState<boolean>(false);
+  const [showPublicationsDropdown, setShowPublicationsDropdown] =
+    useState<boolean>(false);
 
   return (
     <div>
-      <div className="lg:w-[80vw] w-[90vw] mx-auto bg-[#fff] py-2 px-6 rounded-2xl text-[18px] flex justify-between items-center">
+      <div className="lg:w-[80vw] w-[90vw] mx-auto text-[18px] flex justify-between items-center">
         <NavLink to="/">
           <Logo />
         </NavLink>
         <div className="space-x-10 lg:flex hidden">
-          <NavLink to="/">Home</NavLink>
+          <NavLink
+            to="/"
+            className={`${active === "Home" && "text-[#00689E] font-semibold"}`}
+          >
+            Home
+          </NavLink>
+          <NavLink
+            to="/about"
+            className={`${active === "About" && "text-[#00689E] font-semibold"}`}
+          >
+            About Us
+          </NavLink>
           <div className="relative">
             <div
               className="space-x-3 flex items-center cursor-pointer"
-              onClick={() => setShowDropdown((prev) => !prev)}
+              onClick={() => {
+                setShowProgrammesDropdown((prev) => !prev);
+                setShowPublicationsDropdown(false);
+              }}
             >
-              <span>Publication</span>
+              <span
+                className={`${active === "Programmes" && "text-[#00689E] font-semibold"}`}
+              >
+                Our Programmes
+              </span>
               <CaretDown />
             </div>
             <AnimatePresence>
-              {showDropdown && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.2 }}
-                  className="absolute bg-[#fff] rounded-xl shadow-lg mt-2 flex flex-col p-2 space-y-2 w-[15vw] top-12"
-                >
-                  <NavLink
-                    to="/publications/featured"
-                    className="text-[15px] hover:bg-[#f1f1f1] hover:rounded-xl p-2 transition-all duration-300 ease-in-out"
-                  >
-                    Featured
-                  </NavLink>
-                  <NavLink
-                    to="/publications/anthology"
-                    className="text-[15px] hover:bg-[#f1f1f1] hover:rounded-xl p-2 transition-all duration-300 ease-in-out"
-                  >
-                    Anthology
-                  </NavLink>
-                </motion.div>
-              )}
+              {showProgrammesDropdown && <ProgrammeDropdown />}
             </AnimatePresence>
           </div>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/our-people">Our People</NavLink>
-          <NavLink to="/blog">Blog</NavLink>
-          <NavLink to="/events">Events</NavLink>
-          <NavLink to="/gallery">Gallery</NavLink>
+          <div className="relative">
+            <div
+              className="space-x-3 flex items-center cursor-pointer"
+              onClick={() => {
+                setShowPublicationsDropdown((prev) => !prev);
+                setShowProgrammesDropdown(false);
+              }}
+            >
+              <span
+                className={`${active === "Publications" && "text-[#00689E] font-semibold"}`}
+              >
+                Publications
+              </span>
+              <CaretDown />
+            </div>
+            <AnimatePresence>
+              {showPublicationsDropdown && <PublicationDropdown />}
+            </AnimatePresence>
+          </div>
+
+          <NavLink
+            to="/our-people"
+            className={`${active === "Our People" && "text-[#00689E] font-semibold"}`}
+          >
+            Our People
+          </NavLink>
+          <NavLink
+            to="/gallery"
+            className={`${active === "Gallery" && "text-[#00689E] font-semibold"}`}
+          >
+            Gallery
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={`${active === "Contact" && "text-[#00689E] font-semibold"}`}
+          >
+            Contact
+          </NavLink>
         </div>
-        <button className="px-6 py-3 text-[#fff] bg-[#00689e] rounded-xl lg:block hidden">
-          Contact Us
-        </button>
+        <a
+          href="https://bit.ly/applicationformttcunilag"
+          target="_blank"
+          className="px-10 py-2 font-semibold text-[#fff] bg-[#00689e] rounded-xl lg:block hidden"
+        >
+          Join Us
+        </a>
 
         <div
           className="lg:hidden"
