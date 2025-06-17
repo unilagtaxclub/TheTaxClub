@@ -108,7 +108,7 @@ const BlogPost = () => {
               className="my-10 lg:h-[462px] h-[296px] rounded-2xl w-[100%] object-cover"
             />
           )}
-          <div className="space-y-6 mt-10">
+          <div className="space-y-6 mt-10 overflow-hidden">
             {post.body?.map((section: any) => (
               <div key={section._key} className="space-y-3">
                 {section.heading && (
