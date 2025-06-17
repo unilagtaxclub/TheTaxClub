@@ -8,7 +8,7 @@ import { Avatar, SearchIcon } from "../../component/svgs/Icons";
 import { useEffect, useState } from "react";
 import { SanityDocument } from "@sanity/client";
 import { client } from "../../sanity/client";
-import { POSTS_QUERY } from "../../component/rawitems/BlogItems";
+import { POSTS_QUERY } from "../../component/rawitems/BlogQueries";
 import { urlFor } from "../../sanity/imageBuilder";
 
 const Blog = () => {

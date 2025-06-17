@@ -17,7 +17,7 @@ const Container: FC<ContainerProps> = ({ children }) => {
   const location = useLocation();
 
   return (
-    <AnimatePresence mode="wait">
+    <AnimatePresence>
       <ScrollToTop />
       <motion.div
         key={location.pathname}
