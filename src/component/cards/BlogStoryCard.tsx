@@ -7,6 +7,7 @@ interface BlogStoryCardProps {
   tags: string[];
   title: string;
   authorName: string;
+  slug: string;
   date: string;
 }
 
@@ -15,10 +16,14 @@ const BlogStoryCard: FC<BlogStoryCardProps> = ({
   tags,
   title,
   authorName,
+  slug,
   date,
 }) => {
   return (
-    <div className="bg-[#fff] p-4 rounded-2xl flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 ease-in-out cursor-pointer space-y-4">
+    <div
+      key={title}
+      className="bg-[#fff] p-4 rounded-2xl flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 ease-in-out cursor-pointer space-y-4"
+    >
       <img
         src={imgSrc}
         alt="blog-img"
@@ -35,10 +40,10 @@ const BlogStoryCard: FC<BlogStoryCardProps> = ({
         ))}
       </div>
       <NavLink
-        to={`/blog/${title}`}
+        to={`/blog/${slug}`}
         className="lg:text-[24px] text-[18px] text-[#333] font-semibold hover:underline"
       >
-        {title}
+        {title.slice(0, 100)}...
       </NavLink>
       <div className="flex justify-between items-center mt-4 text-[#808080] lg:text-[14px] text-[10px]">
         <div className="flex items-center space-x-3">

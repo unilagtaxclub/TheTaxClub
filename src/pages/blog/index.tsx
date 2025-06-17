@@ -5,9 +5,27 @@ import Footer from "../../component/defaults/Footer";
 import Header from "../../component/defaults/Header";
 import { publicationItems } from "../../component/rawitems/PublicationItems";
 import { Avatar, SearchIcon } from "../../component/svgs/Icons";
-import { blogItems } from "../../component/rawitems/BlogItems";
+import { useEffect, useState } from "react";
+import { SanityDocument } from "@sanity/client";
+import { client } from "../../sanity/client";
+import { POSTS_QUERY } from "../../component/rawitems/BlogItems";
+import { urlFor } from "../../sanity/imageBuilder";
 
 const Blog = () => {
+  const [posts, setPosts] = useState<SanityDocument[] | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    client
+      .fetch<SanityDocument[]>(POSTS_QUERY)
+      .then((data) => setPosts(data))
+      .catch((err) => console.error("Error fetching posts:", err))
+      .finally(() => setLoading(false));
+  }, []);
+
+  if (loading) return <p>Loading...</p>;
+  if (!posts) return <p>No posts found.</p>;
+
   return (
     <Container>
       <div className="bg-[#f2f2f2] min-h-screen pt-10">
@@ -24,29 +42,39 @@ const Blog = () => {
               </NavLink>
             ))}
           </div>
-          <div className="w-[100%] lg:h-[644px] h-[296px] bg-[url('/assets/blog-imgs/bl-hero.png')] bg-cover bg-center text-white rounded-xl">
-            <div className="flex flex-col justify-end bg-black/50 lg:pb-20 lg:space-y-6 space-y-3 rounded-lg lg:px-16 pb-6 px-6 h-[100%]">
-              <p className="lg:text-[24px] text-[16px] lg:w-[50%] w-[90%]">
-                Tax Planning, Tax Avoidance and Tax Evasion: An Exposition and
-                Analysis of Implications on the Economy
-              </p>
-              <div className="flex">
-                <button className="px-10 py-2 font-semibold text-[#fff] bg-[#00689e] rounded-xl lg:block hidden">
-                  Read article
-                </button>
-              </div>
+          {posts && posts.length > 0 && (
+            <div
+              className="w-[100%] lg:h-[644px] h-[296px] bg-cover bg-center text-white rounded-xl"
+              style={{
+                backgroundImage: `url(${urlFor(posts[0].image).width(1200).height(600).url()})`,
+              }}
+            >
+              <div className="flex flex-col justify-end bg-black/50 lg:pb-20 lg:space-y-6 space-y-3 rounded-lg lg:px-16 pb-6 px-6 h-[100%]">
+                <p className="lg:text-[24px] text-[16px] lg:w-[50%] w-[90%]">
+                  {posts[0].title}
+                </p>
 
-              <div className="flex items-center lg:space-x-3 text-[12px] lg:text-[16px]">
-                <div className="lg:scale-100 scale-50">
-                  <Avatar />
+                <div className="flex">
+                  <NavLink
+                    to={`/blog/${posts[0].slug.current}`}
+                    className="px-10 py-2 font-semibold text-[#fff] bg-[#00689e] rounded-xl lg:block hidden"
+                  >
+                    Read article
+                  </NavLink>
                 </div>
-                <div className="flex lg:justify-normal space-x-6 justify-between w-[100%]">
-                  <p>Oyinkansola Ademeso</p>
-                  <p>May 5, 2025</p>
+
+                <div className="flex items-center lg:space-x-3 text-[12px] lg:text-[16px]">
+                  <div className="lg:scale-100 scale-50">
+                    <Avatar />
+                  </div>
+                  <div className="flex lg:justify-normal space-x-6 justify-between w-[100%]">
+                    <p>{posts[0].authorName}</p>
+                    <p>{new Date(posts[0].publishedAt).toLocaleDateString()}</p>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          )}
 
           <div className="flex items-center border border-[#ccc] bg-[#E5E5E5] space-x-3 rounded-full mt-10 lg:p-6 p-3 w-[100%]">
             <SearchIcon />
@@ -65,13 +93,14 @@ const Blog = () => {
             </h2>
 
             <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-10 gap-6 mt-10">
-              {blogItems.map((item) => (
+              {posts.map((item) => (
                 <BlogStoryCard
                   key={item.id}
-                  imgSrc={item.img}
+                  imgSrc={urlFor(item.image).width(800).height(400).url()}
                   title={item.title}
+                  slug={item.slug.current}
                   authorName={item.authorName}
-                  date={item.date}
+                  date={new Date(item.publishedAt).toLocaleDateString()}
                   tags={item.tags}
                 />
               ))}
