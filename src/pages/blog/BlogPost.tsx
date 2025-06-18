@@ -76,9 +76,9 @@ const BlogPost = () => {
 
   return (
     <Container>
-      <div className="bg-[#f2f2f2] min-h-screen pt-10">
+      <div className="bg-[#f2f2f2] min-h-screen lg:pt-10 pt-4">
         <Header active="Blog" />
-        <div className="w-[90vw] lg:w-[50vw] mx-auto mt-10 pb-10">
+        <div className="w-[90vw] lg:w-[50vw] mx-auto lg:mt-10 mt-6 pb-10">
           <div className="space-y-4">
             <div className="flex">
               {post.tags.map((tag: string, index: number) => (

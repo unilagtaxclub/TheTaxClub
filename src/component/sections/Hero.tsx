@@ -55,7 +55,7 @@ const Hero = () => {
 
       <div className="absolute inset-0 bg-[rgba(0,0,0,0.4)] z-10 text-white w-full flex flex-col pt-6 lg:pt-20 pb-20 lg:pb-0 lg:px-6">
         <motion.div variants={heroVariants} initial="hidden" animate="visible">
-          <Header active="Home" />
+          <Header color="#ffffff" active="Home" />
         </motion.div>
 
         <div className="lg:w-[80vw] w-[90vw] mx-auto mt-10 lg:mt-[20vh] z-20">
@@ -114,7 +114,7 @@ const Hero = () => {
             <a
               href="https://bit.ly/applicationformttcunilag"
               target="_blank"
-              className="border border-[#00689e] text-[#00689e] px-20 py-3 rounded-lg font-semibold hover:bg-[#00689e] hover:text-white transition-all duration-300 ease-in-out"
+              className="border border-[#00689e] text-[#00689e] flex items-center justify-center lg:px-20 py-3 rounded-lg font-semibold hover:bg-[#00689e] hover:text-white transition-all duration-300 ease-in-out"
             >
               Become a Member
             </a>

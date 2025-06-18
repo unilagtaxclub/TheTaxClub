@@ -23,14 +23,14 @@ const Blog = () => {
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <p>Loading...</p>;
-  if (!posts) return <p>No posts found.</p>;
+  if (loading) return <p className="p-6">Loading...</p>;
+  if (!posts) return <p className="p-6">No posts found.</p>;
 
   return (
     <Container>
-      <div className="bg-[#f2f2f2] min-h-screen pt-10">
+      <div className="bg-[#f2f2f2] min-h-screen lg:pt-10 pt-4">
         <Header active="Blog" />
-        <div className="w-[90vw] lg:w-[80vw] mx-auto mt-10 pb-10">
+        <div className="w-[90vw] lg:w-[80vw] mx-auto lg:mt-10 mt-4 pb-10">
           <div className="lg:flex hidden items-center flex-wrap gap-6 mb-10 text-[14px]">
             {publicationItems.map((item) => (
               <NavLink

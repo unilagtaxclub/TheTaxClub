@@ -11,7 +11,7 @@ import Upcoming from "../../component/sections/Upcoming";
 const Home = () => {
   return (
     <Container>
-      <div className="bg-[#f2f2f2] min-h-screen">
+      <div className="bg-[#f2f2f2] min-h-screen overflow-x-hidden">
         <Hero />
         <LogoScroll />
         <About />

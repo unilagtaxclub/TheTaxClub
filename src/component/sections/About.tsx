@@ -27,7 +27,7 @@ const About = () => {
         </div>
       </div>
 
-      <div className="lg:mt-[10vh] mt-16 lg:w-[80vw] w-[90vw] mx-auto flex lg:flex-row-reverse flex-col items-center justify-between">
+      <div className="lg:mt-[10vh] mt-16 lg:w-[80vw] w-[90vw] mx-auto flex lg:flex-row-reverse lg:space-y-0 space-y-10 flex-col items-center justify-between">
         <div className="space-y-4 lg:w-[45%]">
           <h2 className="lg:text-[40px] text-[24px] font-semibold">
             Career Advancement
@@ -39,13 +39,11 @@ const About = () => {
             Office which is in charge of sourcing and allotting internship
             placements as well as other networking opportunities.
           </p>
-          <a
-            href="https://bit.ly/applicationformttcunilag"
-            target="_blank"
-            className="px-6 py-3 text-[#fff] bg-[#00689e] lg:w-[50%] w-[100%] lg:max-w-[50%] font-semibold rounded-lg lg:text-[20px] mb-10 lg:mb-0"
-          >
-            Become a Member
-          </a>
+          <button className="px-6 py-3 text-[#fff] bg-[#00689e] lg:w-[50%] w-[100%] lg:max-w-[50%] lg:text-[20px] font-semibold rounded-lg">
+            <a href="https://bit.ly/applicationformttcunilag" target="_blank">
+              Become a Member
+            </a>
+          </button>
         </div>
         <div className="lg:w-[45%]">
           <img

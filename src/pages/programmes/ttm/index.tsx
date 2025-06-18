@@ -7,9 +7,9 @@ import { programmeItems } from "../../../component/rawitems/ProgrammeItems";
 const Ttm = () => {
   return (
     <Container>
-      <div className="lg:mt-[10vh] mt-10">
+      <div className="lg:mt-[10vh] mt-6">
         <Header active="Programmes" />
-        <div className="lg:w-[80vw] w-[90vw] mt-14 mx-auto">
+        <div className="lg:w-[80vw] w-[90vw] lg:mt-14 mx-auto">
           <div className="lg:flex hidden items-center flex-wrap gap-6 text-[14px]">
             {programmeItems.map((item) => (
               <NavLink
@@ -22,7 +22,7 @@ const Ttm = () => {
             ))}
           </div>
 
-          <div className="flex lg:flex-row flex-col justify-between space-x-10 lg:mt-20 mt-10">
+          <div className="flex lg:flex-row flex-col justify-between space-x-10 lg:mt-20 mt-6">
             <div className="lg:w-[50%] w-[100%]">
               <img
                 src="/assets/programme-imgs/ttm-one.png"

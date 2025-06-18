@@ -65,7 +65,7 @@ const CountdownTimer = ({ targetDate }: { targetDate: string }) => {
 
     return (
       <div className="flex flex-col items-center">
-        <div className="relative w-[60px] lg:w-[80px] h-[60px] lg:h-[100px] bg-[#00689e] text-white font-bold text-[28px] lg:text-[48px] rounded-xl overflow-hidden perspective">
+        <div className="relative w-[50px] lg:w-[80px] h-[50px] lg:h-[100px] bg-[#00689e] text-white font-bold text-[24px] lg:text-[48px] rounded-xl overflow-hidden perspective">
           <AnimatePresence initial={false}>
             {hasChanged ? (
               <motion.div

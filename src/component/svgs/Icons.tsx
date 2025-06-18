@@ -19,7 +19,7 @@ export const CaretDown = () => (
   </svg>
 );
 
-export const Hamburger = () => (
+export const Hamburger = ({ color }: IconProps) => (
   <svg
     width="24"
     height="24"
@@ -27,24 +27,24 @@ export const Hamburger = () => (
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
   >
-    <path d="M3 7H21H3Z" fill="#00507B" />
+    <path d="M3 7H21H3Z" fill={color ? color : "#00507B"} />
     <path
       d="M3 7H21"
-      stroke="#00507B"
+      stroke={color ? color : "#00507B"}
       strokeWidth="1.5"
       strokeLinecap="round"
     />
-    <path d="M3 12H21H3Z" fill="#00507B" />
+    <path d="M3 12H21H3Z" fill={color ? color : "#00507B"} />
     <path
       d="M3 12H21"
-      stroke="#00507B"
+      stroke={color ? color : "#00507B"}
       strokeWidth="1.5"
       strokeLinecap="round"
     />
-    <path d="M3 17H21H3Z" fill="#00507B" />
+    <path d="M3 17H21H3Z" fill={color ? color : "#00507B"} />
     <path
       d="M3 17H21"
-      stroke="#292D32"
+      stroke={color ? color : "#292D32"}
       strokeWidth="1.5"
       strokeLinecap="round"
     />
