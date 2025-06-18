@@ -7,7 +7,7 @@ import { programmeItems } from "../../../component/rawitems/ProgrammeItems";
 const Ttw = () => {
   return (
     <Container>
-      <div className="lg:mt-[10vh] mt-10">
+      <div className="lg:mt-[10vh] mt-6">
         <Header active="Programmes" />
         <div className="lg:w-[80vw] w-[90vw] mt-14 mx-auto">
           <div className="lg:flex hidden items-center flex-wrap gap-6 text-[14px]">
@@ -22,7 +22,7 @@ const Ttw = () => {
             ))}
           </div>
 
-          <div className="flex lg:flex-row flex-col justify-between space-x-10 lg:mt-20 mt-10">
+          <div className="flex lg:flex-row flex-col justify-between space-x-10 lg:mt-20 mt-6">
             <div className="lg:w-[50%] w-[100%] flex flex-col lg:mt-0 mt-6 space-y-6 justify-between">
               <img
                 src="/assets/programme-imgs/ttw-one.png"

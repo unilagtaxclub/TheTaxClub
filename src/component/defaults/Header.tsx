@@ -9,9 +9,10 @@ import PublicationDropdown from "../dropdowns/PublicationDropdown";
 
 interface HeaderProps {
   active: string;
+  color?: string;
 }
 
-const Header = ({ active }: HeaderProps) => {
+const Header = ({ active, color }: HeaderProps) => {
   const [showDrawer, setShowDrawer] = useState<boolean>(false);
   const [showProgrammesDropdown, setShowProgrammesDropdown] =
     useState<boolean>(false);
@@ -126,7 +127,7 @@ const Header = ({ active }: HeaderProps) => {
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.2 }}
               >
-                <Hamburger />
+                <Hamburger color={color} />
               </motion.div>
             )}
           </AnimatePresence>
