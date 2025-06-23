@@ -115,7 +115,7 @@ const OurPeople = () => {
             </div>
             <div className="mt-6 grid lg:grid-cols-3 grid-cols-1 gap-4">
               {executives.map((executive) => (
-                <div key={executive.id} className="lg:h-[509px] h-[450px]">
+                <div key={executive.id} className="h-[509px] lg:w-[386px]">
                   <FlippableCard
                     frontCard={executive.frontCard}
                     backCard={executive.backCard}
@@ -133,7 +133,7 @@ const OurPeople = () => {
             </div>
             <div className="mt-6 grid lg:grid-cols-3 grid-cols-1 gap-4">
               {staffAdvisers.map((staff) => (
-                <div key={staff.id} className="lg:h-[509px] h-[450px]">
+                <div key={staff.id} className="h-[509px] w-[386px]">
                   <FlippableCard
                     frontCard={staff.frontCard}
                     backCard={staff.backCard}
@@ -151,7 +151,7 @@ const OurPeople = () => {
             </div>
             <div className="mt-6 grid lg:grid-cols-3 grid-cols-1 gap-4">
               {elders.map((elder) => (
-                <div key={elder.id} className="lg:h-[509px] h-[450px]">
+                <div key={elder.id} className="h-[509px] w-[386px]">
                   <FlippableCard
                     frontCard={elder.frontCard}
                     backCard={elder.backCard}
