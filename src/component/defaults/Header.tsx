@@ -116,6 +116,7 @@ const Header = ({ active, color }: HeaderProps) => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.2 }}
+                className="z-50 fixed top-10 right-4"
               >
                 <CloseIcon />
               </motion.div>

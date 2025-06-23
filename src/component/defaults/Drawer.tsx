@@ -12,7 +12,7 @@ const Drawer = () => {
     useState<boolean>(false);
 
   return (
-    <div className="bg-gray-800 text-[#fff] min-h-screen z-50 space-y-10 flex-col flex lg:hidden w-[100%] py-10 fixed px-4 mx-auto">
+    <div className="bg-gray-800 text-[#fff] min-h-screen z-40 space-y-10 flex-col flex lg:hidden w-[100%] py-20 top-0 fixed px-4 mx-auto">
       <NavLink to="/">Home</NavLink>
       <NavLink to="/about">About Us</NavLink>
       <div className="">
@@ -56,9 +56,13 @@ const Drawer = () => {
       <NavLink to="/our-people">Our People</NavLink>
       <NavLink to="/gallery">Gallery</NavLink>
       <NavLink to="/contact">Contact</NavLink>
-      <button className="px-6 py-3 text-[#fff] bg-[#00689e] w-[90%] rounded-xl">
+      <a
+        href="https://bit.ly/applicationformttcunilag"
+        target="_blank"
+        className="px-6 py-3 text-[#fff] bg-[#00689e] w-[100%] rounded-xl"
+      >
         Join Us
-      </button>
+      </a>
     </div>
   );
 };
