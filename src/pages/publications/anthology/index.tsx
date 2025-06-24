@@ -8,9 +8,9 @@ import { DownloadIcon } from "../../../component/svgs/Icons";
 const Anthology = () => {
   return (
     <Container>
-      <div className="bg-[#f2f2f2] min-h-screen pt-10">
+      <div className="bg-[#f2f2f2] min-h-screen lg:pt-10 pt-4">
         <Header active="Publications" />
-        <div className="w-[90vw] lg:w-[80vw] mx-auto mt-10 pb-10">
+        <div className="w-[90vw] lg:w-[80vw] mx-auto lg:mt-10 pb-10">
           <div className="lg:flex hidden items-center flex-wrap gap-6 mb-10 text-[14px]">
             {publicationItems.map((item) => (
               <NavLink
@@ -41,8 +41,8 @@ const Anthology = () => {
                 The Tax Anthology (2021)
               </h2>
               <a
-                href="/downloads/THE TAX ANTHOLOGY 2021.pdf"
-                download
+                href="https://docs.google.com/forms/d/1MD3nDdhUh78NsMaoLj9kUneOCOTW6_IMGznVLvLo-ew/viewform"
+                target="_blank"
                 className="flex justify-center items-center space-x-3 text-[14px] font-semibold text-[#fff] bg-[#00689E] w-[100%] rounded-lg py-3"
               >
                 <span>Download</span>
@@ -64,8 +64,8 @@ const Anthology = () => {
                 The Tax Anthology (2019)
               </h2>
               <a
-                href="/downloads/THE TAX ANTHOLOGY 2019.pdf"
-                download
+                href="https://docs.google.com/forms/d/1MD3nDdhUh78NsMaoLj9kUneOCOTW6_IMGznVLvLo-ew/viewform"
+                target="_blank"
                 className="flex justify-center items-center space-x-3 text-[14px] font-semibold text-[#fff] bg-[#00689E] w-[100%] rounded-lg py-3"
               >
                 <span>Download</span>
@@ -87,8 +87,8 @@ const Anthology = () => {
                 The Tax Anthology (2018)
               </h2>
               <a
-                href="/downloads/THE TAX ANTHOLOGY 2018.pdf"
-                download
+                href="https://docs.google.com/forms/d/1MD3nDdhUh78NsMaoLj9kUneOCOTW6_IMGznVLvLo-ew/viewform"
+                target="_blank"
                 className="flex justify-center items-center space-x-3 text-[14px] font-semibold text-[#fff] bg-[#00689E] w-[100%] rounded-lg py-3"
               >
                 <span>Download</span>

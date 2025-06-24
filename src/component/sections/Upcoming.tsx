@@ -42,7 +42,7 @@ const Upcoming = () => {
             </div>
           </div>
 
-          <div className="border-3 border-[#00689E] lg:w-[45%] flex flex-col justify-center items-center rounded-2xl py-10 lg:px-20 px-10">
+          <div className="border-3 border-[#00689E] lg:w-[45%] w-[100%] flex flex-col justify-center items-center rounded-2xl py-10 lg:px-20 px-10">
             <h2 className="lg:text-[20px] font-semibold text-center text-[#00689E] uppercase">
               Time remaining for anniversary event
             </h2>

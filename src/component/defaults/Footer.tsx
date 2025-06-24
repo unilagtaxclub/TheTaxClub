@@ -19,19 +19,25 @@ const Footer = ({ active }: FooterProps) => {
             and events.
           </p>
           <div className="">
-            <div className="flex items-center lg:mb-10 mt-6 border border-[#ccc] space-x-3 rounded-lg px-4 lg:py-4 py-2">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Your email"
-                className="w-[100%] outline-none border-none"
-              />
-              <EmailIcon />
-            </div>
-            <button className="bg-[#00689e] text-[#fff] mt-6 text-[16px] font-semibold rounded-lg lg:py-4 py-2 px-6 w-[100%]">
-              Subscribe to Newsletter
-            </button>
+            <form action="https://getform.io/f/adrgxvja" method="POST">
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_redirect" value="false" />
+
+              <div className="flex items-center lg:mb-10 mt-6 border border-[#ccc] space-x-3 rounded-lg px-4 lg:py-4 py-2">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Your email"
+                  className="w-[100%] outline-none border-none"
+                />
+                <EmailIcon />
+              </div>
+
+              <button className="bg-[#00689e] text-[#fff] mt-6 text-[16px] font-semibold rounded-lg lg:py-4 py-2 px-6 w-[100%]">
+                Subscribe to Newsletter
+              </button>
+            </form>
           </div>
         </div>
       )}

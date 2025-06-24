@@ -18,9 +18,6 @@ import Tt from "./pages/programmes/tt";
 import Tandt from "./pages/programmes/tandt";
 import Bwm from "./pages/programmes/bwm";
 import Contact from "./pages/contact";
-import NtdvOne from "./pages/gallery/ntdvOne";
-import NtdvTwo from "./pages/gallery/ntdvTwo";
-import TaxDebate from "./pages/gallery/TaxDebate";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -44,11 +41,6 @@ const App = () => {
     { path: "/programmes/tt", element: <Tt /> },
     { path: "/programmes/tandt", element: <Tandt /> },
     { path: "/programmes/bwm", element: <Bwm /> },
-
-    // gallery links
-    { path: "/gallery/ntdv-one", element: <NtdvOne /> },
-    { path: "/gallery/ntdv-two", element: <NtdvTwo /> },
-    { path: "/gallery/tax-debate", element: <TaxDebate /> },
   ]);
 
   return (
