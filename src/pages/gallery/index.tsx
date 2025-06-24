@@ -44,7 +44,7 @@ const Gallery = () => {
                 </div>
               </div>
               <NavLink
-                to="/gallery/ntdv-one"
+                to="#"
                 className="lg:text-[20px] underline text-[#00689e] font-semibold"
               >
                 See all
@@ -63,13 +63,13 @@ const Gallery = () => {
                 imgEight="/assets/gallery/ntdv-two/eight.png"
               />
               <LayoutTwo
-                imgOne="/assets/gallery/ntdv-two/fifteen.png"
-                imgTwo="/assets/gallery/ntdv-two/sixteen.png"
-                imgThree="/assets/gallery/ntdv-two/seventeen.png"
-                imgFour="/assets/gallery/ntdv-two/eighteen.png"
-                imgFive="/assets/gallery/ntdv-two/nineteen.png"
-                imgSix="/assets/gallery/ntdv-two/twenty.png"
-                imgSeven="/assets/gallery/ntdv-two/twenty-one.png"
+                imgOne="/assets/gallery/ntdv-two/nine.png"
+                imgTwo="/assets/gallery/ntdv-two/ten.png"
+                imgThree="/assets/gallery/ntdv-two/eleven.png"
+                imgFour="/assets/gallery/ntdv-two/twelve.png"
+                imgFive="/assets/gallery/ntdv-two/thirteen.png"
+                imgSix="/assets/gallery/ntdv-two/fourteen.png"
+                imgSeven="/assets/gallery/ntdv-two/five.png"
               />
             </div>
           </div>
@@ -86,7 +86,8 @@ const Gallery = () => {
                 </div>
               </div>
               <NavLink
-                to="/gallery/ntdv-two"
+                to="https://drive.google.com/drive/folders/1KBgkL7SlddepbsKrlZTRrOyh4XH6GFXK"
+                target="_blank"
                 className="lg:text-[20px] underline text-[#00689e] font-semibold"
               >
                 See all
@@ -130,7 +131,8 @@ const Gallery = () => {
                 </div>
               </div>
               <NavLink
-                to="/gallery/tax-debate"
+                to="https://drive.google.com/drive/u/0/folders/15nt9cA6BpE7m58oW7wAaYJ4UUKgKMV2Z"
+                target="_blank"
                 className="lg:text-[20px] underline text-[#00689e] font-semibold"
               >
                 See all
@@ -138,24 +140,24 @@ const Gallery = () => {
             </div>
 
             <div className="space-y-6">
-              <LayoutOne
-                imgOne="/assets/gallery/debate/one.png"
-                imgTwo="/assets/gallery/debate/two.png"
-                imgThree="/assets/gallery/debate/three.png"
-                imgFour="/assets/gallery/debate/four.png"
-                imgFive="/assets/gallery/debate/five.png"
-                imgSix="/assets/gallery/debate/six.png"
-                imgSeven="/assets/gallery/debate/seven.png"
-                imgEight="/assets/gallery/debate/eight.png"
-              />
               <LayoutTwo
-                imgOne="/assets/gallery/debate/eight.png"
-                imgTwo="/assets/gallery/debate/nine.png"
-                imgThree="/assets/gallery/debate/ten.png"
-                imgFour="/assets/gallery/debate/eleven.png"
-                imgFive="/assets/gallery/debate/twelve.png"
-                imgSix="/assets/gallery/debate/thirteen.png"
-                imgSeven="/assets/gallery/debate/fourteen.png"
+                imgOne="/assets/gallery/ntdv-two/fifteen.png"
+                imgTwo="/assets/gallery/ntdv-two/sixteen.png"
+                imgThree="/assets/gallery/ntdv-two/seventeen.png"
+                imgFour="/assets/gallery/ntdv-two/eighteen.png"
+                imgFive="/assets/gallery/ntdv-two/nineteen.png"
+                imgSix="/assets/gallery/ntdv-two/twenty.png"
+                imgSeven="/assets/gallery/ntdv-two/twenty-one.png"
+              />
+              <LayoutOne
+                imgOne="/assets/gallery/ntdv-two/twenty-two.png"
+                imgTwo="/assets/gallery/ntdv-two/twenty-three.png"
+                imgThree="/assets/gallery/ntdv-two/twenty-four.png"
+                imgFour="/assets/gallery/ntdv-two/twenty-five.png"
+                imgFive="/assets/gallery/ntdv-two/twenty-six.png"
+                imgSix="/assets/gallery/ntdv-two/twenty-seven.png"
+                imgSeven="/assets/gallery/ntdv-two/twenty-eight.png"
+                imgEight="/assets/gallery/ntdv-two/twenty-nine.png"
               />
             </div>
           </div>
