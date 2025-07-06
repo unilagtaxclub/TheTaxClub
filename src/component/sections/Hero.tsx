@@ -20,8 +20,7 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((prev) => (prev + 1) % backgroundImages.length);
-    }, 5000); // Change every 5 seconds
-
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -40,7 +39,8 @@ const Hero = () => {
   };
 
   return (
-    <div className="relative min-h-[650px] lg:min-h-screen">
+    <div className="relative lg:min-h-screen">
+      {/* Desktop background slideshow */}
       <AnimatePresence mode="wait">
         <motion.div
           key={currentImage}
@@ -48,17 +48,18 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 1.2 }}
-          className="absolute inset-0 w-full h-full bg-cover bg-no-repeat z-0"
+          className="hidden lg:block absolute inset-0 w-full h-full bg-cover bg-no-repeat z-0"
           style={{ backgroundImage: `url(${backgroundImages[currentImage]})` }}
         ></motion.div>
       </AnimatePresence>
 
-      <div className="absolute inset-0 bg-[rgba(0,0,0,0.4)] z-10 text-white w-full flex flex-col pt-6 lg:pt-20 pb-20 lg:pb-0 lg:px-6">
+      {/* Overlay for desktop */}
+      <div className="lg:absolute lg:inset-0 lg:bg-black/40 lg:text-[#fff] text-[#333] z-10 w-full flex flex-col pt-6 lg:pt-20 lg:px-6">
         <motion.div variants={heroVariants} initial="hidden" animate="visible">
-          <Header color="#ffffff" active="Home" />
+          <Header active="Home" />
         </motion.div>
 
-        <div className="lg:w-[80vw] w-[90vw] mx-auto mt-10 lg:mt-[20vh] z-20">
+        <div className="lg:w-[80vw] w-[90vw] mx-auto mt-6 lg:mt-[20vh] z-20">
           <motion.h2
             className="text-[#fff301] font-semibold"
             custom={0}
@@ -80,7 +81,7 @@ const Hero = () => {
           </motion.h2>
 
           <motion.h2
-            className="lg:hidden text-[30px] font-semibold"
+            className="lg:hidden text-[22px] font-bold"
             custom={1}
             variants={contentVariants}
             initial="hidden"
@@ -90,7 +91,7 @@ const Hero = () => {
           </motion.h2>
 
           <motion.p
-            className="lg:w-[60%] mt-3"
+            className="lg:w-[60%] mt-3 lg:pl-0 lg:border-none pl-4 border-l-4 border-[#00689E]"
             custom={2}
             variants={contentVariants}
             initial="hidden"
@@ -120,6 +121,22 @@ const Hero = () => {
             </a>
           </motion.div>
         </div>
+      </div>
+
+      {/* Mobile slideshow at bottom */}
+      <div className="lg:hidden mt-8 w-[90vw] mx-auto">
+        <AnimatePresence mode="wait">
+          <motion.img
+            key={currentImage}
+            src={backgroundImages[currentImage]}
+            alt="Hero Mobile Slideshow"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            className="w-full h-[384px] object-cover rounded-2xl"
+          />
+        </AnimatePresence>
       </div>
     </div>
   );

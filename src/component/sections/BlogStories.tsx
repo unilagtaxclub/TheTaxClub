@@ -4,6 +4,8 @@ import { SanityDocument } from "@sanity/client";
 import { client } from "../../sanity/client";
 import { POSTS_QUERY } from "../rawitems/BlogQueries";
 import { urlFor } from "../../sanity/imageBuilder";
+import { NavLink } from "react-router-dom";
+import { RightArrow } from "../svgs/Icons";
 
 const BlogStories = () => {
   const [posts, setPosts] = useState<SanityDocument[] | null>(null);
@@ -35,12 +37,20 @@ const BlogStories = () => {
           Discover why the public trust us for insights, driven by our
           commitment to quality resources and member support.
         </p>
+        <div className="w-[100%] flex lg:hidden">
+          <NavLink
+            to="/blog"
+            className="py-3 px-10 w-[100%] mt-6 bg-[#00689E] text-[#fff] lg:text-[20px] flex justify-center font-semibold space-x-3 rounded-lg"
+          >
+            See more blog stories
+          </NavLink>
+        </div>
       </div>
 
       <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-10 gap-6 mt-10">
-        {posts.slice(0, 3).map((item) => (
+        {posts.slice(0, 3).map((item, idx) => (
           <BlogStoryCard
-            key={item.id}
+            key={idx}
             imgSrc={urlFor(item.image).width(800).height(400).url()}
             title={item.title}
             slug={item.slug.current}

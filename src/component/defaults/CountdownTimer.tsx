@@ -65,7 +65,7 @@ const CountdownTimer = ({ targetDate }: { targetDate: string }) => {
 
     return (
       <div className="flex flex-col items-center">
-        <div className="relative w-[50px] lg:w-[80px] h-[50px] lg:h-[100px] bg-[#00689e] text-white font-bold text-[24px] lg:text-[48px] rounded-xl overflow-hidden perspective">
+        <div className="relative w-[40px] lg:w-[80px] h-[40px] lg:h-[100px] bg-[#00689e] text-white font-bold text-[24px] lg:text-[48px] rounded-xl overflow-hidden perspective">
           <AnimatePresence initial={false}>
             {hasChanged ? (
               <motion.div
@@ -95,19 +95,19 @@ const CountdownTimer = ({ targetDate }: { targetDate: string }) => {
   return (
     <div className="flex items-center justify-center gap-3 mt-4">
       <FlipCard label="Days" value={timeLeft.days} prevValue={prevTime.days} />
-      <span className="text-[#00689E] text-xl lg:text-3xl font-bold">:</span>
+      <span className="text-[#00689E] lg:text-3xl font-bold">:</span>
       <FlipCard
         label="Hours"
         value={timeLeft.hours}
         prevValue={prevTime.hours}
       />
-      <span className="text-[#00689E] text-xl lg:text-3xl font-bold">:</span>
+      <span className="text-[#00689E] lg:text-3xl font-bold">:</span>
       <FlipCard
         label="Minutes"
         value={timeLeft.minutes}
         prevValue={prevTime.minutes}
       />
-      <span className="text-[#00689E] text-xl lg:text-3xl font-bold">:</span>
+      <span className="text-[#00689E] lg:text-3xl font-bold">:</span>
       <FlipCard
         label="Seconds"
         value={timeLeft.seconds}
