@@ -5,7 +5,6 @@ import { client } from "../../sanity/client";
 import { POSTS_QUERY } from "../rawitems/BlogQueries";
 import { urlFor } from "../../sanity/imageBuilder";
 import { NavLink } from "react-router-dom";
-import { RightArrow } from "../svgs/Icons";
 
 const BlogStories = () => {
   const [posts, setPosts] = useState<SanityDocument[] | null>(null);

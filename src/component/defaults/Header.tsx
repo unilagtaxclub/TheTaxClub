@@ -34,7 +34,7 @@ const Header = ({ active, color }: HeaderProps) => {
           </NavLink>
           <NavLink
             to="/about"
-            className={`${active === "About" && "text-[#00689E] font-semibold"}`}
+            className={`${active === "About Us" && "text-[#00689E] font-semibold"}`}
           >
             About Us
           </NavLink>
