@@ -8,7 +8,7 @@ const Tandt = () => {
   return (
     <Container>
       <div className="lg:mt-[10vh] mt-6">
-        <Header active="Programmes" />
+        <Header active="Our Programmes" />
         <div className="lg:w-[80vw] w-[90vw] lg:mt-14 mx-auto">
           <div className="lg:flex hidden items-center flex-wrap gap-6 text-[14px]">
             {programmeItems.map((item) => (

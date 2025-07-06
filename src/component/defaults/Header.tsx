@@ -47,7 +47,7 @@ const Header = ({ active, color }: HeaderProps) => {
               }}
             >
               <span
-                className={`${active === "Programmes" && "text-[#00689E] font-semibold"}`}
+                className={`${active === "Our Programmes" && "text-[#00689E] font-semibold"}`}
               >
                 Our Programmes
               </span>
