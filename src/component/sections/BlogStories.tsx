@@ -18,11 +18,21 @@ const BlogStories = () => {
       .finally(() => setLoading(false));
   }, []);
 
-  if (loading) return <p className="p-4">Loading...</p>;
-  if (!posts) return <p className="p-4">No posts found.</p>;
+  if (loading)
+    return (
+      <p className="p-4 min-h-screen flex items-center justify-center">
+        Loading...
+      </p>
+    );
+  if (!posts)
+    return (
+      <p className="p-4 min-h-screen flex items-center justify-center">
+        No posts found.
+      </p>
+    );
 
   return (
-    <div className="lg:mt-[10vh] mt-16 pb-[10vh] lg:w-[80vw] w-[90vw] mx-auto">
+    <div className="lg:mt-[10vh] mt-16 pb-[10vh] lg:w-[80vw] w-[90vw] mx-auto min-h-screen">
       <div className="flex flex-col lg:w-[50%]">
         <div className="flex">
           <h2 className="text-[#808080] lg:text-[20px] text-[12px] font-semibold uppercase text-center border border-[#DFBD00] py-1 px-3 rounded-full">
