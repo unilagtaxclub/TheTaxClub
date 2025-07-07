@@ -42,7 +42,9 @@ const FlippableCard = ({ frontCard, name, title, bio }: Props) => {
         {/* Back Side */}
         <div className="absolute w-full h-full backface-hidden [transform:rotateY(180deg)]">
           <div className="bg-[#0F1A20] rounded-2xl w-full h-full p-6 flex flex-col justify-between">
-            <p className="text-[#fff] text-[20px] text-center">{bio}</p>
+            <p className="text-[#fff] lg:text-[20px] text-[18px] text-center">
+              {bio}
+            </p>
           </div>
         </div>
       </motion.div>

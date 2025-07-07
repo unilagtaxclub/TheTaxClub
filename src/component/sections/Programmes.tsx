@@ -91,7 +91,7 @@ const Programmes = () => {
             <img
               src={item.img}
               alt={item.title}
-              className="w-full h-[192px] rounded-xl object-cover grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out"
+              className="w-full h-[192px] rounded-xl object-cover lg:grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out"
             />
             <div className="mt-4 space-y-2">
               <h2 className="lg:text-[20px] font-semibold">{item.title}</h2>

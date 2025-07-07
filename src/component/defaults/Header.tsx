@@ -22,7 +22,7 @@ const Header = ({ active, color }: HeaderProps) => {
   return (
     <div>
       <div className="lg:w-[80vw] w-[90vw] mx-auto text-[18px] flex justify-between items-center">
-        <NavLink to="/">
+        <NavLink to="/" className="lg:scale-100 scale-75">
           <Logo />
         </NavLink>
         <div className="space-x-10 lg:flex hidden">
@@ -34,7 +34,7 @@ const Header = ({ active, color }: HeaderProps) => {
           </NavLink>
           <NavLink
             to="/about"
-            className={`${active === "About" && "text-[#00689E] font-semibold"}`}
+            className={`${active === "About Us" && "text-[#00689E] font-semibold"}`}
           >
             About Us
           </NavLink>
@@ -47,7 +47,7 @@ const Header = ({ active, color }: HeaderProps) => {
               }}
             >
               <span
-                className={`${active === "Programmes" && "text-[#00689E] font-semibold"}`}
+                className={`${active === "Our Programmes" && "text-[#00689E] font-semibold"}`}
               >
                 Our Programmes
               </span>
@@ -127,7 +127,13 @@ const Header = ({ active, color }: HeaderProps) => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.8 }}
                 transition={{ duration: 0.2 }}
+                className="flex items-center space-x-4 cursor-pointer"
               >
+                <span
+                  className={`${color ? color : "text-[#00689E]"} font-semibold text-[14px]`}
+                >
+                  {active}
+                </span>
                 <Hamburger color={color} />
               </motion.div>
             )}

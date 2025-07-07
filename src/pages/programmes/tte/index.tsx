@@ -8,7 +8,7 @@ const Tte = () => {
   return (
     <Container>
       <div className="lg:mt-[10vh] mt-6">
-        <Header active="Programmes" />
+        <Header active="Our Programmes" />
         <div className="lg:w-[80vw] w-[90vw] lg:mt-14 mx-auto">
           <div className="lg:flex hidden items-center flex-wrap gap-6 text-[14px]">
             {programmeItems.map((item) => (
@@ -76,7 +76,9 @@ const Tte = () => {
             </p>
 
             <button className="px-20 py-3 lg:mt-20 lg:w-auto w-[100%] mt-6 font-semibold text-[#fff] bg-[#00689e] rounded-xl">
-              Support this Cause
+              <NavLink to="https://forms.gle/MuKfmBBhTaskt2TQ9" target="_blank">
+                Support this Cause
+              </NavLink>
             </button>
           </div>
         </div>

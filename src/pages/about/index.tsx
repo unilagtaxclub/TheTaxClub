@@ -34,9 +34,9 @@ const About = () => {
 
   return (
     <Container>
-      <div className="bg-[url('/assets/hero-imgs/img-four.png')] lg:min-h-[650px] bg-cover bg-no-repeat scroll-smooth">
+      <div className="bg-[url('/assets/hero-imgs/img-eleven.png')] lg:min-h-[650px] lg:h-[780px] h-[512px] bg-center lg:bg-cover bg-no-repeat scroll-smooth">
         <div className="bg-[rgba(0,0,0,0.4)] text-[#fff] w-[100%] flex flex-col pt-6 lg:pt-20 lg:min-h-screen pb-20 lg:pb-0 lg:px-6">
-          <Header active="About" color="#ffffff" />
+          <Header active="About Us" color="#ffffff" />
           <div className="lg:w-[80vw] w-[90vw] text-[#000] mx-auto mt-10 lg:mt-[20vh]">
             <div className="bg-[rgba(255,255,255,0.6)] lg:w-[40%] p-10 rounded-2xl">
               <h2 className="lg:text-[56px] text-[30px] font-semibold">
@@ -52,14 +52,16 @@ const About = () => {
                 ].map(({ label, id }) => (
                   <div
                     key={id}
-                    className="flex items-center justify-between text-[20px] text-[#00689E] cursor-pointer"
+                    className="flex items-center justify-between lg:text-[20px] text-[16px] text-[#00689E] cursor-pointer"
                     onClick={(e) => {
                       e.preventDefault();
                       scrollToTarget(id);
                     }}
                   >
                     <span>{label}</span>
-                    <RedirectIcon />
+                    <div className="lg:scale-100 scale-75">
+                      <RedirectIcon />
+                    </div>
                   </div>
                 ))}
               </div>

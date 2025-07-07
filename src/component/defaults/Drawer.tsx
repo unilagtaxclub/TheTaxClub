@@ -59,7 +59,7 @@ const Drawer = () => {
       <a
         href="https://bit.ly/applicationformttcunilag"
         target="_blank"
-        className="px-6 py-3 text-[#fff] bg-[#00689e] w-[100%] rounded-xl"
+        className="px-6 py-3 text-[#fff] bg-[#00689e] w-[100%] rounded-xl flex justify-center"
       >
         Join Us
       </a>
