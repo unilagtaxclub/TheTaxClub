@@ -1,7 +1,17 @@
+import { NavLink } from "react-router-dom";
 import CountdownTimer from "../defaults/CountdownTimer";
 import { RightArrow } from "../svgs/Icons";
+import { useState } from "react";
+import FlierModal from "../modals/FlierModal";
+import { AnimatePresence } from "framer-motion";
 
 const Upcoming = () => {
+  const [showFlier, setShowFlier] = useState<boolean>(false);
+
+  const closeModal = () => {
+    setShowFlier(false);
+  };
+
   return (
     <div className="bg-[#ffffff] w-[90vw] mx-auto lg:w-[100%] lg:rounded-none rounded-2xl">
       <div className="lg:mt-[10vh] mt-16 lg:pt-20 pt-6 px-4 lg:px-0 pb-[10vh] lg:w-[80vw] w-[90vw] mx-auto">
@@ -32,14 +42,26 @@ const Upcoming = () => {
 
             <div className="mt-10 flex lg:flex-row flex-col lg:space-x-4 space-y-6 lg:space-y-0 lg:text-[20px]">
               <button className="bg-[#00689e] text-[#fff] px-10 py-3 rounded-lg font-semibold hover:bg-[#005a7a] transition-all duration-300 ease-in-out">
-                Sponsor Event
+                <NavLink
+                  to="https://forms.gle/MuKfmBBhTaskt2TQ9"
+                  target="_blank"
+                >
+                  Sponsor Event
+                </NavLink>
               </button>
-              <button className="border border-[#00689e] text-[#00689e] px-10 py-3 rounded-lg font-semibold hover:bg-[#00689e] hover:text-[#fff] transition-all duration-300 ease-in-out">
+              <NavLink
+                to="https://tix.africa/ntdix"
+                target="_blank"
+                className="border border-[#00689e] text-[#00689e] px-10 py-3 rounded-lg text-center font-semibold hover:bg-[#00689e] hover:text-[#fff] transition-all duration-300 ease-in-out"
+              >
                 Register for Event
-              </button>
+              </NavLink>
             </div>
 
-            <div className="flex items-center lg:justify-start justify-center space-x-3 lg:text-[18px] lg:px-6 px-3 pt-4 text-[#00689E] font-semibold">
+            <div
+              onClick={() => setShowFlier(true)}
+              className="cursor-pointer flex items-center lg:justify-start justify-center space-x-3 lg:text-[18px] lg:px-6 px-3 pt-4 text-[#00689E] font-semibold"
+            >
               <p>See flier</p>
               <div className="lg:scale-100 scale-75">
                 <RightArrow />
@@ -52,11 +74,14 @@ const Upcoming = () => {
               Time remaining for anniversary event
             </h2>
             <div className="my-6">
-              <CountdownTimer targetDate="August 1, 2025 15:30" />
+              <CountdownTimer targetDate="July 30, 2025 12:00" />
             </div>
           </div>
         </div>
       </div>
+      <AnimatePresence>
+        {showFlier && <FlierModal closeModal={closeModal} />}
+      </AnimatePresence>
     </div>
   );
 };

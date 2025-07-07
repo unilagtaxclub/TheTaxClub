@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Header from "../defaults/Header";
+import { NavLink } from "react-router-dom";
 
 const backgroundImages = [
   "/assets/hero-imgs/hero.png",
@@ -109,9 +110,13 @@ const Hero = () => {
             initial="hidden"
             animate="visible"
           >
-            <button className="bg-[#00689e] text-white px-20 py-3 rounded-lg font-semibold hover:bg-[#005a7a] transition-all duration-300 ease-in-out">
+            <NavLink
+              to="https://forms.gle/MuKfmBBhTaskt2TQ9"
+              target="_blank"
+              className="bg-[#00689e] text-center text-white px-20 py-3 rounded-lg font-semibold hover:bg-[#005a7a] transition-all duration-300 ease-in-out"
+            >
               Partner with us
-            </button>
+            </NavLink>
             <a
               href="https://bit.ly/applicationformttcunilag"
               target="_blank"

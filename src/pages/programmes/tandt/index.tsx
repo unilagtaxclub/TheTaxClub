@@ -50,7 +50,9 @@ const Tandt = () => {
             </p>
 
             <button className="px-20 py-3 lg:mt-20 lg:w-auto w-[100%] mt-6 font-semibold text-[#fff] bg-[#00689e] rounded-xl">
-              Support this Cause
+              <NavLink to="https://forms.gle/MuKfmBBhTaskt2TQ9" target="_blank">
+                Support this Cause
+              </NavLink>
             </button>
           </div>
         </div>
