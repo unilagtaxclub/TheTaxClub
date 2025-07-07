@@ -10,7 +10,7 @@ const Footer = ({ active }: FooterProps) => {
   return (
     <div className="bg-[#003D5E] relative lg:mt-[20vh] mt-14">
       {active === "Home" && (
-        <div className="bg-[#fff] text-center z-10 absolute -top-[15vh] lg:left-[30%] lg:px-20 lg:py-10 lg:space-y-6 space-y-3 py-4 px-6 mt-10 lg:mt-0 rounded-3xl lg:w-[45%] w-[90%] left-6">
+        <div className="bg-[#fff] text-center z-10 mt-10 absolute -top-[15vh] lg:left-[30%] lg:px-20 lg:py-10 lg:space-y-6 space-y-3 py-4 px-6 lg:mt-0 rounded-3xl lg:w-[45%] w-[90%] left-6">
           <h2 className="mt-4 lg:mb-8 mb-4 lg:text-[34px] font-semibold">
             Haven't signed up to our Newsletter yet?
           </h2>
@@ -42,7 +42,7 @@ const Footer = ({ active }: FooterProps) => {
         </div>
       )}
       {active === "Home" && (
-        <div className="relative lg:h-[400px] h-[328px]">
+        <div className="relative lg:h-[400px] h-[328px] mt-30">
           <img
             src="/assets/footer-img.png"
             alt="footer-img"
