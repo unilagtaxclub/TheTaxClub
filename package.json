@@ -17,6 +17,7 @@
     "@tailwindcss/vite": "^4.0.9",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^12.4.7",
+    "lucide-react": "^0.525.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.2.0",

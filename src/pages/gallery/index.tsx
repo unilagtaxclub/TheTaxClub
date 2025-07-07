@@ -5,8 +5,25 @@ import Header from "../../component/defaults/Header";
 import LayoutOne from "../../component/gallery-layouts/LayoutOne";
 import LayoutTwo from "../../component/gallery-layouts/LayoutTwo";
 import { MiniCalendarIcon } from "../../component/svgs/Icons";
+import { useState } from "react";
+import ImageModal from "../../component/modals/ImgModal";
 
 const Gallery = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImages, setModalImages] = useState<string[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const openImageModal = (images: string[], index: number) => {
+    setModalImages(images);
+    setCurrentIndex(index);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => setModalOpen(false);
+  const showNext = () =>
+    setCurrentIndex((prev) => (prev + 1) % modalImages.length);
+  const showPrev = () =>
+    setCurrentIndex((prev) => (prev === 0 ? modalImages.length - 1 : prev - 1));
   return (
     <Container>
       <div className="bg-[#f2f2f2] min-h-screen ">
@@ -44,23 +61,30 @@ const Gallery = () => {
 
             <div className="space-y-6 mt-10">
               <LayoutOne
-                imgOne="/assets/gallery/ntdv-two/one.png"
-                imgTwo="/assets/gallery/ntdv-two/two.png"
-                imgThree="/assets/gallery/ntdv-two/three.png"
-                imgFour="/assets/gallery/ntdv-two/four.png"
-                imgFive="/assets/gallery/ntdv-two/five.png"
-                imgSix="/assets/gallery/ntdv-two/six.png"
-                imgSeven="/assets/gallery/ntdv-two/seven.png"
-                imgEight="/assets/gallery/ntdv-two/eight.png"
+                images={[
+                  "/assets/gallery/ntdv-two/one.png",
+                  "/assets/gallery/ntdv-two/two.png",
+                  "/assets/gallery/ntdv-two/three.png",
+                  "/assets/gallery/ntdv-two/four.png",
+                  "/assets/gallery/ntdv-two/five.png",
+                  "/assets/gallery/ntdv-two/six.png",
+                  "/assets/gallery/ntdv-two/seven.png",
+                  "/assets/gallery/ntdv-two/eight.png",
+                ]}
+                onImageClick={openImageModal}
               />
               <LayoutTwo
-                imgOne="/assets/gallery/ntdv-two/nine.png"
-                imgTwo="/assets/gallery/ntdv-two/ten.png"
-                imgThree="/assets/gallery/ntdv-two/eleven.png"
-                imgFour="/assets/gallery/ntdv-two/twelve.png"
-                imgFive="/assets/gallery/ntdv-two/thirteen.png"
-                imgSix="/assets/gallery/ntdv-two/fourteen.png"
-                imgSeven="/assets/gallery/ntdv-two/five.png"
+                onImageClick={openImageModal}
+                images={[
+                  "/assets/gallery/ntdv-two/eight.png",
+                  "/assets/gallery/ntdv-two/nine.png",
+                  "/assets/gallery/ntdv-two/ten.png",
+                  "/assets/gallery/ntdv-two/eleven.png",
+                  "/assets/gallery/ntdv-two/twelve.png",
+                  "/assets/gallery/ntdv-two/thirteen.png",
+                  "/assets/gallery/ntdv-two/fourteen.png",
+                  "/assets/gallery/ntdv-two/five.png",
+                ]}
               />
             </div>
           </div>
@@ -80,23 +104,30 @@ const Gallery = () => {
 
             <div className="space-y-6 mt-10">
               <LayoutOne
-                imgOne="/assets/gallery/ntdv/img-one.png"
-                imgTwo="/assets/gallery/ntdv/img-two.png"
-                imgThree="/assets/gallery/ntdv/img-three.png"
-                imgFour="/assets/gallery/ntdv/img-four.png"
-                imgFive="/assets/gallery/ntdv/img-five.png"
-                imgSix="/assets/gallery/ntdv/img-six.png"
-                imgSeven="/assets/gallery/ntdv/img-seven.png"
-                imgEight="/assets/gallery/ntdv/img-eight.png"
+                onImageClick={openImageModal}
+                images={[
+                  "/assets/gallery/ntdv/img-one.png",
+                  "/assets/gallery/ntdv/img-two.png",
+                  "/assets/gallery/ntdv/img-three.png",
+                  "/assets/gallery/ntdv/img-four.png",
+                  "/assets/gallery/ntdv/img-five.png",
+                  "/assets/gallery/ntdv/img-six.png",
+                  "/assets/gallery/ntdv/img-seven.png",
+                  "/assets/gallery/ntdv/img-eight.png",
+                ]}
               />
               <LayoutTwo
-                imgOne="/assets/gallery/ntdv/img-eight.png"
-                imgTwo="/assets/gallery/ntdv/img-nine.png"
-                imgThree="/assets/gallery/ntdv/img-ten.png"
-                imgFour="/assets/gallery/ntdv/img-eleven.png"
-                imgFive="/assets/gallery/ntdv/img-twelve.png"
-                imgSix="/assets/gallery/ntdv/img-thirteen.png"
-                imgSeven="/assets/gallery/ntdv/img-fourteen.png"
+                onImageClick={openImageModal}
+                images={[
+                  "/assets/gallery/ntdv/img-eight.png",
+                  "/assets/gallery/ntdv/img-nine.png",
+                  "/assets/gallery/ntdv/img-ten.png",
+                  "/assets/gallery/ntdv/img-eleven.png",
+                  "/assets/gallery/ntdv/img-twelve.png",
+                  "/assets/gallery/ntdv/img-thirteen.png",
+                  "/assets/gallery/ntdv/img-fourteen.png",
+                  "/assets/gallery/ntdv/img-fifteen.png",
+                ]}
               />
             </div>
           </div>
@@ -116,29 +147,45 @@ const Gallery = () => {
 
             <div className="space-y-6 mt-10">
               <LayoutTwo
-                imgOne="/assets/gallery/ntdv-two/fifteen.png"
-                imgTwo="/assets/gallery/ntdv-two/sixteen.png"
-                imgThree="/assets/gallery/ntdv-two/seventeen.png"
-                imgFour="/assets/gallery/ntdv-two/eighteen.png"
-                imgFive="/assets/gallery/ntdv-two/nineteen.png"
-                imgSix="/assets/gallery/ntdv-two/twenty.png"
-                imgSeven="/assets/gallery/ntdv-two/twenty-one.png"
+                onImageClick={openImageModal}
+                images={[
+                  "/assets/gallery/ntdv-two/fifteen.png",
+                  "/assets/gallery/ntdv-two/sixteen.png",
+                  "/assets/gallery/ntdv-two/seventeen.png",
+                  "/assets/gallery/ntdv-two/eighteen.png",
+                  "/assets/gallery/ntdv-two/nineteen.png",
+                  "/assets/gallery/ntdv-two/twenty.png",
+                  "/assets/gallery/ntdv-two/twenty-one.png",
+                  "/assets/gallery/ntdv-two/twenty-two.png",
+                ]}
               />
               <LayoutOne
-                imgOne="/assets/gallery/ntdv-two/twenty-two.png"
-                imgTwo="/assets/gallery/ntdv-two/twenty-three.png"
-                imgThree="/assets/gallery/ntdv-two/twenty-four.png"
-                imgFour="/assets/gallery/ntdv-two/twenty-five.png"
-                imgFive="/assets/gallery/ntdv-two/twenty-six.png"
-                imgSix="/assets/gallery/ntdv-two/twenty-seven.png"
-                imgSeven="/assets/gallery/ntdv-two/twenty-eight.png"
-                imgEight="/assets/gallery/ntdv-two/twenty-nine.png"
+                onImageClick={openImageModal}
+                images={[
+                  "/assets/gallery/ntdv-two/twenty-two.png",
+                  "/assets/gallery/ntdv-two/twenty-three.png",
+                  "/assets/gallery/ntdv-two/twenty-four.png",
+                  "/assets/gallery/ntdv-two/twenty-five.png",
+                  "/assets/gallery/ntdv-two/twenty-six.png",
+                  "/assets/gallery/ntdv-two/twenty-seven.png",
+                  "/assets/gallery/ntdv-two/twenty-eight.png",
+                  "/assets/gallery/ntdv-two/twenty-nine.png",
+                ]}
               />
             </div>
           </div>
         </div>
         <Footer />
       </div>
+      {modalOpen && (
+        <ImageModal
+          images={modalImages}
+          currentIndex={currentIndex}
+          onClose={closeModal}
+          onNext={showNext}
+          onPrev={showPrev}
+        />
+      )}
     </Container>
   );
 };
