@@ -17,7 +17,7 @@ const About = () => {
             championing the birth of various tax clubs across the country.
           </p>
           <button className="px-6 py-3 text-[#fff] bg-[#00689e] text-center lg:w-[50%] w-[100%] lg:max-w-[50%] lg:text-[20px] font-semibold rounded-lg mb-10 lg:mb-0">
-            <NavLink to="https://forms.gle/MuKfmBBhTaskt2TQ9" target="_blank">
+            <NavLink to="https://forms.gle/fUCN99VZVev6WNLTA" target="_blank">
               Support The Tax Club
             </NavLink>
           </button>

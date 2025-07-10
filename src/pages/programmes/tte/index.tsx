@@ -76,7 +76,7 @@ const Tte = () => {
             </p>
 
             <button className="px-20 py-3 lg:mt-20 lg:w-auto w-[100%] mt-6 font-semibold text-[#fff] bg-[#00689e] rounded-xl">
-              <NavLink to="https://forms.gle/MuKfmBBhTaskt2TQ9" target="_blank">
+              <NavLink to="https://forms.gle/fUCN99VZVev6WNLTA" target="_blank">
                 Support this Cause
               </NavLink>
             </button>

@@ -21,7 +21,7 @@ const Upcoming = () => {
           </h2>
         </div>
         <h2 className="lg:text-[40px] text-[18px] lg:mt-0 mt-4 font-semibold">
-          Something good is happening
+          Upcoming Events
         </h2>
         <div className="flex items-center justify-between lg:flex-row flex-col lg:space-x-10 space-y-10 lg:space-y-0 lg:mt-10 mt-6">
           <div className="bg-[#E6F4FC] space-y-6 lg:p-10 p-4 shadow-lg lg:w-[50%] rounded-2xl">
@@ -31,13 +31,17 @@ const Upcoming = () => {
             <div className="space-y-2 lg:text-[20px]">
               <h2 className="text-[#808080]">Theme:</h2>
               <p>
-                Harnessing Intelligent Revenue Ecosystems in Forging the future
-                of tax policy and administration
+                Leveraging Intelligent Revenue Ecosystems: The Future of Tax
+                Policy and Tax Administration in Nigeria.
               </p>
             </div>
             <div className="space-y-2 lg:text-[20px]">
               <h2 className="text-[#808080]">Date:</h2>
               <p>July 30th, 2025</p>
+            </div>
+            <div className="space-y-2 lg:text-[20px]">
+              <h2 className="text-[#808080]">Venue:</h2>
+              <p>Tayo Aderinokun Hall (Inside Guest House) UNILAG.</p>
             </div>
 
             <div className="mt-10 flex lg:flex-row flex-col lg:space-x-4 space-y-6 lg:space-y-0 lg:text-[20px]">

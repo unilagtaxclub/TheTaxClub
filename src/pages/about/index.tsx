@@ -34,7 +34,7 @@ const About = () => {
 
   return (
     <Container>
-      <div className="bg-[url('/assets/hero-imgs/img-eleven.png')] lg:min-h-[650px] lg:h-[780px] bg-center lg:bg-cover bg-no-repeat scroll-smooth">
+      <div className="lg:bg-[url('/assets/hero-imgs/img-eleven.png')] bg-[url('/assets/hero-imgs/about-hero-img.png')] lg:min-h-[650px] lg:h-[780px] bg-center lg:bg-cover bg-no-repeat scroll-smooth">
         <div className="bg-[rgba(0,0,0,0.4)] text-[#fff] w-[100%] flex flex-col pt-6 lg:pt-20 lg:min-h-screen pb-20 lg:pb-0 lg:px-6">
           <Header active="About Us" color="#ffffff" />
           <div className="lg:w-[80vw] w-[90vw] text-[#000] mx-auto mt-10 lg:mt-[20vh]">

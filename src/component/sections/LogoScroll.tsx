@@ -1,26 +1,67 @@
-import { Acuity, CITN, Deloitte, FIRS, IRS, SIAO } from "../svgs/Logos";
+import {
+  Acuity,
+  Aelex,
+  Ajayi,
+  Andersen,
+  AxMatter,
+  BAI,
+  Belo,
+  CITN,
+  Deloitte,
+  Ey,
+  FIRS,
+  Flutterwave,
+  IRS,
+  Kenna,
+  KPMG,
+  SIAO,
+} from "../svgs/Logos";
 
 const LogoScroll = () => {
   return (
-    <>
-      <div className="flex justify-center items-center lg:mt-[10vh] mt-10">
-        <h2 className="text-[#808080] lg:text-[20px] text-[12px] font-semibold uppercase text-center border border-[#DFBD00] py-1 px-3 rounded-full">
-          Supported by our partners
-        </h2>
-      </div>
-      <div className="w-[98vw] mx-auto mt-10 overflow-hidden">
-        <div className="flex items-center scroll-content scroll-animation">
-          <div className="flex items-center space-x-10 lg:space-x-20 lg:scale-100 scale-75">
+    <div className="w-[98vw] mx-auto mt-10 overflow-hidden">
+      <div className="scroll-wrapper">
+        <div className="scroll-track">
+          {/* First set of logos */}
+          <div className="flex items-center space-x-10 lg:space-x-20">
             <FIRS />
             <IRS />
             <CITN />
             <Acuity />
             <SIAO />
             <Deloitte />
+            <Ajayi />
+            <KPMG />
+            <Kenna />
+            <BAI />
+            <Ey />
+            <AxMatter />
+            <Flutterwave />
+            <Belo />
+            <Andersen />
+            <Aelex />
+          </div>
+          <div className="flex items-center space-x-10 lg:space-x-20">
+            <FIRS />
+            <IRS />
+            <CITN />
+            <Acuity />
+            <SIAO />
+            <Deloitte />
+            <Ajayi />
+            <KPMG />
+            <Kenna />
+            <BAI />
+            <Ey />
+            <AxMatter />
+            <Flutterwave />
+            <Belo />
+            <Andersen />
+            <Aelex />
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
