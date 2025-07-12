@@ -1,21 +1,38 @@
 import BlogStoryCard from "../cards/BlogStoryCard";
 import { useEffect, useState } from "react";
-import { SanityDocument } from "@sanity/client";
-import { client } from "../../sanity/client";
-import { POSTS_QUERY } from "../rawitems/BlogQueries";
 import { urlFor } from "../../sanity/imageBuilder";
 import { NavLink } from "react-router-dom";
+import axios from "axios";
+import { useBlogStore } from "../../store/blogStore";
 
 const BlogStories = () => {
-  const [posts, setPosts] = useState<SanityDocument[] | null>(null);
   const [loading, setLoading] = useState(true);
+  const setPosts = useBlogStore((state) => state.setPosts);
+  const posts = useBlogStore((state) => state.posts);
 
   useEffect(() => {
-    client
-      .fetch<SanityDocument[]>(POSTS_QUERY)
-      .then((data) => setPosts(data))
-      .catch((err) => console.error("Error fetching posts:", err))
-      .finally(() => setLoading(false));
+    const fetchFeed = async () => {
+      setLoading(true);
+      try {
+        const rssFeedUrl = "https://medium.com/feed/@towardsdatascience";
+        const apiURL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeedUrl)}`;
+
+        const { data } = await axios.get(apiURL);
+        console.log("data", data);
+        const withSlugs = data.items.map((item) => ({
+          ...item,
+          slug: item?.link?.split("/").pop(),
+        }));
+
+        setPosts(withSlugs);
+      } catch (error) {
+        console.error("Failed to fetch Medium posts:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchFeed();
   }, []);
 
   if (loading)
@@ -31,6 +48,7 @@ const BlogStories = () => {
       </p>
     );
 
+  console.log(posts);
   return (
     <div className="lg:mt-[10vh] mt-16 pb-[10vh] lg:w-[80vw] w-[90vw] mx-auto min-h-screen">
       <div className="flex flex-col lg:w-[50%]">
@@ -57,17 +75,17 @@ const BlogStories = () => {
       </div>
 
       <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-10 gap-6 mt-10">
-        {posts.slice(0, 3).map((item, idx) => (
-          <BlogStoryCard
-            key={idx}
-            imgSrc={urlFor(item.image).width(800).height(400).url()}
-            title={item.title}
-            slug={item.slug.current}
-            authorName={item.authorName}
-            date={new Date(item.publishedAt).toLocaleDateString()}
-            tags={item.tags}
-          />
-        ))}
+        {/* {posts.slice(0, 3).map((item, idx) => (
+                                        <BlogStoryCard
+                                          key={idx}
+                                          imgSrc={urlFor(item.image).width(800).height(400).url()}
+                                          title={item.title}
+                                          slug={item.slug.current}
+                                          authorName={item.authorName}
+                                          date={new Date(item.publishedAt).toLocaleDateString()}
+                                          tags={item.tags}
+                                        />
+                                      ))} */}
       </div>
     </div>
   );

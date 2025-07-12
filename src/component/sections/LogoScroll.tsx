@@ -41,7 +41,7 @@ const LogoScroll = () => {
             <Andersen />
             <Aelex />
           </div>
-          <div className="flex items-center space-x-10 lg:space-x-20">
+          <div className="flex items-center space-x-10 lg:space-x-20 ml-10">
             <FIRS />
             <IRS />
             <CITN />
