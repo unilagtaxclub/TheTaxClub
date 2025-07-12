@@ -41,7 +41,6 @@ const Hero = () => {
 
   return (
     <div className="relative lg:min-h-screen">
-      {/* Desktop background slideshow */}
       <AnimatePresence mode="wait">
         <motion.div
           key={currentImage}
@@ -54,7 +53,6 @@ const Hero = () => {
         ></motion.div>
       </AnimatePresence>
 
-      {/* Overlay for desktop */}
       <div className="lg:absolute lg:inset-0 lg:bg-black/40 lg:text-[#fff] text-[#333] z-10 w-full flex flex-col pt-6 lg:pt-20 lg:px-6">
         <motion.div variants={heroVariants} initial="hidden" animate="visible">
           <Header active="Home" />
@@ -62,7 +60,7 @@ const Hero = () => {
 
         <div className="lg:w-[80vw] w-[90vw] mx-auto mt-6 lg:mt-[20vh] z-20">
           <motion.h2
-            className="text-[#fff301] font-semibold"
+            className="text-[#DFBD00] font-semibold"
             custom={0}
             variants={contentVariants}
             initial="hidden"
@@ -111,7 +109,7 @@ const Hero = () => {
             animate="visible"
           >
             <NavLink
-              to="https://forms.gle/MuKfmBBhTaskt2TQ9"
+              to="https://forms.gle/fUCN99VZVev6WNLTA"
               target="_blank"
               className="bg-[#00689e] text-center text-white px-20 py-3 rounded-lg font-semibold hover:bg-[#005a7a] transition-all duration-300 ease-in-out"
             >

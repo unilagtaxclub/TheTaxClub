@@ -41,8 +41,8 @@ const Anthology = () => {
                 The Tax Anthology (2021)
               </h2>
               <a
-                href="https://docs.google.com/forms/d/1MD3nDdhUh78NsMaoLj9kUneOCOTW6_IMGznVLvLo-ew/viewform"
-                target="_blank"
+                href="/assets/files/THE TAX ANTHOLOGY 2021.pdf"
+                download
                 className="flex justify-center items-center space-x-3 text-[14px] font-semibold text-[#fff] bg-[#00689E] w-[100%] rounded-lg py-3"
               >
                 <span>Download</span>
@@ -64,8 +64,8 @@ const Anthology = () => {
                 The Tax Anthology (2019)
               </h2>
               <a
-                href="https://docs.google.com/forms/d/1MD3nDdhUh78NsMaoLj9kUneOCOTW6_IMGznVLvLo-ew/viewform"
-                target="_blank"
+                href="/assets/files/THE TAX ANTHOLOGY 2019.pdf"
+                download
                 className="flex justify-center items-center space-x-3 text-[14px] font-semibold text-[#fff] bg-[#00689E] w-[100%] rounded-lg py-3"
               >
                 <span>Download</span>
@@ -87,8 +87,8 @@ const Anthology = () => {
                 The Tax Anthology (2018)
               </h2>
               <a
-                href="https://docs.google.com/forms/d/1MD3nDdhUh78NsMaoLj9kUneOCOTW6_IMGznVLvLo-ew/viewform"
-                target="_blank"
+                href="/assets/files/THE TAX ANTHOLOGY 2018.pdf"
+                download
                 className="flex justify-center items-center space-x-3 text-[14px] font-semibold text-[#fff] bg-[#00689E] w-[100%] rounded-lg py-3"
               >
                 <span>Download</span>

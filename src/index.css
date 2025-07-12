@@ -1,29 +1,33 @@
 @import "tailwindcss";
+
+/* ===== Animation ===== */
 @keyframes scroll {
     0% {
-        transform: translateX(50%);
+        transform: translateX(0%);
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }
+
 html {
     scroll-behavior: smooth;
 }
 
-.scroll-animation {
-    display: flex;
-    animation: scroll 10s linear infinite;
-}
-
+/* ===== Logo Scrolling Styles ===== */
 .scroll-container {
     overflow: hidden;
     width: 100%;
 }
 
-.scroll-content {
+.scroll-track {
     display: flex;
-    width: 200%;
+    width: max-content;
+    animation: scroll 25s linear infinite;
+}
+
+.scroll-track > * {
+    flex-shrink: 0;
 }
 
 .perspective {
@@ -35,33 +39,20 @@ html {
     -webkit-backface-visibility: hidden;
 }
 
-/* Chrome, Safari, Edge, Opera */
+/* ===== Form Fixes ===== */
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-/* Firefox */
 input[type="number"] {
     -moz-appearance: textfield;
 }
 
+/* ===== Mobile Animation Override (optional) ===== */
 @media only screen and (max-width: 768px) {
-    @keyframes scroll {
-        0% {
-            transform: translateX(20%);
-        }
-        100% {
-            transform: translateX(-100%);
-        }
-    }
-    .scroll-animation {
-        display: flex;
-        animation: scroll 8s linear infinite;
-    }
-    .scroll-content {
-        display: flex;
-        width: 550%;
+    .scroll-track {
+        animation: scroll 15s linear infinite;
     }
 }

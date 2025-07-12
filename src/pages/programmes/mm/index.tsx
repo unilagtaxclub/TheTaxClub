@@ -37,7 +37,7 @@ const Mm = () => {
                 className="w-[100%] lg:h-[273px] h-[370px] object-cover rounded-3xl"
               />
               <img
-                src="/assets/gallery/ntdv/img-seventeen.png"
+                src="/assets/programme-imgs/mm-three.png"
                 alt="img"
                 className="w-[100%] lg:h-[273px] h-[370px] object-cover lg:mt-0 mt-6 rounded-3xl"
               />
@@ -76,7 +76,7 @@ const Mm = () => {
             </p>
 
             <button className="px-20 py-3 lg:mt-20 lg:w-auto w-[100%] mt-6 font-semibold text-[#fff] bg-[#00689e] rounded-xl">
-              <NavLink to="https://forms.gle/MuKfmBBhTaskt2TQ9" target="_blank">
+              <NavLink to="https://forms.gle/fUCN99VZVev6WNLTA" target="_blank">
                 Support this Cause
               </NavLink>
             </button>
