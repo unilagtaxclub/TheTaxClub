@@ -18,7 +18,7 @@ const FlierModal = ({ closeModal }: { closeModal: () => void }) => {
         </button>
 
         <img
-          src="/assets/flier.jpg"
+          src="/assets/flier.png"
           alt="flier"
           className="w-full h-[100%] mb-4"
         />
