@@ -1,27 +1,65 @@
 import BlogStoryCard from "../cards/BlogStoryCard";
 import { useEffect, useState } from "react";
-import { urlFor } from "../../sanity/imageBuilder";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
-import { useBlogStore } from "../../store/blogStore";
+import { BlogPost, useBlogStore } from "../../store/blogStore";
 
 const BlogStories = () => {
   const [loading, setLoading] = useState(true);
   const setPosts = useBlogStore((state) => state.setPosts);
   const posts = useBlogStore((state) => state.posts);
 
+  const extractFirstImage = (html: string): string | null => {
+    if (!html || typeof html !== "string") return null;
+
+    try {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, "text/html");
+      const images = doc.querySelectorAll("img");
+
+      for (const img of Array.from(images)) {
+        const src = img.getAttribute("src");
+        if (
+          src &&
+          src.startsWith("http") &&
+          !src.includes("medium.com/_/stat")
+        ) {
+          return src;
+        }
+      }
+
+      const urlRegex = /(https?:\/\/[^\s"']+\.(?:png|jpg|jpeg|webp|gif))/gi;
+      const matches = html.match(urlRegex);
+
+      if (matches) {
+        const validMatch = matches.find(
+          (url) => !url.includes("medium.com/_/stat"),
+        );
+        return validMatch || null;
+      }
+
+      return null;
+    } catch (e) {
+      console.error("❌ Error extracting image:", e);
+      return null;
+    }
+  };
+
   useEffect(() => {
     const fetchFeed = async () => {
       setLoading(true);
       try {
-        const rssFeedUrl = "https://medium.com/feed/@towardsdatascience";
+        const rssFeedUrl = "https://medium.com/feed/@unilagtaxclub";
         const apiURL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeedUrl)}`;
 
         const { data } = await axios.get(apiURL);
-        console.log("data", data);
-        const withSlugs = data.items.map((item) => ({
+
+        const withSlugs = data.items.map((item: BlogPost) => ({
           ...item,
           slug: item?.link?.split("/").pop(),
+          coverImage: extractFirstImage(
+            item.content || (item.description as unknown as string),
+          ),
         }));
 
         setPosts(withSlugs);
@@ -48,7 +86,6 @@ const BlogStories = () => {
       </p>
     );
 
-  console.log(posts);
   return (
     <div className="lg:mt-[10vh] mt-16 pb-[10vh] lg:w-[80vw] w-[90vw] mx-auto min-h-screen">
       <div className="flex flex-col lg:w-[50%]">
@@ -75,17 +112,22 @@ const BlogStories = () => {
       </div>
 
       <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-10 gap-6 mt-10">
-        {/* {posts.slice(0, 3).map((item, idx) => (
-                                        <BlogStoryCard
-                                          key={idx}
-                                          imgSrc={urlFor(item.image).width(800).height(400).url()}
-                                          title={item.title}
-                                          slug={item.slug.current}
-                                          authorName={item.authorName}
-                                          date={new Date(item.publishedAt).toLocaleDateString()}
-                                          tags={item.tags}
-                                        />
-                                      ))} */}
+        {posts.slice(0, 3).map((item, idx) => (
+          <BlogStoryCard
+            key={idx}
+            imgSrc={item.coverImage || "/assets/blog-imgs/bl-cover-1.png"}
+            title={item.title}
+            link={item.link}
+            author={item.author || "Unilag Tax Club"}
+            date={new Date(item.pubDate).toLocaleDateString()}
+            tags={item.categories || []}
+          />
+        ))}
+      </div>
+      <div className="flex items-center justify-center mt-10 lg:mb-[15vh]">
+        <button className="border border-[#00689e] text-[#00689e] font-semibold text-[18px] py-3 px-10 rounded-lg">
+          <NavLink to="/blog">Load More</NavLink>
+        </button>
       </div>
     </div>
   );

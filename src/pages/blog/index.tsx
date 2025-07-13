@@ -6,25 +6,89 @@ import Header from "../../component/defaults/Header";
 import { publicationItems } from "../../component/rawitems/PublicationItems";
 import { Avatar, SearchIcon } from "../../component/svgs/Icons";
 import { useEffect, useState } from "react";
-import { SanityDocument } from "@sanity/client";
-import { client } from "../../sanity/client";
-import { POSTS_QUERY } from "../../component/rawitems/BlogQueries";
-import { urlFor } from "../../sanity/imageBuilder";
+import { BlogPost, useBlogStore } from "../../store/blogStore";
+import axios from "axios";
 
 const Blog = () => {
-  const [posts, setPosts] = useState<SanityDocument[] | null>(null);
+  const setPosts = useBlogStore((state) => state.setPosts);
+  const posts = useBlogStore((state) => state.posts);
   const [loading, setLoading] = useState(true);
 
+  const extractFirstImage = (html: string): string | null => {
+    if (!html || typeof html !== "string") return null;
+
+    try {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, "text/html");
+      const images = doc.querySelectorAll("img");
+
+      for (const img of Array.from(images)) {
+        const src = img.getAttribute("src");
+        if (
+          src &&
+          src.startsWith("http") &&
+          !src.includes("medium.com/_/stat")
+        ) {
+          return src;
+        }
+      }
+
+      const urlRegex = /(https?:\/\/[^\s"']+\.(?:png|jpg|jpeg|webp|gif))/gi;
+      const matches = html.match(urlRegex);
+
+      if (matches) {
+        const validMatch = matches.find(
+          (url) => !url.includes("medium.com/_/stat"),
+        );
+        return validMatch || null;
+      }
+
+      return null;
+    } catch (e) {
+      console.error("❌ Error extracting image:", e);
+      return null;
+    }
+  };
+
   useEffect(() => {
-    client
-      .fetch<SanityDocument[]>(POSTS_QUERY)
-      .then((data) => setPosts(data))
-      .catch((err) => console.error("Error fetching posts:", err))
-      .finally(() => setLoading(false));
+    const fetchFeed = async () => {
+      setLoading(true);
+      try {
+        const rssFeedUrl = "https://medium.com/feed/@unilagtaxclub";
+        const apiURL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeedUrl)}`;
+
+        const { data } = await axios.get(apiURL);
+
+        const withSlugs = data.items.map((item: BlogPost) => ({
+          ...item,
+          slug: item.link?.split("/").pop() ?? "",
+          coverImage: extractFirstImage(item.content || item.description || ""),
+        }));
+
+        setPosts(withSlugs);
+      } catch (error) {
+        console.error("Failed to fetch Medium posts:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchFeed();
   }, []);
 
-  if (loading) return <p className="p-6">Loading...</p>;
-  if (!posts) return <p className="p-6">No posts found.</p>;
+  if (loading)
+    return (
+      <p className="p-4 min-h-screen flex items-center justify-center">
+        Loading...
+      </p>
+    );
+
+  if (!posts || posts.length === 0)
+    return (
+      <p className="p-4 min-h-screen flex items-center justify-center">
+        No posts found.
+      </p>
+    );
 
   return (
     <Container>
@@ -36,54 +100,57 @@ const Blog = () => {
               <NavLink
                 to={item.link}
                 key={item.id}
-                className={`${item.title === "Blog" ? "border-[#00689E] text-[#00689E] font-semibold" : "text-[#808080] border-[#808080]"} border rounded-full cursor-pointer py-3 px-6`}
+                className={`${
+                  item.title === "Blog"
+                    ? "border-[#00689E] text-[#00689E] font-semibold"
+                    : "text-[#808080] border-[#808080]"
+                } border rounded-full cursor-pointer py-3 px-6`}
               >
                 {item.title}
               </NavLink>
             ))}
           </div>
-          {posts && posts.length > 0 && (
+
+          {posts[0]?.coverImage && (
             <div
-              className="w-[100%] lg:h-[644px] h-[296px] bg-cover bg-center text-white rounded-xl"
+              className="w-full lg:h-[644px] h-[296px] bg-cover bg-center text-white rounded-xl"
               style={{
-                backgroundImage: `url(${urlFor(posts[0].image).width(1200).height(600).url()})`,
+                backgroundImage: `url(${posts[0].coverImage})`,
               }}
             >
-              <div className="flex flex-col justify-end bg-black/50 lg:pb-20 lg:space-y-6 space-y-3 rounded-lg lg:px-16 pb-6 px-6 h-[100%]">
+              <div className="flex flex-col justify-end bg-black/50 lg:pb-20 lg:space-y-6 space-y-3 rounded-lg lg:px-16 pb-6 px-6 h-full">
                 <p className="lg:text-[24px] text-[16px] lg:w-[50%] w-[90%]">
                   {posts[0].title}
                 </p>
-
                 <div className="flex">
                   <NavLink
-                    to={`/blog/${posts[0].slug.current}`}
-                    className="px-10 py-2 font-semibold text-[#fff] bg-[#00689e] rounded-xl lg:block hidden"
+                    to={`/blog/${posts[0].slug}`}
+                    className="px-10 py-2 font-semibold text-white bg-[#00689e] rounded-xl lg:block hidden"
                   >
                     Read article
                   </NavLink>
                 </div>
-
                 <div className="flex items-center lg:space-x-3 text-[12px] lg:text-[16px]">
                   <div className="lg:scale-100 scale-50">
                     <Avatar />
                   </div>
-                  <div className="flex lg:justify-normal space-x-6 justify-between w-[100%]">
-                    <p>{posts[0].authorName}</p>
-                    <p>{new Date(posts[0].publishedAt).toLocaleDateString()}</p>
+                  <div className="flex lg:justify-normal space-x-6 justify-between w-full">
+                    <p>{posts[0].author || "Unknown Author"}</p>
+                    <p>{new Date(posts[0].pubDate).toLocaleDateString()}</p>
                   </div>
                 </div>
               </div>
             </div>
           )}
 
-          <div className="flex items-center border border-[#ccc] bg-[#E5E5E5] space-x-3 rounded-full mt-10 lg:p-6 p-3 w-[100%]">
+          <div className="flex items-center border border-[#ccc] bg-[#E5E5E5] space-x-3 rounded-full mt-10 lg:p-6 p-3 w-full">
             <SearchIcon />
             <input
               type="search"
               name="search"
               id="search"
               placeholder="Search Articles"
-              className="w-[100%] outline-none border-none"
+              className="w-full outline-none border-none bg-transparent"
             />
           </div>
 
@@ -93,38 +160,37 @@ const Blog = () => {
             </h2>
 
             <div className="grid lg:grid-cols-3 grid-cols-1 lg:gap-10 gap-6 mt-10">
-              {posts.map((item) => (
+              {posts.map((item, index) => (
                 <BlogStoryCard
-                  key={item.id}
-                  imgSrc={urlFor(item.image).width(800).height(400).url()}
+                  key={index}
+                  imgSrc={item.coverImage || "/assets/blog-imgs/bl-cover-1.png"}
                   title={item.title}
-                  slug={item.slug.current}
-                  authorName={item.authorName}
-                  date={new Date(item.publishedAt).toLocaleDateString()}
-                  tags={item.tags}
+                  link={item.link}
+                  author={item.author || "The Tax Club"}
+                  date={new Date(item.pubDate).toLocaleDateString()}
+                  tags={item.categories || []}
                 />
               ))}
-            </div>
-
-            <div className="flex items-center justify-center mt-10 lg:mb-[15vh]">
-              <button className="border border-[#00689e] text-[#00689e] font-semibold text-[18px] py-3 px-10 rounded-lg">
-                Load More
-              </button>
             </div>
           </div>
         </div>
 
         <div className="flex items-center justify-center pb-20">
-          <div className="lg:w-[40%] w-[90%] rounded-2xl shadow-md bg-[#fff] p-10 space-y-6 flex items-center justify-center flex-col">
+          <div className="lg:w-[40%] w-[90%] rounded-2xl shadow-md bg-white p-10 space-y-6 flex items-center justify-center flex-col">
             <h2 className="lg:text-[24px] text-[20px] font-semibold">
               Follow us on Medium
             </h2>
             <p className="lg:text-[18px] lg:w-[60%] mx-auto text-center">
               Be the first to receive notifications when we drop a new article
             </p>
-            <button className="px-10 py-2 font-semibold text-[#fff] bg-[#00689e] rounded-xl">
+            <a
+              href="https://medium.com/@unilagtaxclub"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-10 py-2 font-semibold text-white bg-[#00689e] rounded-xl"
+            >
               Follow
-            </button>
+            </a>
           </div>
         </div>
         <Footer />

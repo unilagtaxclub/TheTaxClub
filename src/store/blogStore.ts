@@ -1,11 +1,15 @@
 import { create } from "zustand";
 
-interface BlogPost {
+export interface BlogPost {
   title: string | undefined;
   link: string | undefined;
-  pubDate: string | undefined;
+  pubDate: string | number | Date;
   content: string | undefined;
+  categories: string[] | undefined;
   slug: string | undefined;
+  author: string | undefined;
+  coverImage: string | undefined;
+  description: string | undefined;
 }
 
 interface BlogStore {
