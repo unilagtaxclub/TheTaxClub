@@ -51,7 +51,7 @@ const Footer = ({ active }: FooterProps) => {
           <div className="bg-[rgba(0,0,0,0.6)] absolute w-[100%] lg:h-[400px] h-[328px] top-0"></div>
         </div>
       )}
-      <div className="mt-10 text-[#fff] lg:w-[80vw] w-[90vw] mx-auto lg:py-14 py-6">
+      <div className="mt-10 text-[#fff] lg:w-[80vw] w-[90vw] mx-auto lg:py-3 py-6">
         <div className="flex lg:flex-row flex-col justify-between">
           <div className="flex space-x-1 items-center lg:mx-0 -mx-3">
             <Logo />
@@ -62,7 +62,7 @@ const Footer = ({ active }: FooterProps) => {
           </div>
           <div className="space-y-6 flex flex-col lg:items-center mt-10 lg:mt-0">
             <h2 className="text-[20px] font-semibold">Quick Links</h2>
-            <div className="space-y-4 flex flex-col">
+            <div className="space-y-4 flex flex-col -mt-2">
               <NavLink to="/">Home</NavLink>
               <NavLink to="/about">About Us</NavLink>
               <NavLink to="/our-people">Our Programmes</NavLink>
@@ -75,7 +75,7 @@ const Footer = ({ active }: FooterProps) => {
           <div className="space-y-6 flex flex-col mt-10 lg:mt-0">
             <h2 className="text-[20px] font-semibold">Reach Us</h2>
             <div className="space-y-4">
-              <div className="flex flex-col">
+              <div className="flex flex-col -mt-2">
                 <span>Email address:</span>
                 <a href="mailto:unilagtaxclub@gmail.com" className="underline">
                   unilagtaxclub@gmail.com
@@ -90,7 +90,7 @@ const Footer = ({ active }: FooterProps) => {
 
           <div className="space-y-6 flex flex-col mt-10 lg:mt-0">
             <h2 className="text-[20px] font-semibold">Social Media</h2>
-            <div className="space-y-4 flex flex-col">
+            <div className="space-y-4 flex flex-col -mt-2">
               <a
                 href="https://www.linkedin.com/company/thetaxclub/"
                 target="_blank"
@@ -112,7 +112,6 @@ const Footer = ({ active }: FooterProps) => {
               >
                 X
               </a>
-              <span className="underline">Facebook</span>
             </div>
           </div>
         </div>

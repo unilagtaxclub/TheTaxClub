@@ -27,19 +27,19 @@ const Mm = () => {
               <img
                 src="/assets/programme-imgs/mm-one.png"
                 alt="img"
-                className="w-[100%] lg:h-[569px] h-[370px] rounded-3xl object-cover"
+                className="w-[100%] lg:h-[569px] h-[300px] rounded-3xl lg:object-cover"
               />
             </div>
             <div className="lg:w-[50%] w-[100%] flex flex-col lg:mt-0 mt-6 justify-between">
               <img
                 src="/assets/programme-imgs/mm-two.png"
                 alt="img"
-                className="w-[100%] lg:h-[273px] h-[370px] object-cover rounded-3xl"
+                className="w-[100%] lg:h-[273px] h-[300px] lg:object-cover rounded-3xl"
               />
               <img
                 src="/assets/programme-imgs/mm-three.png"
                 alt="img"
-                className="w-[100%] lg:h-[273px] h-[370px] object-cover lg:mt-0 mt-6 rounded-3xl"
+                className="w-[100%] lg:h-[273px] h-[300px] lg:object-cover lg:mt-0 mt-6 rounded-3xl"
               />
             </div>
           </div>

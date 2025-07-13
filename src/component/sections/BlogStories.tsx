@@ -1,21 +1,76 @@
 import BlogStoryCard from "../cards/BlogStoryCard";
 import { useEffect, useState } from "react";
-import { SanityDocument } from "@sanity/client";
-import { client } from "../../sanity/client";
-import { POSTS_QUERY } from "../rawitems/BlogQueries";
-import { urlFor } from "../../sanity/imageBuilder";
 import { NavLink } from "react-router-dom";
+import axios from "axios";
+import { BlogPost, useBlogStore } from "../../store/blogStore";
 
 const BlogStories = () => {
-  const [posts, setPosts] = useState<SanityDocument[] | null>(null);
   const [loading, setLoading] = useState(true);
+  const setPosts = useBlogStore((state) => state.setPosts);
+  const posts = useBlogStore((state) => state.posts);
+
+  const extractFirstImage = (html: string): string | null => {
+    if (!html || typeof html !== "string") return null;
+
+    try {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, "text/html");
+      const images = doc.querySelectorAll("img");
+
+      for (const img of Array.from(images)) {
+        const src = img.getAttribute("src");
+        if (
+          src &&
+          src.startsWith("http") &&
+          !src.includes("medium.com/_/stat")
+        ) {
+          return src;
+        }
+      }
+
+      const urlRegex = /(https?:\/\/[^\s"']+\.(?:png|jpg|jpeg|webp|gif))/gi;
+      const matches = html.match(urlRegex);
+
+      if (matches) {
+        const validMatch = matches.find(
+          (url) => !url.includes("medium.com/_/stat"),
+        );
+        return validMatch || null;
+      }
+
+      return null;
+    } catch (e) {
+      console.error("❌ Error extracting image:", e);
+      return null;
+    }
+  };
 
   useEffect(() => {
-    client
-      .fetch<SanityDocument[]>(POSTS_QUERY)
-      .then((data) => setPosts(data))
-      .catch((err) => console.error("Error fetching posts:", err))
-      .finally(() => setLoading(false));
+    const fetchFeed = async () => {
+      setLoading(true);
+      try {
+        const rssFeedUrl = "https://medium.com/feed/@unilagtaxclub";
+        const apiURL = `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssFeedUrl)}`;
+
+        const { data } = await axios.get(apiURL);
+
+        const withSlugs = data.items.map((item: BlogPost) => ({
+          ...item,
+          slug: item?.link?.split("/").pop(),
+          coverImage: extractFirstImage(
+            item.content || (item.description as unknown as string),
+          ),
+        }));
+
+        setPosts(withSlugs);
+      } catch (error) {
+        console.error("Failed to fetch Medium posts:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchFeed();
   }, []);
 
   if (loading)
@@ -60,14 +115,19 @@ const BlogStories = () => {
         {posts.slice(0, 3).map((item, idx) => (
           <BlogStoryCard
             key={idx}
-            imgSrc={urlFor(item.image).width(800).height(400).url()}
+            imgSrc={item.coverImage || "/assets/blog-imgs/bl-cover-1.png"}
             title={item.title}
-            slug={item.slug.current}
-            authorName={item.authorName}
-            date={new Date(item.publishedAt).toLocaleDateString()}
-            tags={item.tags}
+            link={item.link}
+            author={item.author || "Unilag Tax Club"}
+            date={new Date(item.pubDate).toLocaleDateString()}
+            tags={item.categories || []}
           />
         ))}
+      </div>
+      <div className="flex items-center justify-center mt-10 lg:mb-[15vh]">
+        <button className="border border-[#00689e] text-[#00689e] font-semibold text-[18px] py-3 px-10 rounded-lg">
+          <NavLink to="/blog">Load More</NavLink>
+        </button>
       </div>
     </div>
   );

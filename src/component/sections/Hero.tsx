@@ -60,7 +60,7 @@ const Hero = () => {
 
         <div className="lg:w-[80vw] w-[90vw] mx-auto mt-6 lg:mt-[20vh] z-20">
           <motion.h2
-            className="text-[#DFBD00] font-semibold"
+            className="lg:text-[#DFBD00] text-[#00689e] font-semibold"
             custom={0}
             variants={contentVariants}
             initial="hidden"
