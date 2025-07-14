@@ -115,7 +115,7 @@ const BlogStories = () => {
         {posts.slice(0, 3).map((item, idx) => (
           <BlogStoryCard
             key={idx}
-            imgSrc={item.coverImage || "/assets/blog-imgs/bl-cover-1.png"}
+            imgSrc={item.coverImage || "/assets/medium.png"}
             title={item.title}
             link={item.link}
             author={item.author || "Unilag Tax Club"}

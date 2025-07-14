@@ -163,7 +163,7 @@ const Blog = () => {
               {posts.map((item, index) => (
                 <BlogStoryCard
                   key={index}
-                  imgSrc={item.coverImage || "/assets/blog-imgs/bl-cover-1.png"}
+                  imgSrc={item.coverImage || "/assets/medium.png"}
                   title={item.title}
                   link={item.link}
                   author={item.author || "The Tax Club"}
