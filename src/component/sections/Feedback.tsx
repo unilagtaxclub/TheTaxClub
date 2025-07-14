@@ -9,13 +9,13 @@ const images = [
     author: "Mazi Afam Osigwe",
   },
   {
-    src: "/assets/feedback-imgs/img-two.png",
+    src: "/assets/feedback-imgs/img-three.png",
     caption:
       "“Becoming a member of the tax club, Unilag gave me the exposure i neened to not only learn and understand Tax, but also to make valuable contributions to the development of Taxation in the country.” I would definitely recommend joining the Tax Club to anybody who cares to listen",
     author: "Prince Obiora",
   },
   {
-    src: "/assets/feedback-imgs/img-three.png",
+    src: "/assets/feedback-imgs/img-two.png",
     caption:
       "“Founding the Tax Club, University of Lagos, was a defining moment in my academic and professional journey. It laid the foundation for impactful tax education, created a platform for future leaders, and showed how student-driven initiatives can influence national policy conversations. I am proud to see the legacy thrive across Nigeria today.",
     author: "ThankGod Enahoro",
