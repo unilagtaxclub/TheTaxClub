@@ -59,8 +59,9 @@ const Anthology = () => {
               <div className="flex justify-end items-center mt-4">
                 <span className="text-[14px] text-[#808080]">August, 2025</span>
               </div>
-              <h2 className="text-[24px] font-semibold mt-6 mb-10">
-                Policy Paper by TTC UNILAG at the National Tax, Debate 9.0
+              <h2 className="text-[18px] font-semibold mt-6 mb-10">
+                TTC UNILAG Team Policy Paper on Designing an Intelligent Revenue
+                Ecosystems in Nigeria
               </h2>
               <a
                 href="/assets/files/NTD Policy Paper.pdf"
