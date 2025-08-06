@@ -16,7 +16,11 @@ const Anthology = () => {
               <NavLink
                 to={item.link}
                 key={item.id}
-                className={`${item.title === "The Tax Anthology" ? "border-[#00689E] text-[#00689E] font-semibold" : "text-[#808080] border-[#808080]"} border rounded-full cursor-pointer py-3 px-6`}
+                className={`${
+                  item.title === "The Tax Anthology"
+                    ? "border-[#00689E] text-[#00689E] font-semibold"
+                    : "text-[#808080] border-[#808080]"
+                } border rounded-full cursor-pointer py-3 px-6`}
               >
                 {item.title}
               </NavLink>
@@ -24,7 +28,50 @@ const Anthology = () => {
           </div>
 
           <div className="mt-10 flex justify-between lg:flex-row flex-col space-y-6 lg:space-y-0 lg:space-x-4">
-            <div className="bg-[#fff] p-4 rounded-3xl lg:w-[33%]">
+            <div className="bg-[#fff] p-4 rounded-3xl lg:w-[33%] flex flex-col justify-between ">
+              <img
+                src="/assets/anthology-imgs/vol6.png"
+                className="w-[100%] h-[240px] object-cover rounded-2xl"
+              />
+              <div className="flex justify-between items-center mt-4">
+                <button className="text-[#FF9E48] bg-[#FF9E4833] text-[14px] font-semibold px-6 py-2 rounded-lg">
+                  Volume 6
+                </button>
+                <span className="text-[14px] text-[#808080]">August, 2025</span>
+              </div>
+              <h2 className="text-[24px] font-semibold mt-6 mb-10">
+                The Tax Anthology 6.0 (2025)
+              </h2>
+              <a
+                href="/assets/files/THE TAX ANTHOLOGY 2025.pdf"
+                download
+                className="flex justify-center items-center space-x-3 text-[14px] font-semibold text-[#fff] bg-[#00689E] w-[100%] rounded-lg py-3"
+              >
+                <span>Download</span>
+                <DownloadIcon />
+              </a>
+            </div>
+            <div className="bg-[#fff] p-4 rounded-3xl lg:w-[33%] flex flex-col justify-between ">
+              <img
+                src="/assets/anthology-imgs/policy-img.jpg"
+                className="w-[100%] h-[240px] object-cover rounded-2xl"
+              />
+              <div className="flex justify-end items-center mt-4">
+                <span className="text-[14px] text-[#808080]">August, 2025</span>
+              </div>
+              <h2 className="text-[24px] font-semibold mt-6 mb-10">
+                Policy Paper by TTC UNILAG at the National Tax, Debate 9.0
+              </h2>
+              <a
+                href="/assets/files/NTD Policy Paper.pdf"
+                download
+                className="flex justify-center items-center space-x-3 text-[14px] font-semibold text-[#fff] bg-[#00689E] w-[100%] rounded-lg py-3"
+              >
+                <span>Download</span>
+                <DownloadIcon />
+              </a>
+            </div>
+            <div className="bg-[#fff] p-4 rounded-3xl lg:w-[33%] flex flex-col justify-between ">
               <img
                 src="/assets/anthology-imgs/img-one.png"
                 className="w-[100%] h-[240px] object-cover rounded-2xl"
@@ -49,7 +96,7 @@ const Anthology = () => {
                 <DownloadIcon />
               </a>
             </div>
-            <div className="bg-[#fff] p-4 rounded-3xl lg:w-[33%]">
+            <div className="bg-[#fff] p-4 rounded-3xl lg:w-[33%] flex flex-col justify-between ">
               <img
                 src="/assets/anthology-imgs/img-two.png"
                 className="w-[100%] h-[240px] object-cover rounded-2xl"
@@ -72,7 +119,7 @@ const Anthology = () => {
                 <DownloadIcon />
               </a>
             </div>
-            <div className="bg-[#fff] p-4 rounded-3xl lg:w-[33%]">
+            <div className="bg-[#fff] p-4 rounded-3xl lg:w-[33%] flex flex-col justify-between ">
               <img
                 src="/assets/anthology-imgs/img-three.png"
                 className="w-[100%] h-[240px] object-cover rounded-2xl"
